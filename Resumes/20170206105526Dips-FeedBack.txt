@@ -1,0 +1,9 @@
+1) When creating calendar , in popup it silently create calendar. it should show some progress indication so
+we can wait for operation to finish.
+
+2) When clicking on close button, it closes,but takes too much time and it looks like UI is freezed , there should
+be progress indication.
+
+3) In create event popup, can not change color.
+
+4) Event date and time does not load date and time picker.

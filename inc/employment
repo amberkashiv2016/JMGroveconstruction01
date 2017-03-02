@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<?php $currentpage = "employment"; ?>
+<html>
+<head>
+	<title>Employment - J.M. Grove  - The Home Improvement Specialists </title>
+	<link rel="stylesheet" href="inc/grovestyle.css" type="text/css"><meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!"/>
+<meta name="keywords" content=" J.M Grove, J.M. Grove employment, J.M. Grove jobs, Installer jobs construction, windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks "/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/screen.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<script>function showdiv(str){
+	if(str=='Others'){
+		document.getElementById('otherdiv').style.display='block';
+	}
+	else{document.getElementById('otherdiv').style.display='none';
+	}
+}
+</script>
+</head>
+
+<body>
+<div align="center">
+	<div id="shell">
+		<?php  include("inc/header.php"); ?>	
+		<div id="content">
+			<?php include("inc/employee_leftmenu.php"); ?>			
+			<div id="content-right">
+				<div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
+				<h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Employment</h1>
+				<div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
+					<p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center">
+						What makes J.M. Grove so great? Our outstanding employees!
+					</p>
+					<p style="padding: 10px 15px 10px 15px;">
+						J.M. Grove is <strong>always</strong> looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. <strong>J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth</strong>. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call.
+					</p>		
+					<p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center">
+						We are currently looking for window, door and roofing installers, experienced only 
+					</p>			
+					<p style="padding: 15px 15px 5px 15px;">
+						<strong>J.M. Grove provides:</strong>
+					</p>
+						<ul style="padding: 0px 15px 3px 39px;list-style-image: url(img/bullet-splash.gif);">
+							<li>Excellent benefits</li>
+							<li>Promotion opportunities</li>
+                            <li>Friendly work atmosphere</li>
+						</ul>		
+					<h4 style="color:#c72121;padding: 10px 15px 0px 15px;">Sales Representative</h4>
+					<p style="padding: 0px 15px 10px 15px;">
+						As a sales representative, you will present our customers with our products and design options. You will be required to educate potential customers on the product and provide them with the best solution for their home. You will also be required to submit written proposals outlining these options and guide the customer through the entire installation process.
+					</p>
+					<h4 style="color:#c72121;padding: 10px 15px 0px 15px;">Product Installers</h4>
+					<p style="padding: 0px 15px 10px 15px;">
+						As a product installer, you will be required to install (one or many) of our product lines onto customer�s homes. Installers must do exceptional work, keep a clean work place, and be courteous to the customer. Installers must be able to occasionally educate customers on their remodeling options and provide written proposals describing these options.
+					</p>	
+					<p style="padding: 0px 15px 10px 15px;" align="center">
+						<!--<a href="/inc/employmentapplication.pdf" target="blank"><img src="img/button-employment.jpg" border="0"></a>-->
+                        <a class="formlink fancybox" href="#formbox"><img src="img/button-employment.jpg" border="0"></a> 
+        <div id="formbox" style="display:none;">
+        <div class="innerbox">                 
+           <h2 class="boxheading">Employment Application</h2>
+           <form name="myForm" action="" method="POST" onSubmit="return formValidation();" enctype="multipart/form-data">
+           <div class="content">
+           	<div class="leftdiv">
+            	<input placeholder="First Name *" class=" " type="text" name="fname" id="fname"></input>
+                <input placeholder="Email *" class="" type="text" name="email" id="email"></input>
+                <input placeholder="State" class="" type="text" name="state"></input>                
+                <textarea rows="4" placeholder="Address" class=""  name="address"></textarea>
+                <input placeholder="Salary Requirements" class="" type="text" name="salary"></input>                
+            </div>
+            <div class="rightdiv">
+            	<input placeholder="LastName* " class=" " type="text" name="lname" id="lname"></input>
+                <input placeholder="Zip *" class="" type="text" name="zip" id="zip"></input> 
+                <input placeholder="City" class="" type="text" name="city"></input>                  
+                <input placeholder="Phone *" class=" " type="text" name="phone" id="phone"></input>
+                <input placeholder="Start date" class="" type="text" name="startdate"></input> 
+<select class="" name="position" onchange="showdiv(this.value);">
+	<option  value="">Position applying for</option>
+	<option value="Staffing Coordinator">Staffing Coordinator</option>               
+	 <option value="Entry_level_sales_associates">Entry level sales associates</option>
+	 <option value="Project_Managers">Project Managers</option>
+	 <option value="Window_&_door_installers">Window & door installers</option>
+	 <option value="Roofing_installers">Roofing installers</option>
+	 <option value="Specialty_roofing_installers">Specialty roofing installers</option>
+	 <option value="Siding_&_aluminum_installers">Siding & aluminum installers</option>
+	 <option value="Seamless_gutter_installers">Seamless gutter installers</option>
+	 <option value="Framing_installers">Framing installers</option>
+	 <option value="Drywall_&_taper_nstallers">Drywall & taper installers</option>
+	 <option value="Flooring_installers">Flooring installers</option>
+	 <option value="Masonry">Masonry</option>
+	 <option value="Rough_carpenter">Rough carpenter</option>
+	 <option value="Finish_carpenter">Finish carpenter</option>
+	 <option value="Painters">Painters</option>
+	 <option value="Electricians">Electricians</option>
+	 <option value="Heating_&_cooling_installers">Heating & cooling installers</option>
+	 <option value="Plumbers">Plumbers</option>
+	  <option value="Others">Others</option>
+</select>
+            </div> 
+            <div class="clearboth"></div>
+            <div id="otherdiv" class="rightdiv"  style="float:right; display:none;">
+            	<input type="text" name="posother" value=""/>
+            </div>           
+            <div class="clearboth"></div>
+            <label>Have you previously worked for j.m grove?</label> 
+            <input type="radio" value="yes" name="worked"> Yes </input>
+            <input type="radio" value="no" name="worked"> No </input>  
+            <div class="clearboth"></div>
+            <label>Do you have a liscense?</label> 
+            <input type="radio" value="Yes" name="license"> Yes </input>
+            <input type="radio" value="No" name="license"> No </input> 
+            <div class="clearboth"></div>    
+            <label>Have you ever plead guilty or been convicted of a crime?</label> 
+            <input type="radio" value="Yes" name="crime"> Yes </input>
+            <input type="radio" value="No" name="crime"> No </input> 
+            <div class="clearboth"></div> 
+            <label class="marginright20">Attach Resume with References</label> <input type="file" name="resume" value="upload"/>
+            <div class="clearboth"></div> 
+            <input type="submit" name="submit" value="Submit" class="submitstyle">
+           </div>
+           </form>
+        </div>
+        </div>
+					</p>	
+
+
+				</div>
+				<p style="padding-bottom:20px;">&nbsp;</p>
+			</div>
+			<?php include("inc/testimonials.php"); ?>	
+		</div>
+		<?php include("inc/footer.php"); ?>	
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+
+<script type="text/javascript">
+function formValidation()  
+{ 
+var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("First Name must be filled out");
+        return false;
+    }
+var y = document.forms["myForm"]["lname"].value;
+    if (y== null || y == "") {
+        alert("Last Name must be filled out");
+        return false;
+    }
+var z = document.forms["myForm"]["email"].value;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(z.match(mailformat))  
+{  
+}  
+else  
+{  
+alert("You have entered an invalid email address!");  
+ 
+return false;  
+ }
+ 
+ var p = document.forms["myForm"]["zip"].value;
+    if (p== null || p == "") {
+        alert("Zip code must be filled out");
+        return false;
+    }
+var q = document.forms["myForm"]["phone"].value;
+    if (q= null || q == "") {
+        alert("Phone must be filled out");
+        return false;
+    }
+}
+
+</script>
+
+</body>
+</html>
+
+<?php if(isset($_POST['submit'])){
+move_uploaded_file($_FILES['resume']['tmp_name'],'upload/'.$_FILES['resume']['name']);
+if($_POST['position']=='Others'){
+$pos=$_POST['posother'];
+}
+else{
+	$pos=$_POST['position'];
+}
+ $message='<table><tr><td>First Name:</td><td>'.$_POST['fname'].'</td></tr>
+<tr><td>Last Name:</td><td>'.$_POST['lname'].'</td></tr>
+<tr><td>Email:</td><td>'.$_POST['email'].'</td></tr>
+<tr><td>Phone:</td><td>'.$_POST['phone'].'</td></tr>
+<tr><td>Address:</td><td>'.$_POST['address'].'</td></tr>
+<tr><td>City:</td><td>'.$_POST['city'].'</td></tr>
+<tr><td>State:</td><td>'.$_POST['state'].'</td></tr>
+<tr><td>Zip:</td><td>'.$_POST['zip'].'</td></tr>
+<tr><td>Satrt Date:</td><td>'.$_POST['startdate'].'</td></tr>
+<tr><td>Salary Requirement:</td><td>'.$_POST['salary'].'</td></tr>
+<tr><td>Position Applying For:</td><td>'.$pos.'</td></tr>
+<tr><td>Have you previously worked for j.m grove? : </td><td>'.$_POST['worked'].'</td></tr>
+<tr><td>Do you have a liscense? :</td><td>'.$_POST['license'].'</td></tr>
+<tr><td>Have you ever plead guilty or been convicted of a crime? :</td><td>'.$_POST['crime'].'</td></tr>
+</table>';
+
+
+$my_file = $_FILES['resume']['name'];
+$my_path = "upload/";
+$my_name = "";
+$my_mail = "hr@jmgroveconstruction.com";
+$my_replyto = "";
+$my_subject = "Employment Application";
+mail_attachment($my_file, $my_path, $my_mail, "example@webmaster.com", $my_name, $my_replyto, $my_subject, $message);
+
+}
+function mail_attachment($filename, $path, $mailto, $from_mail, $from_name, $replyto, $subject, $message) {
+    $file = $path.$filename;
+    $file_size = filesize($file);
+    $handle = fopen($file, "r");
+    $content = fread($handle, $file_size);
+    fclose($handle);
+    $content = chunk_split(base64_encode($content));
+    $uid = md5(uniqid(time()));
+    $name = basename($file);
+    $header = "From: ".$from_name." <".$from_mail.">\r\n";
+    $header .= "Reply-To: ".$replyto."\r\n";
+    $header .= "MIME-Version: 1.0\r\n";
+    $header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+    $header .= "This is a multi-part message in MIME format.\r\n";
+    $header .= "--".$uid."\r\n";
+    $header .= "Content-type:text/html; charset=iso-8859-1\r\n";
+    $header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+    $header .= $message."\r\n\r\n";
+    $header .= "--".$uid."\r\n";
+    $header .= "Content-Type: application/octet-stream; name=\"".$filename."\"\r\n"; // use different content types here
+    $header .= "Content-Transfer-Encoding: base64\r\n";
+    $header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
+    $header .= $content."\r\n\r\n";
+    $header .= "--".$uid."--";
+
+    if (mail($mailto, $subject, "", $header)) {
+        "mail send ... OK"; // or use booleans here
+    } else {
+        "mail send ... ERROR!";
+    }
+}
+
+
+
+?>
+</body>
+<?php include_once("inc/analyticstracking.php") ?>
+</html>

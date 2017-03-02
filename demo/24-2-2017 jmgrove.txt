@@ -1,0 +1,44 @@
+employement.php
+            profilepic: {
+				required: true,
+				extension: "gif|jpg|png|bmp"
+			},
+			 resume: {
+				required: true,
+				extension: "pdf|doc|txt|gif|jpg|png|bmp"
+			},
+		contanct pref
+		
+		<div class="">
+  <div class="cntpref">
+  <label><input type="checkbox" id="cbox1" value="first_checkbox"> Email</label><br>
+<label><input type="checkbox" id="cbox1" value="first_checkbox"> calls</label><br>
+<label><input type="checkbox" id="cbox1" value="first_checkbox"> Text</label><br>
+<label><input type="checkbox" id="cbox1" value="first_checkbox"> mail</label><br>
+
+  </div>
+</div>
+			
+	css 
+	.cntpref > label
+sendemployee.php
+			
+		if(strtolower($_POST['employed'])=='yes')
+		{ $CruntEmployement = 1;	}
+		else
+		{ $CruntEmployement = 0;	}
+	
+		//felony yes/no
+		if(strtolower($_POST['crime'])=='yes')
+		{$FELONY=1;}
+		else
+		{$FELONY=0;}
+	
+		//drug test yes/no
+		if(strtolower($_POST['drugtest'])=='yes')
+		{ $CrimeStatus = 1;	}
+		else
+		{ $CrimeStatus = 0;	}
+
+		
+			

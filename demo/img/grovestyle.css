@@ -1,0 +1,229 @@
+* { margin: 0; padding: 0; font-family: trebuchet ms; color: #000;font-size:1em; }
+body { background: url(/img/background-replacement-windows.jpg); background-color:#95a4ae;}
+
+#shell {
+float:center;
+width:927px;
+overflow:hidden;
+
+}
+#header{
+float:left;
+width:100%;
+height: 134px;
+}
+#header-top{
+float:left;
+height: 4px;
+width:100%;
+overflow: hidden;
+text-align:left;
+background: url(/img/header-top.jpg) no-repeat;
+}
+
+#form-required {
+color: #C00;
+}
+
+.marker, .descriptionFont {
+font-size: .8em;
+}
+
+.marker, .whitefont {
+color: white;k
+}
+
+.marker, .blackfont {
+color: black;
+}
+
+.marker, .redfont {
+color: red;
+}
+
+#toolBar{
+height:150px;
+width:500px;
+float:center;
+overflow:hidden;
+align:center;
+}
+
+#quickQuote{
+height:265px;
+width:210px;
+repeat-x;
+overflow:hidden;
+float:right;
+}
+
+.marker .whitefontHighLight {
+color: white;
+background-color: rgb(255, 255, 166);
+p.thick {font-weight:bold}
+}
+
+.marker, .form-required {
+color: red;
+}
+
+#header-mid{
+float:left;
+height: 124px;
+width:100%;
+overflow: hidden;
+text-align:left;
+background: url(/img/header-mid.jpg) repeat-x;
+}
+#header-bottom{
+float:left;
+height: 6px;
+width:100%;
+overflow: hidden;
+
+}
+
+#splash{
+float:left;
+height: 201px;
+width:100%;
+overflow: hidden;
+}
+#splash-left{
+float:left;
+height: 195px;
+width:317px;
+overflow: hidden;
+background: url(/img/splash-left.jpg);
+}
+#splash-right{
+float:left;
+height: 195px;
+width:610px;
+overflow: hidden;
+}
+#splash-footer{
+float:left;
+height: 6px;
+width:100%;
+overflow: hidden;
+background: url(/img/splash-footer.jpg);
+}
+#content{
+float:left;
+width:100%;
+overflow: hidden;
+text-align:left;
+background-color:#fff;
+}
+#content-left{
+float:left;
+width:215px;
+overflow: hidden;
+text-align:left;
+background: url(/img/content-left-vdiv.jpg) no-repeat;
+background-position: 210px 18px;
+}
+#content-right{
+float:left;
+width:712px;
+overflow: hidden;
+text-align:left;
+}
+#footer{
+float:left;
+height: 52px;
+width:100%;
+overflow: hidden;
+}
+#footer-top{
+float:left;
+height: 47px;
+width:100%;
+overflow: hidden;
+background: url(/img/footer-top.jpg);
+}
+#footer-bottom{
+float:left;
+height: 10px;
+width:100%;
+overflow: hidden;
+background: url(/img/header-top.jpg);
+}
+.option {
+width:100%;float:left;padding-top:25px;
+}
+.option-image {
+width:15%;float:left;margin-left:15px;overflow:hidden;
+}
+.option-color {
+width:10%;float:left;padding-left:15px;padding-bottom:35px;
+}
+.option-glass {
+width:155px;float:left;padding-left:15px;padding-bottom:35px;font-size:.8em;text-align:center;
+}
+.option-text {
+width:80%;float:left;
+}
+
+.option p {padding: 0px 5px 0px 5px;font-size:.8em;color:#666}
+.option-image h2 {font-size:10px;}
+.option img {border:0px;}
+
+.content { text-align:left;padding:15px;padding-left:21px;}
+#splash ul {padding: 2px 0px 0px 39px;list-style-image: url(/img/bullet-splash.gif); font-size:.8em;}
+#splash li {color:#fff;}
+#content-left li {padding: 2px 0px 0px 25px;}
+#content-left a {color:#fff;text-decoration:none;padding-left:16px;font-size:.8em;background: url(/img/bullet-grey1.jpg) no-repeat;}
+#content-left a:hover {color:#c72121;padding-left:16px;font-size:.8em;background: url(/img/bullet-red1.jpg) no-repeat;}
+
+
+
+#content-left.sub li {padding: 2px 0px 0px 25px;}
+.sub a {color:#fff;text-decoration:none;padding-left:16px;font-size:.8em;background: url(/img/bullet-grey1.jpg) no-repeat;}
+.sub a:hover {color:#000;padding-left:16px;font-size:.8em;background: url(/img/bullet-red1.jpg) no-repeat;}
+
+
+a:hover{color:#c72121;}
+.currentpage {color:#c72121;padding-left:16px;font-size:.8em;background: url(/img/bullet-red1.jpg) no-repeat;}
+
+h2 {padding: 0px 0px 0px 5px;font-size:1em;}
+.off a, .off {color:#ccc;}
+
+h1, h1 strong {color:#c72121;}
+
+.f1{font-size:20px;color:#000000;}
+.f2{font-size:11px;line-height:16px;}
+.f3{font-size:14px;color:#666666;}
+.f4{font-size:10px;}
+.f5{font-size:10px;font-weight:bold;color:#000000;}
+.f6{font-size:12px;font-weight:bold;color:#000000;}
+.f7{font-size:11px;font-weight:bold;color:#000000;}
+.f8{font-size:12px;font-weight:bold;color:#00703C;}
+.f9{color:#000000;}
+.f10{font-size:11px;color:#000000;}
+.f11{font-size:11px;color:#505050;}
+.f12{font-size:16px;color:#70A088; margin-bottom:5px;}
+.fWhite{font-size:16px;color:#FFFFFF; margin-bottom:5px;}
+
+right-element {
+   position: absolute;
+   right: 0;
+   width: 50%;
+   text-align: right; /* depends on element width */
+   }
+   
+left-element {
+	position: absolute;
+	left: 0;
+	width: 50%;
+	text-align: left; /* depends on element width */
+	}
+
+.container {
+   position: relative;
+   height: 50px;
+   }
+	
+	
+	

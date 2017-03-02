@@ -1,0 +1,12 @@
+ToolBox {
+
+public void addTool(String imgSrc, String width, String height, String border, String hrefLink, String caption, String text)
+	cur += GenerateTool(imgSrc,width,height,border,hrefLink,caption,text);
+}
+
+
+publc String generate() {
+	return cur;
+}
+
+}

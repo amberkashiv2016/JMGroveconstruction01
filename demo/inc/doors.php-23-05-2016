@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<?php $currentpage = "doors"; ?>
+<html>
+<head>
+	<title>Replacement Doors, replacement sliding door, replacement entry doors, sliding door, front door, entry door, glass door, exterior door, exterior doors, Custom French door, Prehung hung doors, door contractor, install Steel front door, door repair, Located in Glassboro,  serving Pitman New Jersey Nj, Williamstown New Jersey Nj, Sicklerville New Jersey Nj, Berlin New Jersey Nj, Vineland New Jersey Nj, Swedesboro New Jersey Nj, Blackwood New Jersey Nj, Mantua Township New Jersey Nj, Washington township New Jersey Nj, Woodbury New Jersey Nj, Sewell New Jersey Nj</title>
+	<link rel="stylesheet" href="inc/grovestyle.css" type="text/css"><meta name="description" content="J. M. Grove  - The experts in home improvement services - including replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more! Located in Glassboro,  serving Pitman New Jersey Nj, Williamstown New Jersey Nj, Sicklerville New Jersey Nj, Berlin New Jersey Nj, Vineland New Jersey Nj, Swedesboro New Jersey Nj, Blackwood New Jersey Nj, Mantua Township New Jersey Nj, Washington township New Jersey Nj, Woodbury New Jersey Nj, Sewell New Jersey Nj."/>
+	<meta name="keywords" content=" replacement door, replacement sliding Doors, sliding door,  replacement entry doors, front door, entry door, glass door, exterior door, French door, exterior doors,  sliding doors, installation information doors, door repair, contractor, install front door, Located in Glassboro,  serving Pitman New Jersey Nj, Williamstown New Jersey Nj, Sicklerville New Jersey Nj, Berlin New Jersey Nj, Vineland New Jersey Nj, Swedesboro New Jersey Nj, Blackwood New Jersey Nj, Mantua Township New Jersey Nj, Washington township New Jersey Nj, Woodbury New Jersey Nj, Sewell New Jersey Nj.">
+	<meta name="description" content="J. M. Grove -Install replacement door, replacement sliding Doors, sliding door, replacement entry doors, front door, entry door, glass door, exterior door, French door, exterior doors, sliding doors,door contractor, install front door, door repair, Located in Glassboro,  serving Pitman New Jersey Nj, Williamstown New Jersey Nj, Sicklerville New Jersey Nj, Berlin New Jersey Nj, Vineland New Jersey Nj, Swedesboro New Jersey Nj, Blackwood New Jersey Nj, Mantua Township New Jersey Nj, Washington township New Jersey Nj, Woodbury New Jersey Nj, Sewell New Jersey Nj."> 
+	
+</head>
+<body>
+<div align="center">
+	<div id="shell">
+		<?php  include("inc/header.php"); ?>	
+		<div id="content">
+			<?php include("inc/leftmenu.php"); ?>			
+			<div id="content-right">
+				<div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
+				<?php 
+				$val00 = $_GET['home'];
+				$val0 = $_GET['type'];
+				$val = $_GET['style'];
+				$val1 = $_GET['color'];
+				$val2 = $_GET['glass'];
+				$val3 = $_GET['hardware'];
+				$val4 = $_GET['accessories'];
+				include("inc/doorheader.php");
+				if ($val00 == "") {
+					include("inc/doorhome.php");
+					include("inc/fullcatalog.php");
+				} elseif ($val0 == "") {
+					include("inc/doortype.php");
+					include("inc/fullcatalog.php");
+				} elseif ($val == "") {
+					include("inc/doorstyle.php");
+					include("inc/fullcatalog.php");
+				} elseif ($val1 == "") {
+					include("inc/doorcolor.php");	
+					include("inc/fullcatalog.php");
+				} elseif ($val2 == "") {
+					include("inc/doorglass.php");	
+					include("inc/fullcatalog.php");
+				} elseif ($val3 == "") {
+					include("inc/doorhardware.php");	
+					include("inc/fullcatalog.php");
+				} else {
+					include("inc/buy.php");
+				}
+				?>
+				<p style="padding-bottom:20px;">&nbsp;</p>
+			</div>
+			<?php include("inc/testimonials.php"); ?>	
+		</div>
+		<?php include("inc/footer.php"); ?>	
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7195628-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</html>
