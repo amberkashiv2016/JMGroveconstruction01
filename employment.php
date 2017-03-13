@@ -48,7 +48,7 @@
                         <a class="formlink fancybox" href="#formbox" onClick="document.getElementById('formbox').style.display='block';"><img src="img/button-employment.jpg" border="0"></a> 
         <div id="formbox" style="display:none;">
         <div class="innerbox">                 
-           <h2 class="boxheading">Employment Application</h2>
+           <h2 class="boxheading">Employment Application - Testing for CI on Demo site</h2>
            <form name="myForm" action="sendemployee.php" method="POST"  enctype="multipart/form-data" onSubmit="return formValidation()">
          <div class="content" style="width:600px;border:1px solid;">
   <div class="leftdiv" style="width:250px;padding-left:10px;margin-left:20px;margin-top:20px;float:left;">
