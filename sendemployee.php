@@ -3,13 +3,12 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
-	echo "start";
 	
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
 	mssql_select_db("JGBS",$conn);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
-	 error_reporting(E_ALL);
+	// error_reporting(E_ALL);
 	// ini_set("display_errors", 1);
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
@@ -102,7 +101,7 @@
 		{$worked='no';} */
 		
 		// alterchange double quote to single quote
-		echo $sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","GETDATE()","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'")';
+		$sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","GETDATE()","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
@@ -117,8 +116,8 @@
 		$email = $_POST['email'];
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
-		echo $redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
-		//header("location:$redirect_url");
+		$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
+		header("location:$redirect_url");
 
 	}
 		
