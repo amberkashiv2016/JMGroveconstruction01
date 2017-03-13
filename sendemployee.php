@@ -104,18 +104,26 @@
 		// alterchange double quote to single quote
 		echo $sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","GETDATE()","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'")';
 		
-		//echo $sql;exit;
-		/*$query = mssql_query($sql);
-		if ($query === false){
-			exit("<pre>".print_r(mssql_error(), true));
-		}
-		else
-		{
-		
-		}*/
-		
-		
+			//echo $sql;exit;
+	$query = mssql_query($sql);
+	if ($query === false){
+		exit("<pre>".print_r(mssql_error(), true));
 	}
+	else
+	{
+		//echo "Record Inserted Successfully";
+		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
+		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
+		$email = $_POST['email'];
+		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
+		$lastID = $result['id'];
+		echo $redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
+		//header("location:$redirect_url");
+
+	}
+		
+		
+}
 
 	
 
