@@ -118,8 +118,8 @@
 		$lastID = $result['id'];
 		
 		
-		$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
-		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
+		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
+		$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
 		header("location:$redirect_url");
 
 	}
