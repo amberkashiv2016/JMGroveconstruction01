@@ -3,6 +3,7 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
+	echo "start";
 	
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
