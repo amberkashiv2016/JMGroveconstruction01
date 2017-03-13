@@ -116,8 +116,11 @@
 		$email = $_POST['email'];
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
-		echo $redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
-		//header("location:$redirect_url");
+		
+		
+		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
+		$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
+		header("location:$redirect_url");
 
 	}
 		
