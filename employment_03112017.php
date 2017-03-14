@@ -249,6 +249,22 @@ width:100%;
         }
 		h2.boxheading{font-size: 20px; margin: 0 0 12px; padding: 0;}
 		label.f-label{display: inline-block; font-size: 1em; font-weight: bold; margin-bottom: 5px;}
+		.cntpref {
+    background: #efeeee;
+    padding: 10px;
+    width: 94%;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.cntpref span {
+    float: left;
+    width: 40%;
+}
+.cntpref label {
+    display: inline-block;
+    margin-left: 5%;
+}
     </style>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
