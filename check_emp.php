@@ -12,6 +12,7 @@
 	echo "test";
 	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers"));
 	
+	print_r($result);
 	foreach($result as $row)
 	{
 	echo $row->Email."<br>";
