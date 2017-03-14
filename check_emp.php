@@ -14,6 +14,6 @@
 	
 	foreach($result as $row)
 	{
-	echo $row->FristName."<br>";
+	echo $row->Email."<br>";
 	}
 	?>
