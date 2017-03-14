@@ -674,6 +674,17 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
+											
+											<div class="cntpref">
+											<span class="cntpref_txt">Contact prefrence</span>
+												<label><input type="checkbox" id="email_contact" name="email_contact"> Email</label>
+												<label><input type="checkbox" id="call_contact" name="call_contact"> calls</label>
+												<label><input type="checkbox" id="text_contact" name="text_contact"> Text</label>
+												<label><input type="checkbox" id="mail_contact" name="mail_contact"> mail</label>
+											</div>
+											
+											
+											
                                             <div class="col-250 left">
                                                <label  class="f-label"> Job type:</label>
                                                 <select name="jobtype" id="jobtype" class=emp-ddl>
