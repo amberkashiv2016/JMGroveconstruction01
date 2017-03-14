@@ -84,9 +84,7 @@
 		$usertype = $_POST['position']=='sales' ? 'SalesUser' : 'installer';
 		$CruntEmployement = strtolower($_POST['employed'])=='yes' ? 1 : 0; //Current employmemnt status
 		$FELONY = isset($_POST['crime']) && strtolower($_POST['crime'])=='yes' ? 1 : 0; 	//felony yes/no
-		//$FELONY = isset($_POST['crime']) && $_POST['crime']=='yes' ? 1 : 0; 	//felony yes/no
 		$CrimeStatus = strtolower($_POST['drugtest'])=='yes' ? 1 : 0; //drug test yes/no
-		//$CrimeStatus = isset($_POST['drugtest']) && $_POST['drugtest']=='yes' ? 1 : 0; //drug test yes/no
 		$email_contact = (isset($_POST['email_contact'])) ? 1 : 0; // email contact preference 
 		$call_contact = (isset($_POST['call_contact'])) ? 1 : 0;  // call contact preference 
 		$text_contact = (isset($_POST['text_contact'])) ? 1 : 0; // text contact preference 
