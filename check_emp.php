@@ -9,6 +9,7 @@
 	mssql_select_db("JGBS",$conn);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
+	echo "test";
 	$result = mssql_fetch_assoc(mssql_query("select * from dbo.tblInstallUsers order by DateSourced limit 0,10"));
 	
 	foreach($result as $row)
