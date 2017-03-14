@@ -10,8 +10,9 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	echo "test";
-	$result = mssql_fetch_array(mssql_query("select FristName from dbo.tblInstallUsers"));
+	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers limit 0,1"));
 	
+	echo "<pre>";
 	print_r($result);
 	/*foreach($result as $row)
 	{
