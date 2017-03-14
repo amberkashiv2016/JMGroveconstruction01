@@ -10,7 +10,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	echo "test";
-	$result = mssql_fetch_assoc(mssql_query("select * from dbo.tblInstallUsers order by DateSourced limit 0,10"));
+	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers"));
 	
 	foreach($result as $row)
 	{
