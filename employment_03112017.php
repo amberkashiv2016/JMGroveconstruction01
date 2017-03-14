@@ -362,7 +362,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                     if(($result = mssql_query("SELECT Id,Source FROM tblSource ORDER BY Source")) !== false){
                                                     while( $obj = mssql_fetch_object( $result )) {
                                                     echo "
-                                                    <option value='$obj->Source'> $obj->Source</option>";
+                                                    <option value='$obj->Id'> $obj->Source</option>";
                                                     }
                                                     }
                                                     ?>
@@ -678,13 +678,13 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                <label  class="f-label"> Job type:</label>
                                                 <select name="jobtype" id="jobtype" class=emp-ddl>
                                                 <option value="">select</option>
-                                                    <option value="Part Time - Remote">Part time - Remote</option>
-                                                    <option value="Full Time - Remote">Full time - Remote</option>
-                                                    <option value="Part Time - Onsite">Part time - Onsite</option>
-                                                    <option value="Full Time - Onsite">Full time - Onsite</option>
-                                                    <option value="Internship">Internship</option>
-                                                    <option value="Temp">Temp</option>
-                                                    <option value="Sub">Sub</option>
+                                                    <option value="1">Part time - Remote</option>
+                                                    <option value="2">Full time - Remote</option>
+                                                    <option value="3">Part time - Onsite</option>
+                                                    <option value="4">Full time - Onsite</option>
+                                                    <option value="5">Internship</option>
+                                                    <option value="6">Temp</option>
+                                                    <option value="7">Sub</option>
                                                 </select>
                                             </div>
                                             <div class="col-250 right">
