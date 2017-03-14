@@ -15,6 +15,6 @@
 	//print_r($result);
 	foreach($result as $row)
 	{
-	echo $row['Email']."<br>";
+	echo $row['FristName']."<br>";
 	}
 	?>
