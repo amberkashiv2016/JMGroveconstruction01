@@ -10,7 +10,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	echo "test";
-	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers limit 0,1"));
+	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers"));
 	
 	echo "<pre>";
 	print_r($result);
