@@ -787,7 +787,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <label id="workedforjg-error" class="error" for="workedforjg"></label>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 right" style="margin-bottom:10px; margin-top: 15px;">
+                                            <div class="col-250 left" style="margin-bottom:10px; margin-top: 15px;">
                                                 <label class="f-label">Attach resume with References</label>
                                                 <input type="file" style="display:block;" name="resume" id="resume" />
                                             </div>

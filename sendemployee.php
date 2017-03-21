@@ -62,8 +62,8 @@
 			if (($_FILES["profilepic"]["size"] < 2097152)	&& in_array($extension, $allowedExts)){
 			if(move_uploaded_file($_FILES['profilepic']['tmp_name'], $target_path))
 			{
-			echo "The file ".  basename( $_FILES['profilepic']['name'])." has been uploaded successfully";
-				echo 'file moved';
+			//echo "The file ".  basename( $_FILES['profilepic']['name'])." has been uploaded successfully";
+				//echo 'file moved';
 				//exit();
 			} else
 			{
