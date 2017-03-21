@@ -1206,7 +1206,7 @@ var d = document.loginform;
 				404: function() {
 				  alert('Not a valid github username');
 				  jQuery("#er_chk_gitunm").css('display','inline');
-				  
+				  document.myForm.git_uname.focus();
 				},
 				200: function() {
 				  //alert('Valid Username');	
@@ -1300,6 +1300,7 @@ var d = document.loginform;
 				  alert('Not a valid github username');
 				  jQuery("#er_chk_gitunm").css('display','inline');
 				  jQuery("#frm_sub").attr('disabled','disabled');
+				  document.myForm.git_uname.focus();
 				},
 				200: function() {
 				  //alert('Valid Username');	
