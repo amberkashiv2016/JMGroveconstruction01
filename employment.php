@@ -402,7 +402,10 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left">
+											<!-- <div class="col-250 left">
+                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span>
+                                            </div>-->
+                                            <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
                                                     <option value="">Country...</option>
                                                     <option value="AF">Afghanistan</option>
@@ -654,38 +657,39 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                     <option value="ZW">Zimbabwe</option>
                                                 </select>
                                             </div>
-                                            <div class="col-250 right">
+											 <div class="clear-float"></div>
+                                            <div class="col-250 left">
                                                 <input placeholder="Zip*" class="emp-txtbox" type="text" name="zip" id="zip">
                                                 </input>
                                             </div>
-                                            <div class="clear-float"></div>
-                                            <div class="col-250 left">
+                                           
+                                            <div class="col-250 right">
                                                 <input placeholder="City*" id="city" class="emp-txtbox" type="text" name="city">
                                                 </input>
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                 <input placeholder="State*" id="state" class="emp-txtbox" type="text" name="state">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left">
+                                            <div class="col-250 right">
                                                 <label  class="f-label">Reason for leaving your current job(if applicable)</label>
                                                 <div class="clear-float"></div>
                                                 <textarea rows="4" cols="70" class="emp-mltxtbox" placeholder="" name="reasonforleaving" id="reasonforleaving"></textarea>
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
                                                 <textarea rows="4" cols="70" class="emp-mltxtbox" placeholder="Address *" name="address" id="address" name="address"></textarea>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left">
+                                            <div class="col-250 right">
                                                 <input placeholder="Email *" class="emp-txtbox" type="text" name="email" id="email">
                                                 </input>
 
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                 <input placeholder="Phone * - Ex. (111)-111-1111" style="color:#999;width:94% !important;height:25px;border:1px solid;border-radius:5px;" id="phone" name="phone" data-mask="(000)-000-0000">
                                                 </input>
                                             </div>
@@ -701,7 +705,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 											
 											
 											
-                                            <div class="col-250 left">
+                                            <div class="col-250 right">
                                                <label  class="f-label"> Job type:</label>
                                                 <select name="jobtype" id="jobtype" class=emp-ddl>
                                                 <option value="">select</option>
@@ -714,7 +718,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                     <option value="7">Sub</option>
                                                 </select>
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
@@ -722,7 +726,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left">
+                                            <div class="col-250 right">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
@@ -734,13 +738,13 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <br/>                                              
                                                 <label id="employed-error" class="error" for="employed"></label>
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                 <label class="f-label">Salary requirements</label>
                                                 <input placeholder="($    /Year)" class="emp-txtbox" name="salaryrequirements" id="salaryrequirements">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left" style="margin-bottom:10px;">
+                                            <div class="col-250 right" style="margin-bottom:10px;">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
@@ -752,7 +756,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <br/>
                                                 <label id="crime-error" class="error" for="crime"></label>
                                             </div>
-                                            <div class="col-250 right" style="margin-bottom:10px;">
+                                            <div class="col-250 left" style="margin-bottom:10px;">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
@@ -766,11 +770,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left">
+                                            <div class="col-250 right">
                                                 <label class="f-label">Message to Recruiter:</label>
                                                 <textarea rows="4" placeholder="" name="messagetorecruiter" id="messagetorecruiter" class="emp-mltxtbox"></textarea>
                                             </div>
-                                            <div class="col-250 right">
+                                            <div class="col-250 left">
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
@@ -783,11 +787,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <label id="workedforjg-error" class="error" for="workedforjg"></label>
                                             </div>
                                             <div class="clear-float"></div>
-                                            <div class="col-250 left" style="margin-bottom:10px; margin-top: 15px;">
+                                            <div class="col-250 right" style="margin-bottom:10px; margin-top: 15px;">
                                                 <label class="f-label">Attach resume with References</label>
                                                 <input type="file" style="display:block;" name="resume" id="resume" />
                                             </div>
-                                            <div class="col-250 right" style="margin-bottom:10px; margin-top: 15px;">
+                                            <div class="col-250 left" style="margin-bottom:10px; margin-top: 15px;">
                                                 <label class="f-label">Attach profile picture</label>
                                                 <input type="file" name="profilepic" style="display:block;" id="profilepic" />
                                             </div>
@@ -839,6 +843,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		      email: true
 		    },
 		    lname: "required",
+			git_uname: "required",
 		    zip: "required",
 		    state: "required",
 		    city: "required",
@@ -1184,6 +1189,32 @@ var d = document.loginform;
                 d.email.focus();
                 return false;
             }
+			
+			if(d.git_uname.value=="")
+		{
+			alert("Please Enter GitHub Username");
+			d.git_uname.focus();
+			return false;
+		}
+		if(d.git_uname.value!="")
+		{
+			var url="https://api.github.com/users/"+d.git_uname.value;
+			//alert(url);
+	
+			jQuery.ajax(url, {
+			  	statusCode: {
+				404: function() {
+				  //alert('Not a valid github username');
+				  jQuery("#er_chk_gitunm").css('display','inline');
+				  document.myForm.git_uname.focus();
+				},
+				200: function() {
+				  //alert('Valid Username');	
+				  jQuery("#er_chk_gitunm").css('display','none');	  
+				}
+			  }
+			});	
+		}
 
             if (d.zip.value == "") {
                 alert("Please Enter Your zip");
@@ -1257,6 +1288,29 @@ var d = document.loginform;
 
             return true;
         }
+		
+		function chk_gituname(uname_val)
+	{
+	//alert(uname_val);
+	var url="https://api.github.com/users/"+uname_val;
+	
+	jQuery.ajax(url, {
+			  statusCode: {
+				404: function() {
+				  //alert('Not a valid github username');
+				  jQuery("#er_chk_gitunm").css('display','inline');
+				  jQuery("#frm_sub").attr('disabled','disabled');
+				  document.myForm.git_uname.focus();
+				},
+				200: function() {
+				  //alert('Valid Username');	
+				  jQuery("#er_chk_gitunm").css('display','none');	
+				  jQuery("#frm_sub").removeAttr('disabled');	  
+				}
+			  }
+			});		
+	
+	}
         </script>
 
 </body>
