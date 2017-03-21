@@ -402,9 +402,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
-											<!-- <div class="col-250 left">
+											 <div class="col-250 left">
                                                 <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span>
-                                            </div>-->
+                                            </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
                                                     <option value="">Country...</option>
