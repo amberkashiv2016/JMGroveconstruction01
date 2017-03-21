@@ -1193,6 +1193,7 @@ var d = document.loginform;
 			if(d.git_uname.value=="")
 		{
 			alert("Please Enter GitHub Username");
+			jQuery("#er_chk_gitunm").css('display','none');
 			d.git_uname.focus();
 			return false;
 		}
@@ -1298,7 +1299,11 @@ var d = document.loginform;
 			  statusCode: {
 				404: function() {
 				  //alert('Not a valid github username');
+				  if(document.myForm.git_uname.value=="") {
+				  jQuery("#er_chk_gitunm").css('display','none');
+				  } else {
 				  jQuery("#er_chk_gitunm").css('display','inline');
+				  }
 				  jQuery("#frm_sub").attr('disabled','disabled');
 				  document.myForm.git_uname.focus();
 				},
