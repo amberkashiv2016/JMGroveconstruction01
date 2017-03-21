@@ -843,6 +843,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		      email: true
 		    },
 		    lname: "required",
+			git_uname: "required",
 		    zip: "required",
 		    state: "required",
 		    city: "required",
