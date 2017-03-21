@@ -657,11 +657,12 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                     <option value="ZW">Zimbabwe</option>
                                                 </select>
                                             </div>
+											 <div class="clear-float"></div>
                                             <div class="col-250 left">
                                                 <input placeholder="Zip*" class="emp-txtbox" type="text" name="zip" id="zip">
                                                 </input>
                                             </div>
-                                            <div class="clear-float"></div>
+                                           
                                             <div class="col-250 right">
                                                 <input placeholder="City*" id="city" class="emp-txtbox" type="text" name="city">
                                                 </input>
