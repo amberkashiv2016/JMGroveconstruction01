@@ -387,7 +387,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             <div class="clear-float"></div>
                                             <div class="col-250 left">
                                               <div>
-                                                <input placeholder="First Name*" class="emp-txtbox" style="width:84%;" type="text" name="fname" id="fname">
+                                                <input placeholder="First Name1*" class="emp-txtbox" style="width:84%;" type="text" name="fname" id="fname">
                                                 </input>
                                                 <input placeholder="I*" class="emp-txtbox" type="text"  style="width:10%;" name="NameMiddleInitial" id="NameMiddleInitial">
                                                 </input>
