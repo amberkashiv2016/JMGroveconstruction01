@@ -1190,13 +1190,16 @@ var d = document.loginform;
                 return false;
             }
 			
-			if(d.git_uname.value=="")
-		{
-			alert("Please Enter GitHub Username");
-			jQuery("#er_chk_gitunm").css('display','none');
-			d.git_uname.focus();
-			return false;
-		}
+			if(d.position.value==11 || d.position.value==9)
+			{
+				if(d.git_uname.value=="")
+				{
+				alert("Please Enter GitHub Username");
+				jQuery("#er_chk_gitunm").css('display','none');
+				d.git_uname.focus();
+				return false;
+				}
+			}
 		if(d.git_uname.value!="")
 		{
 			var url="https://api.github.com/users/"+d.git_uname.value;
