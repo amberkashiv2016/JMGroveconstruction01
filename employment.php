@@ -843,7 +843,10 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		      email: true
 		    },
 		    lname: "required",
+			if(document.myForm.position.value==11 || document.myForm.position.value==9)
+			{
 			git_uname: "required",
+			}
 		    zip: "required",
 		    state: "required",
 		    city: "required",
