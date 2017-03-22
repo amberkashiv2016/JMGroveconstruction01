@@ -1173,7 +1173,7 @@ var d = document.loginform;
         function formValidation() {
             //alert('abc');
             var d = document.myForm;
-            //alert(d);
+            alert(d.position.value);
             if (d.fname.value == "") {
                 alert("Please Enter First Name");
                 d.fname.focus();
