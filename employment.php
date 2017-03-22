@@ -1190,7 +1190,7 @@ var d = document.loginform;
                 return false;
             }
 			
-			if(d.position.value=='11' || d.position.value=='9')
+			if(d.position.value=='11')
 			{
 				if(d.git_uname.value=="")
 				{
