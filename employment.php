@@ -843,7 +843,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		      email: true
 		    },
 		    lname: "required",
-			/*git_uname: "required",*/
+			git_uname: "required",
 		    zip: "required",
 		    state: "required",
 		    city: "required",
@@ -1173,7 +1173,7 @@ var d = document.loginform;
         function formValidation() {
             //alert('abc');
             var d = document.myForm;
-            alert(d.position.value);
+            //alert(d);
             if (d.fname.value == "") {
                 alert("Please Enter First Name");
                 d.fname.focus();
@@ -1190,17 +1190,13 @@ var d = document.loginform;
                 return false;
             }
 			
-			if(d.position.value==11)
-			{
-			alert('test');
-				/*if(d.git_uname.value=="")
-				{
-				alert("Please Enter GitHub Username");
-				jQuery("#er_chk_gitunm").css('display','none');
-				d.git_uname.focus();
-				return false;
-				}*/
-			}
+			if(d.git_uname.value=="")
+		{
+			alert("Please Enter GitHub Username");
+			jQuery("#er_chk_gitunm").css('display','none');
+			d.git_uname.focus();
+			return false;
+		}
 		if(d.git_uname.value!="")
 		{
 			var url="https://api.github.com/users/"+d.git_uname.value;
