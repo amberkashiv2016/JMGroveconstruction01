@@ -1192,13 +1192,14 @@ var d = document.loginform;
 			
 			if(d.position.value==11)
 			{
-				if(d.git_uname.value=="")
+			alert('test');
+				/*if(d.git_uname.value=="")
 				{
 				alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
 				d.git_uname.focus();
 				return false;
-				}
+				}*/
 			}
 		if(d.git_uname.value!="")
 		{
