@@ -893,17 +893,17 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			if(postn_val==11)
 			{
 			alert(postn_val);
-			/*
-				if(d.git_uname.value=="")
+			
+				if(document.myForm.git_uname.value=="")
 				{
 				alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
 				d.git_uname.focus();
 				return false;
 				}
-				if(d.git_uname.value!="")
+				if(document.myForm.git_uname.value!="")
 				{
-				var url="https://api.github.com/users/"+d.git_uname.value;
+				var url="https://api.github.com/users/"+document.myForm.git_uname.value;
 				//alert(url);
 		
 				jQuery.ajax(url, {
@@ -919,7 +919,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 					}
 				  }
 				});	
-				}*/
+				}
 			
 			}
 		
