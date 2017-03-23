@@ -80,7 +80,7 @@
 			}
 		}
 		
-		if($_POST['position']==8 || $_POST['position']==9 || $_POST['position']==10 || $_POST['position']==11 || $_POST['position']==12 || $_POST['position']==13 || $_POST['position']==21)
+		/*if($_POST['position']==8 || $_POST['position']==9 || $_POST['position']==10 || $_POST['position']==11 || $_POST['position']==12 || $_POST['position']==13 || $_POST['position']==21)
 		{
 			if($_POST['git_uname']=='')
 			{
@@ -89,7 +89,7 @@
 			
 			}
 		
-		}
+		}*/
 		
 		// set variables
 		$worked = isset($_POST['workedforjg']) && $_POST['workedforjg']=='yes' ? 1 : 0;
