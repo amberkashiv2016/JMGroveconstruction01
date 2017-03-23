@@ -888,7 +888,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
 	
 		function chk_gitunm_val(postn_val)
 		{
-			if(postn_val==11)
+			
+			alert(postn_val);
+			/*if(postn_val==11)
 			{
 			
 				if(d.git_uname.value=="")
@@ -918,7 +920,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				});	
 				}
 			
-			}
+			}*/
 		
 		}
 
