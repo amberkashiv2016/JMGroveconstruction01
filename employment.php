@@ -925,6 +925,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			
 			}
 			else {
+			jQuery("#git_uname_error").css('display','none');
 			jQuery("#frm_sub").removeAttr('disabled');
 			}
 		
