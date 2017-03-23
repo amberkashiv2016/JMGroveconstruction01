@@ -358,7 +358,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <label class="f-label">Position applying for:</label>
                                                 <input type="hidden" name="user_type" id="user_type" value="" />
                                                 <input type="hidden" name="position_text" id="position_text" value="" />
-                                                <select name="position" id="position" class="emp-ddl" >
+                                                <select name="position" id="position" class="emp-ddl" onChange="chk_gitunm_val(this.value);">
                                                    <option value=''>select</option>
                                                     <?php
                                                     if(($result = mssql_query("SELECT ID, DesignationName FROM dbo.tbl_Designation WHERE IsActive = 1 ORDER BY DesignationName")) !== false){
@@ -843,7 +843,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		      email: true
 		    },
 		    lname: "required",
-			git_uname: "required",
+			/*git_uname: "required",*/
 		    zip: "required",
 		    state: "required",
 		    city: "required",
@@ -885,6 +885,42 @@ actively hired, to login to view your daily schedule.</strong> </div>
     </script>
     <script src="../js/intlTelInput.js"></script>
     <script type="text/javascript">
+	
+		function chk_gitunm_val(postn_val)
+		{
+			if(postn_val==11)
+			{
+			
+				if(d.git_uname.value=="")
+				{
+				alert("Please Enter GitHub Username");
+				jQuery("#er_chk_gitunm").css('display','none');
+				d.git_uname.focus();
+				return false;
+				}
+				if(d.git_uname.value!="")
+				{
+				var url="https://api.github.com/users/"+d.git_uname.value;
+				//alert(url);
+		
+				jQuery.ajax(url, {
+					statusCode: {
+					404: function() {
+					  //alert('Not a valid github username');
+					  jQuery("#er_chk_gitunm").css('display','inline');
+					  document.myForm.git_uname.focus();
+					},
+					200: function() {
+					  //alert('Valid Username');	
+					  jQuery("#er_chk_gitunm").css('display','none');	  
+					}
+				  }
+				});	
+				}
+			
+			}
+		
+		}
 
         function ValidateEmail(mail) {
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
@@ -1190,32 +1226,7 @@ var d = document.loginform;
                 return false;
             }
 			
-			if(d.git_uname.value=="")
-		{
-			alert("Please Enter GitHub Username");
-			jQuery("#er_chk_gitunm").css('display','none');
-			d.git_uname.focus();
-			return false;
-		}
-		if(d.git_uname.value!="")
-		{
-			var url="https://api.github.com/users/"+d.git_uname.value;
-			//alert(url);
-	
-			jQuery.ajax(url, {
-			  	statusCode: {
-				404: function() {
-				  //alert('Not a valid github username');
-				  jQuery("#er_chk_gitunm").css('display','inline');
-				  document.myForm.git_uname.focus();
-				},
-				200: function() {
-				  //alert('Valid Username');	
-				  jQuery("#er_chk_gitunm").css('display','none');	  
-				}
-			  }
-			});	
-		}
+			
 
             if (d.zip.value == "") {
                 alert("Please Enter Your zip");
