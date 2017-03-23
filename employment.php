@@ -403,7 +403,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             </div>
                                             <div class="clear-float"></div>
 											 <div class="col-250 left">
-                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span>
+                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><label style="display:none" id="git_uname_error" class="error" for="Username">This field is required.</label><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span>
                                             </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
@@ -898,6 +898,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				{
 				//alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
+				jQuery("#git_uname_error").css('display','inline');
 				document.myForm.git_uname.focus();
 				return false;
 				}
@@ -905,7 +906,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				{
 				var url="https://api.github.com/users/"+document.myForm.git_uname.value;
 				//alert(url);
-		
+				jQuery("#git_uname_error").css('display','none');
 				jQuery.ajax(url, {
 					statusCode: {
 					404: function() {
@@ -1308,7 +1309,7 @@ var d = document.loginform;
 	{
 	//alert(uname_val);
 	var url="https://api.github.com/users/"+uname_val;
-	
+	jQuery("#git_uname_error").css('display','none');
 	jQuery.ajax(url, {
 			  statusCode: {
 				404: function() {
