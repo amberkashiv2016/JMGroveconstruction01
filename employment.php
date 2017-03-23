@@ -899,7 +899,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				//alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
 				jQuery("#git_uname_error").css('display','inline');
-				document.myForm.git_uname.focus();
+				//document.myForm.git_uname.focus();
 				return false;
 				}
 				if(document.myForm.git_uname.value!="")
@@ -912,7 +912,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 					404: function() {
 					  //alert('Not a valid github username');
 					  jQuery("#er_chk_gitunm").css('display','inline');
-					  document.myForm.git_uname.focus();
+					  //document.myForm.git_uname.focus();
 					},
 					200: function() {
 					  //alert('Valid Username');	
@@ -1320,7 +1320,7 @@ var d = document.loginform;
 				  jQuery("#er_chk_gitunm").css('display','inline');
 				  }
 				  jQuery("#frm_sub").attr('disabled','disabled');
-				  document.myForm.git_uname.focus();
+				  //document.myForm.git_uname.focus();
 				},
 				200: function() {
 				  //alert('Valid Username');	
