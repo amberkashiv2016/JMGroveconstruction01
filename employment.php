@@ -900,6 +900,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				jQuery("#er_chk_gitunm").css('display','none');
 				jQuery("#git_uname_error").css('display','inline');
 				//document.myForm.git_uname.focus();
+				jQuery("#frm_sub").attr('disabled','disabled');
 				return false;
 				}
 				if(document.myForm.git_uname.value!="")
