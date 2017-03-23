@@ -924,6 +924,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				}
 			
 			}
+			else {
+			jQuery("#frm_sub").removeAttr('disabled');
+			}
 		
 		}
 
