@@ -802,7 +802,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             <div class="g-recaptcha" data-sitekey="6LeGzBMUAAAAAN2ph9MEqiwcQAFdiKs-_bWhmgdM"></div>
                                             <div class="clear-float"></div>
                                              <div class="pad-5 btn_sec" style="text-align: center;">
-                                                <input onClick="return emailBlur();" type="submit" name="submit" value="Submit"
+                                                <input id="frm_sub" onClick="return emailBlur();" type="submit" name="submit" value="Submit"
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
