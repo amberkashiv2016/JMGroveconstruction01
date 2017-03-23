@@ -889,10 +889,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		function chk_gitunm_val(postn_val)
 		{
 			
-			alert(postn_val);
-			/*if(postn_val==11)
-			{
 			
+			if(postn_val==11)
+			{
+			alert(postn_val);
+			/*
 				if(d.git_uname.value=="")
 				{
 				alert("Please Enter GitHub Username");
@@ -918,9 +919,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
 					}
 				  }
 				});	
-				}
+				}*/
 			
-			}*/
+			}
 		
 		}
 
