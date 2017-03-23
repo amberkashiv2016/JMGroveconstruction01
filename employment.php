@@ -892,13 +892,13 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			
 			if(postn_val==11)
 			{
-			alert(postn_val);
+			//alert(postn_val);
 			
 				if(document.myForm.git_uname.value=="")
 				{
-				alert("Please Enter GitHub Username");
+				//alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
-				d.git_uname.focus();
+				document.myForm.git_uname.focus();
 				return false;
 				}
 				if(document.myForm.git_uname.value!="")
