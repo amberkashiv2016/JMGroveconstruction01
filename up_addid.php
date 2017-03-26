@@ -12,8 +12,8 @@
 	
 	
 	echo $sql="UPDATE dbo.tblInstallUsers SET FristName='ww1537ww' WHERE Id=2487";
-	
-	$query = mssql_query($sql);
+	echo "ss";
+	$query = mssql_query($conn,$sql);
 	
 	//echo $sql;exit;
 	if ($query === false){
