@@ -124,10 +124,7 @@
 			
 	$query = mssql_query($sql);
 	
-	$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
-	echo $lastID = $result['id'];
-	
-	echo $sql;exit;
+	//echo $sql;exit;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 		
