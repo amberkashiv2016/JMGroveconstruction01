@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	mssql_query("update dbo.tblInstallUsers SET AddedByUserID='1537' where Id='2487'");
+	mssql_query("update dbo.tblInstallUsers SET FristName='1537' where Id='2487'");
 	
 	if (!mssql_query) {
     // The query has failed, print a nice error message
