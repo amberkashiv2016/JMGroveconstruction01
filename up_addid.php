@@ -11,11 +11,13 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	mssql_query("UPDATE dbo.tblInstallUsers SET 1='ww1537ww' WHERE Id='2487'");
+	$sql="UPDATE dbo.tblInstallUsers SET FristName='ww1537ww' WHERE Id='2487'";
 	
-	if (!mssql_query) {
-    // The query has failed, print a nice error message
-    // using mssql_get_last_message()
-    die('MSSQL error: ' . mssql_get_last_message());
-}
+	$query = mssql_query($sql);
+	
+	//echo $sql;exit;
+	if ($query === false){
+		exit("<pre>".print_r(mssql_error(), true));
+		
+	}
 ?>
