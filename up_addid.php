@@ -19,7 +19,7 @@ echo '\'' . mssql_field_name($query, 0) . '\' is a type of ' .
      '(' . mssql_field_length($query, 0) . ')';
 	
 	
-	echo $sql="UPDATE dbo.tblInstallUsers SET AddedByUserID=1 WHERE Id='2847'";
+	echo $sql="UPDATE dbo.tblInstallUsers SET AddedByUserID=AddedByUserID|4 WHERE Id='2847'";
 	echo "ssq";
 	$query = mssql_query($sql);
 	
