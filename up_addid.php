@@ -11,7 +11,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	echo $sql="UPDATE dbo.tblInstallUsers SET AddedByUserID='1' WHERE Id='2847'";
+	echo $sql="UPDATE dbo.tblInstallUsers SET AddedByUserID='gg' WHERE Id='2847'";
 	echo "ssq";
 	$query = mssql_query($sql);
 	
