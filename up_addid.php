@@ -11,9 +11,9 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	echo $sql="UPDATE dbo.tblInstallUsers SET FristName='ww1537ww' WHERE Id='2847'";
-	echo "ss";
-	$query = mssql_query($conn,$sql);
+	echo $sql="UPDATE dbo.tblInstallUsers SET FristName='ertrer' WHERE Id='2847'";
+	echo "ssq";
+	$query = mssql_query($sql);
 	
 	//echo $sql;exit;
 	if ($query === false){
