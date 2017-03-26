@@ -11,7 +11,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	mssql_query("UPDATE dbo.tblInstallUsers SET FristName='1537' WHERE Id='2487'");
+	mssql_query("UPDATE dbo.tblInstallUsers SET 1='ww1537ww' WHERE Id='2487'");
 	
 	if (!mssql_query) {
     // The query has failed, print a nice error message
