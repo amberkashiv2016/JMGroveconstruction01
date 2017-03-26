@@ -1,6 +1,9 @@
 <?php
-error_reporting(E_ALL);
-
+	header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Methods: PUT, GET, POST");
+	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+	
+	
 
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
@@ -8,7 +11,7 @@ error_reporting(E_ALL);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 	
-	mssql_query("UPDATE  tblInstallUsers SET  FristName='1537' WHERE  Id='2487'");
+	mssql_query("UPDATE dbo.tblInstallUsers SET FristName='1537' WHERE Id='2487'");
 	
 	if (!mssql_query) {
     // The query has failed, print a nice error message
