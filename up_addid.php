@@ -9,4 +9,10 @@ error_reporting(E_ALL);
 	
 	
 	mssql_query("update dbo.tblInstallUsers SET AddedByUserID='1537' where Id='2487'");
+	
+	if (!mssql_query) {
+    // The query has failed, print a nice error message
+    // using mssql_get_last_message()
+    die('MSSQL error: ' . mssql_get_last_message());
+}
 ?>
