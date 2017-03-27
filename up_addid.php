@@ -15,7 +15,7 @@
 	echo "ssq";
 	$query = mssql_query($sql);
 	
-	//echo $sql;exit;
+	echo $sql;exit;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 		
