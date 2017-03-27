@@ -11,11 +11,11 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 
-	echo $sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID='rr' WHERE Id=2891";
+	$sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID='15' WHERE Id=2891";
 	echo "ssq";
 	$query = mssql_query($sql);
 	
-	//echo $sql;exit;
+	echo $sql;exit;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 		
