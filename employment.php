@@ -338,7 +338,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </select>
                                             </div>
                                             <div class="col-250 right">
-                                                <label class="f-label">Source:</label><input type="number" name="AddedByUserID" value="1573" />
+                                                <label class="f-label">Source:</label>
                                                 <select name="source" class="emp-ddl" id="source">
                                                 <option value=''>select</option>
                                                     <?php
