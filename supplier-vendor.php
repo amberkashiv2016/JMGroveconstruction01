@@ -302,9 +302,10 @@ number as login Id &amp; your given password. Complete the interview process or 
 actively hired, to login to view your daily schedule.</strong> </div>
                             </form>
                         </section>
+						<div style="padding: 0px 15px 10px 15px;clear:both;">
 						<h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Become a JMG Supplier! </h1>
 						<p style="padding: 10px 15px 10px 15px;"> we strive to be the best corporate partner possible in our communities. If you are a prospective US, International Merchandising &/or Non- Merchandising supplier, fill the form below</p>
-						
+						</div>
                         <?php if(isset($_GET['view'])=='formbox')
                         {
                         $style= 'block';
