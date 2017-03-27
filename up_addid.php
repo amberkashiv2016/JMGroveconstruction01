@@ -9,7 +9,7 @@
 	mssql_select_db("JGBS",$conn);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
-	$sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=999.AddedByUserID WHERE Id=2891";
+	$sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=2891";
 	echo "ssq";
 	$query = mssql_query($sql);
 	
