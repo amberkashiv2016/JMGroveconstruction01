@@ -11,7 +11,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
 
-	echo $sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID='1537' WHERE Id='2847'";
+	echo $sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID='1537' WHERE Id='2891'";
 	echo "ssq";
 	$query = mssql_query($sql);
 	
@@ -19,5 +19,8 @@
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 		
+	}
+	else {
+	echo "test";
 	}
 ?>
