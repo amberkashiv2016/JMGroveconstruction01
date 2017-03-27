@@ -9,8 +9,8 @@
 	mssql_select_db("JGBS_Dev_New",$conn);
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
-	echo "test";
-	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers where Id=2891"));
+	echo "test1";
+	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers limit 0,1"));
 	
 	echo "<pre>";
 	print_r($result);
