@@ -243,239 +243,122 @@ width:100%;
                 <?php include("inc/employee_leftmenu.php"); ?>
                 <div id="content-right">
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
-                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Welcome to JMG Vendor Portal</h1>
+                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Product Submission</h1>
                     <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
-                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding employees! </p>
-                        <p style="padding: 10px 15px 10px 15px;"> JMG provides suppliers and business partners with access to information and real time apps used for conducting business with JMG company(ies).  This site provides users with business related documentation, contact information, alerts, billing, logisitcs & user actions . </p>
-                        <section class="content_panel" style="min-height:inherit;">
-                        <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
-
-                            <div class="login_right_panel">
-                                <h1 style="text-align:left;"><b>Vendor Login</b></h1>
-
-                                <!-- Tabs starts -->
-                                <div id="tabs-1" style="margin: 0 0 0 0 !important;">
-                                    <div class="login_form_panel" style="margin: 0 0 0 0 !important;">
-                                        <ul>
-                                            <li class="last">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <label>Login Id<span>*</span></label>
-                                                                <input name="txtloginid" id="txtloginid" tabindex="1" placeholder="Enter email address or phone number" style="width:311px;" type="text">
-                                                                <span id="RequiredFieldValidator1" style="color:Red;display:none;">Please Enter UserName</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label>Password<span>*</span></label>
-                                                                <input name="txtpassword" id="txtpassword" tabindex="2" placeholder="Password" value="" style="width:311px;" type="password">
-                                                                <span id="RequiredFieldValidator2" style="color:Red;display:none;">Please Enter Password</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="padding-bottom:2px !important;background:none !important;">
-                                                                <label></label>
-                                                                <div class="btn_sec">
-                                                                    <input name="btnsubmit" value="Login" id="btnsubmit" tabindex="3" style="width: 98% !important; height: 67% !important;" type="submit">
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="padding-top:0px !important;">
-                                                                <label></label>
-                                                                <a id="lnkForgotUsername" href="http://web.jmgrovebuildingsupply.com/ForgotuserId.aspx">Forgot Username</a> &nbsp;<a id="lnkForgotPassword" href="http://web.jmgrovebuildingsupply.com/ForgotPassword.aspx">Forgot Password</a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your given "email" or "phone number" as login Id & your given password. Complete the vendor form below or if already an active vendor,  login to view access of JMG vendor portal.</strong> </div>
-                          </form>
-                        </section>
-						<div style="padding: 0px 15px 10px 15px;clear:both;">
-						<h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Become a JMG Supplier! </h1>
-						<p style="padding: 10px 15px 10px 15px;"> we strive to be the best corporate partner possible in our communities. If you are a prospective US, International Merchandising &/or Non- Merchandising supplier, fill the form below</p>
-						</div>
-                        <?php if(isset($_GET['view'])=='formbox')
-                        {
-                        $style= 'block';
-                        }
-                        else
-                        {
-                        $style ='none';
-                        }
-                        ?>
+                       
+                       
+						
+                       
 
 
                         <div style="padding: 0px 15px 10px 15px;clear:both;">
-                            <div id="formbox" style="display:<?php echo $style;+';'?>margin-left:20px;">
+                            <div id="formbox" style="margin-left:20px;">
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
                                     <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
 
-                                        <div class="emp-content" style="width:650px;border:1px solid;padding: 15 15 0 15;">
+                                        <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
 												<table width="100%" border="0" cellpadding="0" cellspacing="0">
 												<tr>
-												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Your Company Details</div></td>
+												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Info</div></td>
 												</tr>
 												<tr>
 												<td>
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
-														<td width="35%" height="30" align="right">Company<span class="style1">*</span></td>
+														<td width="35%" height="30" align="right">Submission Type<span class="style1">*</span></td>
+														<td width="46%" align="left" style="padding-left:12px"><input type="radio" name="zip" id="zip"> By Product <input type="radio" name="zip" id="zip"> By Catalog</td>
+														<td width="19%">&nbsp;</td>
+														</tr>
+														<tr>
+														<td height="30" align="right">Product Name </td>
+														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
+														<td>&nbsp;</td>
+														</tr>
+														<tr>
+														<td height="30" align="right">Product Pitch<span class="style1">*</span> </td>
+														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
+														<td>&nbsp;</td>
+														</tr>
+														<tr>
+														<td height="30" align="right">Product Description<span class="style1">*</span> </td>
+														<td align="right"><textarea class="emp-txtbox"  style="width:94%; height:80px;" name="zip4" id="zip4"></textarea></td>
+														<td>750 Char Max</td>
+														</tr>
+														<tr>
+														  <td height="30" align="right">Product cost per unit $<span class="style1">*</span> </td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5" value="0.00"></td>
+														  <td>USD</td>
+														</tr>
+														<tr>
+														  <td height="30" align="right">Suggested Retail $<span class="style1">*</span> </td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5" value="0.00"></td>
+														  <td>USD</td>
+														</tr>
+														<tr>
+														  <td height="30" align="right">&nbsp;</td>
+														  <td colspan="2" align="left"><input type="button" name="submit" value="Upload an image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
+														  </tr>
+												  </table>
+
+												</td>
+												</tr>
+												
+												<tr>
+												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Classification</div></td>
+												</tr>
+												<tr>
+												<td>
+														<table width="100%" border="0" cellpadding="0">
+														<tr>
+														<td width="35%" height="30" align="right">THD Product Department<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">US Vendor Number </td>
+														<td height="30" align="right">THD Product Class<span class="style1">*</span> </td>
 														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
 														<td>&nbsp;</td>
 														</tr>
-														<tr>
-														<td height="30" align="right">Supplier Type<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
-														<td>&nbsp;</td>
-														</tr>
-														<tr>
-														<td height="30" align="right">Small or Diverse Supplier?<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
-														<td>&nbsp;</td>
-														</tr>
-														<tr>
-														  <td height="30" align="right">Do you have the ability to drop ship?<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5"></td>
-														  <td>&nbsp;</td>
-														</tr>
+														
 												  </table>
 
 												</td>
 												</tr>
 												
+												
 												<tr>
-												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Your Company Address</div></td>
+												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Logistics</div></td>
 												</tr>
 												<tr>
 												<td>
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
-														<td width="35%" height="30" align="right">Country<span class="style1">*</span></td>
+														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Address 1<span class="style1">*</span> </td>
+														<td height="30" align="right">Where will this be sold?<span class="style1">*</span> </td>
 														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Address 2 </td>
+														<td height="30" align="right">FOB Point<span class="style1">*</span> </td>
 														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">City<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
-														<td>&nbsp;</td>
-														</tr>
-														<tr>
-														  <td height="30" align="right">State/Province<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5"></td>
-														  <td>&nbsp;</td>
-														</tr>
-														<tr>
-														<td height="30" align="right">Postal Code<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
-														<td>&nbsp;</td>
-														</tr>
-												  </table>
-
-												</td>
-												</tr>
-												
-												
-												<tr>
-												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Contact Information</div></td>
-												</tr>
-												<tr>
-												<td>
-														<table width="100%" border="0" cellpadding="0">
-														<tr>
-														<td width="35%" height="30" align="right">Primary Contact Name<span class="style1">*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
-														<td width="26%">&nbsp;24 Char Max</td>
-														</tr>
-														<tr>
-														<td height="30" align="right">Primary Contact Position Title<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
-														<td>&nbsp;</td>
-														</tr>
-														<tr>
-														<td height="30" align="right">Primary Contact Phone Number<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
-														<td>&nbsp;</td>
-														</tr>
-														<tr>
-														<td height="30" align="right">Primary Contact Email Address<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
-														<td>&nbsp;</td>
-														</tr>
-														
-														<tr>
-														<td height="30" align="left"><input type="button" name="zip4" value="+ Add Alternate Contact"></td>
-														<td align="right">&nbsp;</td>
-														<td>&nbsp;</td>
-														</tr>
-												  </table>
-
-												</td>
-												</tr>
-												
-												
-												<tr>
-												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Legal</div></td>
-												</tr>
-												<tr>
-												<td>
-														<table width="100%" border="0" cellpadding="0">
-														<tr>
-														<td height="30" colspan="2" align="left">Legal Agreement</td>
-														</tr>
-														
-														<tr>
-														  <td height="30" colspan="2" align="left"><div style="width:100%; height:200px; overflow:scroll; border:1px solid #999999">
-														    <p>I am submitting to JMG supply, LLC.,(together with its subsidiaries and affiliates, collectively referred to as "<strong>JMG</strong>") certain ideas, technologies, and/or other materials having to do with products, and/or the development of new products, processes, and/or packaging, (collectively referred to as the "<strong>Submission</strong>"). I understand and agree to the following:&nbsp;<br>
-														        <br>
-														      <strong>(1) Non-confidential Submission.</strong>&nbsp;Only non-confidential information is included in the Submission. All information disclosed to JMG in this Submission will be considered non-confidential public information and JMG shall not be required to retain or return any Submission. I will indemnify and hold JMG harmless from and against any and all third party claims, losses, liabilities and damages arising from my Submission.&nbsp;<br>
-														      <br>
-														      <strong>(2) No Commitment.</strong>&nbsp;JMG has no obligation to enter into any discussion or agreement regarding the Submission or pay or buy the Submission. Moreover, nothing herein will prevent JMG from pursuing any conversations or agreements for similar Submissions with other third parties. Further, JMG shall not be limited or prohibited from creating, developing or acquiring any ideas, products, technologies, concepts or systems that are similar to or compete with the Submission.&nbsp;<br>
-														      <br>
-														      <strong>(3) Additional Representations.</strong>&nbsp;I represent that I am 18 years or older. I represent that to the best of my knowledge I am the owner of the Submission or authorized representative of the owner.</p>
-														    <p><strong>(4) Governing Law.</strong>The website from which this document was downloaded ("<strong>Website</strong>"), these terms and conditions, and any Submission made pursuant to the Website is governed by the substantive law of and is subject to the exclusive jurisdiction of the State of Pennsylvania, USA, without regard to any principle of conflict or choice of laws<br>
-													        </p>
-														  
-														  
-														  </div></td>
+														  <td height="30" colspan="3" align="center"><input type="button" name="zip42" value="+ Add Another Product"></td>
 														  </tr>
-														<tr>
-														  <td height="30" align="left">&nbsp;</td>
-														  <td align="left">&nbsp;</td>
-														  </tr>
-														<tr>
-														<td width="4%" height="30" align="left"><input type="checkbox" name="checkbox" value="checkbox"></td>
-														<td width="96%" align="left">I have read and understoon this agreement and agree to be bound by all of its <a href="#">terms and conditions</a><span class="style1">*</span> <a href="#">View Print Legal Agreement</a></td>
-														</tr>
 												  </table>
 
 												</td>
 												</tr>
+												
+												
+												
 												
 												<tr>
 												<td>&nbsp;</td>
