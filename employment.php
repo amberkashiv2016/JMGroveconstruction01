@@ -1,15 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <?php $currentpage = "employment";
+
 $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 $connectionInfo = array( "Database"=>"JGBS_Dev", "UID"=>"devloperuser", "PWD"=>"JG%987");
 $conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
-mssql_select_db("JGBS",$conn);
+/*mssql_select_db("JGBS",$conn);*/
+mssql_select_db("JGC",$conn);
 if( $conn === false ) {
     die( print_r( sqlsrv_errors(), true));
 }
 else
 {
+
 }
+
 ?>
 <html>
 <head>
@@ -24,6 +28,7 @@ else
     <meta name="keywords" content=" J.M Grove, J.M. Grove employment, J.M. Grove jobs, Installer jobs construction, windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks " />
     
     <style>
+
 label.error {
     color: #c72121;
     display:inline-block;
@@ -34,6 +39,7 @@ label.error {
 {
  border-color:#c72121;
 }
+
 .allow-dropdown
 {
 width:100%;    
@@ -46,6 +52,7 @@ width:100%;
             color: #4d4a33;
             font-family: Arial, Helvetica, sans-serif;
         }
+
             .content_panel .login_right_panel {
                 background: #efeeee;
                 border-radius: 10px;
@@ -56,6 +63,7 @@ width:100%;
                 width: 508px;
                 float:left;
             }
+
             .content_panel h1 {
                 background: rgba(193,82,85,1);
                 background: -moz-linear-gradient(top, rgba(193,82,85,1) 0%, rgba(169,64,66,1) 100%);
@@ -74,26 +82,31 @@ width:100%;
                 margin: 0;
                 padding: 0 0 0 25px;
             }
+
                 .content_panel h1 b {
                     font-weight: normal;
                     padding: 0 0 0 18px;
                     color: #FFF;
                 }
+
             .content_panel .login_form_panel {
                 background: #efeeee;
                 border-top: 10px solid #000;
                 min-height: 200px;
                 padding: 0 5px;
             }
+
                 .content_panel .login_form_panel ul {
                     list-style-type: none;
                     margin: 0;
                     overflow: auto;
                     padding: 0;
                 }
+
                     .content_panel .login_form_panel ul li.last {
                         border-right: 0 none;
                     }
+
                     .content_panel .login_form_panel ul li {
                         border-right: 0 solid #fff;
                         float: left;
@@ -101,23 +114,28 @@ width:100%;
                         padding: 0;
                         width: 99%;
                     }
+
                         .content_panel .login_form_panel ul li table {
                             margin: 0 3%;
                             width: 94%;
                         }
+
                             .content_panel .login_form_panel ul li table tr td {
                                 background: rgba(0, 0, 0, 0) url("../img/line.png") repeat-x scroll center bottom;
                                 padding: 10px 15px 12px;
                             }
+
             .content_panel input[type="checkbox"] {
                 float: left;
                 height: 20px;
                 line-height: 20px !important;
                 margin: 0 5px 0 0 !important;
             }
+
             .content_panel label {
                 float: left;
             }
+
             .content_panel .login_form_panel ul li table tr td label {
                 display: inline-block;
                 font-weight: normal;
@@ -127,6 +145,7 @@ width:100%;
                 vertical-align: top;
                 width: 26%;
             }
+
             .content_panel .login_form_panel ul li table tr td input, .content_panel .login_form_panel ul li table tr td textarea, .content_panel .login_form_panel ul li table tr td select {
                 border: 1px solid #b5b4b4;
                 border-radius: 5px;
@@ -134,18 +153,22 @@ width:100%;
                 margin: 0;
                 padding: 5px;
             }
+
             .content_panel a {
                 color: #06c;
                 text-decoration: underline;
             }
+
                 .content_panel a:hover, .content_panel a:focus {
                     color: #09F;
                 }
+
             .content_panel .btn_sec {
                 width: 44%;
                 float: left;
                 height: 60px;
             }
+
         .btn_sec input[type="submit"] {
             background: rgba(193,82,85,1);
             background: -moz-linear-gradient(top, rgba(193,82,85,1) 0%, rgba(169,64,66,1) 100%);
@@ -168,30 +191,38 @@ width:100%;
             text-decoration: none;
             border: 2px solid #FFF !important;
         }
+
         .col-250 {
             width: 320px;
             min-height: 35px;
             margin-bottom:15px;
         }
+
         .left {
             float: left;
         }
+
         .right {
             float: right;
         }
+
         .clear-float {
             float: none;
             clear: both;
         }
+
         .text-left {
             text-align: left;
         }
+
         .text-right {
             text-align: right;
         }
+
         .pad-5 {
             padding: 5px;
         }
+
         .emp-mltxtbox {
             color: #999999;
             width: 94%;
@@ -199,6 +230,7 @@ width:100%;
             border: 1px solid;
             border-radius: 5px;
         }
+
         .emp-txtbox {
             color: #999999;
             width: 94%;
@@ -206,6 +238,7 @@ width:100%;
             border: 1px solid;
             border-radius: 5px;
         }
+
         .emp-ddl {
             color: #999999;
             width: 94%;
@@ -801,6 +834,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
+
     $("#employees_data_form").validate({
 		  rules: {
 		    fname: "required",
@@ -830,11 +864,14 @@ actively hired, to login to view your daily schedule.</strong> </div>
             workedforjg:{required: true},
             source: "required",
             jobtype:"required"
+
 		  },
 		  submitHandler: function(form) {
 		    form.submit();
 		  }
+
 		});
+
 		$("#loginform").validate({
 		  rules: {
 		    txtloginid: "required",
@@ -843,6 +880,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		  submitHandler: function(form) {
 		    form.submit();
 		  }
+
 		});
     </script>
     <script src="../js/intlTelInput.js"></script>
@@ -892,6 +930,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			}
 		
 		}
+
         function ValidateEmail(mail) {
             if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
                 return (true);
@@ -899,8 +938,10 @@ actively hired, to login to view your daily schedule.</strong> </div>
             alert("Please enter valid email address!");
             return (false);
         }
+
         function emailBlur(){
             var email = $("#email").val();
+
                 if (email != '') {
                     //alert(email);
                     $.ajax({
@@ -932,16 +973,23 @@ actively hired, to login to view your daily schedule.</strong> </div>
                     });
                 }
         }
+
         $(document).ready(function () {
+
+
+
             $('#country, #zip').on('change', function () {
                 var str = $('#zip').val() + ',' + $("#country option:selected").text();
                 var geocoder;
                 var map;
+
                 geocoder = new google.maps.Geocoder();
                 var address = str;
                 var city;
+
                 geocoder.geocode({ 'address': address }, function (results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
+
                         for (var component in results[0]['address_components']) {
                             for (var i in results[0]['address_components'][component]['types']) {
                                 if (results[0]['address_components'][component]['types'][i] == "administrative_area_level_1") {
@@ -957,7 +1005,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
                         alert('Invalid Zipcode');
                     }
                 });
+
             });
+
             $("#startdate").datepicker(
                      {
                          minDate: 0,
@@ -967,11 +1017,19 @@ actively hired, to login to view your daily schedule.</strong> </div>
                          yearRange: '1950:2050'
                      }
                  );
+
             var position = $("#position option:selected").text();
+
             $("#position_text").val(position);
+
             $("#otherposition").hide();
+
+
+
             $("#email").on("blur", function () {
+
                 var email = $("#email").val();
+
                 if (email != '') {
                     //alert(email);
                     $.ajax({
@@ -1003,9 +1061,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
                     });
                 }
             });
+
             $("#position").change(function () {
                 //    var position = $("#position").val();
                 var position = $("#position option:selected").text();
+
                 $("#position_text").val(position);
                 //  alert(position);
                 switch (position) {
@@ -1023,8 +1083,10 @@ actively hired, to login to view your daily schedule.</strong> </div>
                 }
                // alert(position);
                 $("#user_type").val(position);
+
             });
 ApplyIntlPhoneValidation();
+
 $("#txtloginid").blur(function(){
     if( $(this).val() != '' &&!ValidateEmail($(this).val()))
     {
@@ -1037,6 +1099,7 @@ $("#txtloginid").blur(function(){
     return true;
     }
 });
+
 // $("#email").blur(function(){
 //   if($(this).val() != '' && !ValidateEmail($(this).val()))
 //     {
@@ -1048,9 +1111,17 @@ $("#txtloginid").blur(function(){
 //     {
 // return true;
 //     }
+
 // });
+
+
 });
+
+
+
+
  function checkAlreadyExistPhone() {
+
                 //var phone = $("#phone").val();
                 var phone = $("#phone").intlTelInput("getNumber");
                 //alert(phone);
@@ -1061,6 +1132,7 @@ $("#txtloginid").blur(function(){
                         data: { phone: phone },
                         success: function (data) {
                             //var returnedData = data.json;
+
                             if (data.trim() == "Exist") {
                                 var r = confirm("This phone is already exists, do you want to go our staff login page?");
                                 if (r == true) {
@@ -1074,14 +1146,20 @@ $("#txtloginid").blur(function(){
                             }
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
+
                             $('#info').html(textStatus + ", " + errorThrown);
                         }
                     });
+
                 }
             }
+
+
 function    ApplyIntlPhoneValidation()
 {
+
 var telInput = $("#phone");
+
 // initialise plugin
 telInput.intlTelInput({
   utilsScript: "../js/intl-tel-utils.js",
@@ -1094,8 +1172,11 @@ telInput.intlTelInput({
     });
   }
 });
+
 var reset = function() {
+
 };
+
 // on blur: validate
 telInput.blur(function() {
   reset();
@@ -1109,11 +1190,15 @@ telInput.blur(function() {
     }
   }
 });
+
 // on keyup / change flag: reset
 telInput.on("keyup change", reset);
+
 }
+
 function    LoginFormValidation ()
 {
+
 var d = document.loginform;
             //alert(d);
             if (d.txtloginid.value == "") {
@@ -1126,7 +1211,9 @@ var d = document.loginform;
                 d.txtpassword.focus();
                 return false;
             }
+
             return true;
+
 }
         function formValidation() {
             //alert('abc');
@@ -1149,16 +1236,19 @@ var d = document.loginform;
             }
 			
 			
+
             if (d.zip.value == "") {
                 alert("Please Enter Your zip");
                 d.zip.focus();
                 return false;
             }
+
             if (d.state.value == "") {
                 alert("Please Enter State");
                 d.state.focus();
                 return false;
             }
+
             if (d.city.value == "") {
                 alert("Please Enter Your City");
                 d.city.focus();
@@ -1179,6 +1269,7 @@ var d = document.loginform;
                 d.startdate.focus();
                 return false;
             }
+
             if (d.salary.value == "") {
                 alert("Please Enter Salary");
                 d.salary.focus();
@@ -1189,6 +1280,7 @@ var d = document.loginform;
                 d.position.focus();
                 return false;
             }
+
             if (document.getElementById('workyes').checked == false && document.getElementById('workno').checked == false) {
                 alert("Please Select Work Status (Yes or No)");
                 return false;
@@ -1201,16 +1293,20 @@ var d = document.loginform;
                 alert("Please Select Crime Status (Yes or No)");
                 return false;
             }
+
             var fmVal = $('#resume').val();
             if (fmVal == '') {
                 alert("Please Upload Resume");
                 return false;
             }
+
             if (d.position.value == "17" && d.otherposition.value == "") {
                 alert("Please Enter Position Name");
                 d.otherposition.focus();
                 return false;
             }
+
+
             return true;
         }
 		
