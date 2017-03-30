@@ -2,9 +2,10 @@
 <?php $currentpage = "employment";
 
 $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-$connectionInfo = array( "Database"=>"JGBS_Dev", "UID"=>"devloperuser", "PWD"=>"JG%987");
-$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
-mssql_select_db("JGBS",$conn);
+
+$connectionInfo = array( "Database"=>"JGBS_Dev_New", "UID"=>"devloperuser", "PWD"=>"JG%987");
+$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
+mssql_select_db("JGBS_Dev_New",$conn);
 /*mssql_select_db("JGC",$conn);*/
 if( $conn === false ) {
     die( print_r( sqlsrv_errors(), true));
@@ -21,7 +22,7 @@ else
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
+    <title>Employmenta - J.M. Grove  - The Home Improvement Specialists</title>
     <link rel="stylesheet" href="../inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="../inc/intlTelInput.css" type="text/css">
     <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
