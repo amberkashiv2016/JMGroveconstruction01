@@ -136,6 +136,8 @@
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
 		
+		$sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID";
+		$query = mssql_query($sql);
 		
 		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
 		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
