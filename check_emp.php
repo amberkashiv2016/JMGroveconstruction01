@@ -5,13 +5,13 @@
 	
 	
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-	$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
-	mssql_select_db("JGBS",$conn);
+	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
+	mssql_select_db("JGBS_Dev_New",$conn);
 	
 	
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
-	echo "select * from dbo.tblInstallUsers where Id=2896";
+	echo "select * from dbo.tblInstallUsers where Id=2896 new";
 	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers where Id=2896"));
 	
 	echo "<pre>";
