@@ -11,8 +11,8 @@
 	
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	
-	echo "select * from dbo.tblInstallUsers where Id=2896 new";
-	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers where Id=2896"));
+	echo "select * from dbo.tblInstallUsers where Id=$_REQUEST[id]";
+	$result = mssql_fetch_array(mssql_query("select * from dbo.tblInstallUsers where Id=$_REQUEST[id]"));
 	
 	echo "<pre>";
 	print_r($result);
