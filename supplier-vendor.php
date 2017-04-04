@@ -661,7 +661,7 @@ width:100%;
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Contact Information</div></td>
 												</tr>
 												<tr>
-												<td>Primary Contact Details</td></tr>
+												<td style="padding: 5px;">Primary Contact Details</td></tr>
 												 <?php
                   $l=1;
 				  $im=1;
@@ -670,8 +670,9 @@ width:100%;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
 												
-												
-												
+											<?php if($i!=0) { ?>	<tr>
+												<td style="padding: 5px;">Alternate Contact Details</td></tr>
+												<?php } ?>
 												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
