@@ -46,9 +46,8 @@
 
 	}
 
-$result = mssql_fetch_array(mssql_query("select * from dbo.tblVendors where VendorId=1"));
+$result = mssql_fetch_array(mssql_query("select * from dbo.tblVendors where Email='test'"));
 	
-	echo "<pre>";
 	print_r($result);
 
 ?>
