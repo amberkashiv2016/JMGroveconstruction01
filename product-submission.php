@@ -8,7 +8,7 @@
 
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
-
+echo $_POST['address1']; exit();
 		$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
 	mssql_select_db("JGBS_Dev_New",$conn);
@@ -24,7 +24,7 @@
 	
 	$address=$_POST['address1'].", ".$_POST['address2'];
 	$VendorId=7;
-echo $address; exit();
+
 
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
