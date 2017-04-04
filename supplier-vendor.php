@@ -660,9 +660,24 @@ width:100%;
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Contact Information</div></td>
 												</tr>
-												<tr>
+												 <?php
+                  $l=1;
+				  $im=1;
+                  for ($i = $im; $i<10+$im; $i++) {
+                    if ($nbr_ligne == 0) $nbr_ligne = $im+1;
+                    if ($i >= $nbr_ligne) $display = 'style="display:none"';
+                    ?>
+												
+												
+												
+												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
+														
+														
+														
+														
+														
 														<tr>
 														<td width="35%" height="30" align="right">Primary Contact Name<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
@@ -684,17 +699,30 @@ width:100%;
 														<td>&nbsp;</td>
 														</tr>
 														
-														<tr>
+														<!--<tr>
 														<td height="30" align="left"><input type="button" id="addmorePOIbutton" value="+ Add Alternate Contact" onclick="add_row()" name="zip4"></td>
 														<td align="right">&nbsp;</td>
 														<td>&nbsp;</td>
-														</tr>
+														</tr>-->
 												  </table>
+												  
+												   <span style="float:right"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>ADD &nbsp;</a>
+                          <?php
+                          if($i> $im)
+                          {
+                            ?>
+                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
+                            if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Delete </a>
+                            <?php
+                          }
+                          ?></span>
 
 												</td>
 												</tr>
 												
-												
+												<?php
+                    }
+                    ?>
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Legal</div></td>
 												</tr>
@@ -785,7 +813,13 @@ width:100%;
 	
  var table=document.getElementById("data_table");
  var table_len=(table.rows.length)-1;
- var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+ 
+  var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+ 
+ 
+ 
+ 
+/* var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";*/
 
  document.getElementById("zip").value="";
  document.getElementById("zip2").value="";
