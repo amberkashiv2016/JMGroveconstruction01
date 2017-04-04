@@ -668,11 +668,13 @@ width:100%;
                   for ($i = $im; $i<10+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
-                    ?>
+                    
+					echo $i;
+					?>
 												
-											<?php if($i!=0) { ?>	<tr>
+											<?php /*?><?php if($i!=0) { ?>	<tr>
 												<td style="padding: 5px;">Alternate Contact Details</td></tr>
-												<?php } ?>
+												<?php } ?><?php */?>
 												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
