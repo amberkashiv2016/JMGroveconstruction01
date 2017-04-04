@@ -706,7 +706,7 @@ width:100%;
 														</tr>-->
 												  </table>
 												  
-												   <span style="float:right"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>ADD &nbsp;</a>
+												   <span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Alternate Contact &nbsp;</a>
                           <?php
                           if($i> $im)
                           {
