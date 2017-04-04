@@ -4,7 +4,7 @@
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
 	
-	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
+	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
 	mssql_select_db("JGBS_Dev_New",$conn);
 	
