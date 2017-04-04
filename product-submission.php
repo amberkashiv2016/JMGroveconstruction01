@@ -24,8 +24,8 @@
 	
 	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","test","'.$_POST['address1'].'")';
 		
-			echo $sql;exit;
-	//$query = mssql_query($sql);
+			//echo $sql;exit;
+	$query = mssql_query($sql);
 	$query=1;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
