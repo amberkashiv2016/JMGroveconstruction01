@@ -670,8 +670,8 @@ width:100%;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
 												
-											<?php if($i!=1) { ?>	<tr>
-												<td style="padding: 5px;">Alternate Contact Details</td></tr>
+											<?php if($i!=1) { ?>	<tr <?=$display?>>
+												<td style="padding: 5px;" >Alternate Contact Details</td></tr>
 												<?php } ?>
 												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
