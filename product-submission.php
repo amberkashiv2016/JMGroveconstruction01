@@ -21,7 +21,7 @@
 
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
-echo $_POST['hid_submit']; exit();
+
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
 			//echo $sql;exit;
