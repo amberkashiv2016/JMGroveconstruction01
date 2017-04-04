@@ -636,7 +636,7 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Address 2 </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
+														<td align="right"><input  class="emp-txtbox" type="text" name="address2" id="address2"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
