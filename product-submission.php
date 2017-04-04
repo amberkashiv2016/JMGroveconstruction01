@@ -22,7 +22,7 @@
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
 
-		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
+		$sql = 'insert into dbo.tblVendors ( VendorName,Email,Address )values ("'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
 			echo $sql;exit;
 	$query = mssql_query($sql);
