@@ -24,11 +24,11 @@
 	
 	$address=$_POST['address1'].", ".$_POST['address2'];
 	$VendorId=7;
-
+echo $address; exit();
 
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
-			echo $sql;exit;
+			//echo $sql;exit;
 	$query = mssql_query($sql);
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
