@@ -3,13 +3,7 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
-	
-	
-
-	if($_POST['hid_submit']=='hid_submit_val')
-	{
-echo $_POST['address1']; exit();
-		$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
+	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
 	mssql_select_db("JGBS_Dev_New",$conn);
 	
@@ -22,11 +16,15 @@ echo $_POST['address1']; exit();
 	$now=date("YmdHis"); //echo $now;
 	$now_dt=date("Y-m-d");
 	
-	$address=$_POST['address1'].", ".$_POST['address2'];
-	$VendorId=7;
 
-
-		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
+	if($_POST['hid_submit']=='hid_submit_val')
+	{
+	
+	//$address=$_POST['address1'].", ".$_POST['address2'];
+	$VendorId=1;
+		echo 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
+exit();
+		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
