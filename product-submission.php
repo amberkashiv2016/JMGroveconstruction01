@@ -4,7 +4,12 @@
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
 	
-	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
+	
+
+	if($_POST['hid_submit']=='hid_submit_val')
+	{
+
+		$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
 	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
 	mssql_select_db("JGBS_Dev_New",$conn);
 	
@@ -12,8 +17,7 @@
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	 //error_reporting(E_ALL);
 	 //ini_set("display_errors", 1);
-	 print_r($_POST);
-	 exit;
+	 
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
 	$now_dt=date("Y-m-d");
@@ -21,8 +25,6 @@
 	$address=$_POST['address1'].", ".$_POST['address2'];
 	$VendorId=7;
 
-	if($_POST['hid_submit']=='hid_submit_val')
-	{
 
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
