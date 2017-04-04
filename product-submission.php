@@ -19,12 +19,12 @@
 
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
-	print_r($_POST);
-	exit();
+	//print_r($_POST);
+	//exit();
 	
-	//$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
+	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","test","'.$_POST['address1'].'")';
 		
-			//echo $sql;exit;
+			echo $sql;exit;
 	//$query = mssql_query($sql);
 	$query=1;
 	if ($query === false){
