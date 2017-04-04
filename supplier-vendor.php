@@ -710,7 +710,7 @@ width:100%;
                           if($i> $im)
                           {
                             ?>
-                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
+                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('cellq<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
                             if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Delete </a>
                             <?php
                           }
