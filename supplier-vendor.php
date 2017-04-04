@@ -660,7 +660,8 @@ width:100%;
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Contact Information</div></td>
 												</tr>
-												<legend style="padding:10px">Primary Contact Details</legend>
+												<tr>
+												<td>Primary Contact Details</td></tr>
 												 <?php
                   $l=1;
 				  $im=1;
