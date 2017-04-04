@@ -32,14 +32,14 @@
 	}
 	else
 	{
-		echo "Record Inserted Successfully";
+		//echo "Record Inserted Successfully";
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
-		/*$email = $_POST['cont_email'];
+		/*$email = $_POST['cont_email'];*/
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
 		
-		echo $lastID." Inserted Successfully";*/
+		echo $lastID." Inserted Successfully";
 		}
 
 
