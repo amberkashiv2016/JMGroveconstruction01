@@ -662,7 +662,7 @@ width:100%;
 												</tr>
 												<tr>
 												<td>
-														<table width="100%" border="0" cellpadding="0" id="POITable">
+														<table width="100%" border="0" cellpadding="0" id="data_table">
 														<tr>
 														<td width="35%" height="30" align="right">Primary Contact Name<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
@@ -685,7 +685,7 @@ width:100%;
 														</tr>
 														
 														<tr>
-														<td height="30" align="left"><input type="button" id="addmorePOIbutton" value="+ Add Alternate Contact" onclick="insRow()" name="zip4"></td>
+														<td height="30" align="left"><input type="button" id="addmorePOIbutton" value="+ Add Alternate Contact" onclick="add_row()" name="zip4"></td>
 														<td align="right">&nbsp;</td>
 														<td>&nbsp;</td>
 														</tr>
@@ -776,21 +776,21 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
-    function insRow()
+    function add_row()
 {
-    console.log( 'hi');
-    var x=document.getElementById('POITable');
-    var new_row = x.rows[1].cloneNode(true);
-    var len = x.rows.length;
-    new_row.cells[0].innerHTML = len;
-    
-    var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-    inp1.id += len;
-    inp1.value = '';
-    var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-    inp2.id += len;
-    inp2.value = '';
-    x.appendChild( new_row );
+ var new_name=document.getElementById("zip").value;
+ var new_country=document.getElementById("zip2").value;
+ var new_age=document.getElementById("zip3").value;
+ var new_zip=document.getElementById("zip4").value;
+	
+ var table=document.getElementById("data_table");
+ var table_len=(table.rows.length)-1;
+ var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+
+ document.getElementById("zip").value="";
+ document.getElementById("zip2").value="";
+ document.getElementById("zip3").value="";
+ document.getElementById("zip4").value="";
 }
 	
 	
