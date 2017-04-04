@@ -22,7 +22,7 @@
 	
 	//$address=$_POST['address1'].", ".$_POST['address2'];
 	$VendorId=1;
-		echo 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
+		echo 'test';
 exit();
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
 		
