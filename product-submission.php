@@ -21,12 +21,12 @@
 	{
 	print_r($_POST);
 	exit();*/
-	
+	$sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode)values ("1","ts")';
 	//$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","test","test","test")';
 		
 			//echo $sql;exit;
-	//$query = mssql_query($sql);
-	$query=1;
+	$query = mssql_query($sql);
+	
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 	}
