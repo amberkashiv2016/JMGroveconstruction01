@@ -10,8 +10,9 @@
 	
 	/*mssql_select_db("JGC",$conn);*/
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
-	 error_reporting(E_ALL);
-	 ini_set("display_errors", 1);
+	 //error_reporting(E_ALL);
+	 //ini_set("display_errors", 1);
+	 print_r($_POST);
 	 exit;
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
