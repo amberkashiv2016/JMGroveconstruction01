@@ -331,17 +331,17 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">Company<span class="style1">*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
+														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="company" id="company"></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">US Vendor Number </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="us_vendor_num" id="us_vendor_num"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Supplier Type<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
+														<td align="right"><select  class="emp-txtbox" name="supp_type" id="supp_type">
 														<option>Select</option>
 														</select>
 														</td>
@@ -803,44 +803,18 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
-    function add_row()
-{
- var new_name=document.getElementById("zip").value;
- var new_country=document.getElementById("zip2").value;
- var new_age=document.getElementById("zip3").value;
- var new_zip=document.getElementById("zip4").value;
-	
- var table=document.getElementById("data_table");
- var table_len=(table.rows.length)-1;
- 
-  var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
- 
- 
- 
- 
-/* var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";*/
-
- document.getElementById("zip").value="";
- document.getElementById("zip2").value="";
- document.getElementById("zip3").value="";
- document.getElementById("zip4").value="";
-}
-	
-	
-	
-	
-	
+    	
 	$("#employees_data_form").validate({
 		  rules: {
-		    fname: "required",
-		    email: {
+		    company: "required",
+		    /*email: {
 		      required: true,
 		      email: true
-		    },
-		    lname: "required",
+		    },*/
+		    us_vendor_num: "required",
 			/*git_uname: "required",*/
-		    zip: "required",
-		    state: "required",
+		    supp_type: "required"
+		    /*state: "required",
 		    city: "required",
 		    address: "required",
 		    phone: "required",
@@ -858,7 +832,7 @@ width:100%;
             drugtest:{required: true},
             workedforjg:{required: true},
             source: "required",
-            jobtype:"required"
+            jobtype:"required"*/
 		  },
 		  submitHandler: function(form) {
 		    form.submit();
@@ -961,124 +935,7 @@ width:100%;
                     });
                 }
         }
-        $(document).ready(function () {
-            $('#country, #zip').on('change', function () {
-                var str = $('#zip').val() + ',' + $("#country option:selected").text();
-                var geocoder;
-                var map;
-                geocoder = new google.maps.Geocoder();
-                var address = str;
-                var city;
-                geocoder.geocode({ 'address': address }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        for (var component in results[0]['address_components']) {
-                            for (var i in results[0]['address_components'][component]['types']) {
-                                if (results[0]['address_components'][component]['types'][i] == "administrative_area_level_1") {
-                                    state = results[0]['address_components'][component]['long_name'];
-                                    city = results[0]['address_components'][1]['long_name'];
-                                    $("#city").val(city);
-                                    $("#state").val(state);
-                                    $('#reasonforleaving').focus();
-                                }
-                            }
-                        }
-                    } else {
-                        alert('Invalid Zipcode');
-                    }
-                });
-            });
-            $("#startdate").datepicker(
-                     {
-                         minDate: 0,
-                         dateFormat: 'yy-mm-dd',
-                         changeMonth: true,
-                         changeYear: true,
-                         yearRange: '1950:2050'
-                     }
-                 );
-            var position = $("#position option:selected").text();
-            $("#position_text").val(position);
-            $("#otherposition").hide();
-            $("#email").on("blur", function () {
-                var email = $("#email").val();
-                if (email != '') {
-                    //alert(email);
-                    $.ajax({
-                        url: "emailValidation.php",
-                        type: "POST",
-                        data: { email: email },
-                        success: function (returnedData) {
-                            //  alert('done');
-                            //var returnedData = data.json;
-                            if (returnedData == "Exist") {
-                                var r = confirm("This email is already exists, do you want to go our staff login page?");
-                                if (r == true) {
-                                    window.location.href = "http://web.jmgrovebuildingsupply.com/stafflogin.aspx";
-                                }
-                                else
-                                {
-                                	
-                                    $("#email").val('');
-                                    $("#email").focus();
-                                    $("#email").trigger('change');
-                                    return false;
-                                }
-                            }
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            //alert('not done');
-                            $('#info').html(textStatus + ", " + errorThrown);
-                        }
-                    });
-                }
-            });
-            $("#position").change(function () {
-                //    var position = $("#position").val();
-                var position = $("#position option:selected").text();
-                $("#position_text").val(position);
-                //  alert(position);
-                switch (position) {
-                    case 'Installer - Helper':
-                    case 'Installer - Journeyman':
-                    case 'Installer - Mechanic':
-                    case 'Installer - Lead mechanic':
-                    case 'Installer - Foreman':
-                    case 'Commercial Only':
-                    case 'SubContractor':
-                        position = 'installer';
-                        break;
-                    default: position = 'SalesUser';
-                        break;
-                }
-               // alert(position);
-                $("#user_type").val(position);
-            });
-ApplyIntlPhoneValidation();
-$("#txtloginid").blur(function(){
-    if( $(this).val() != '' &&!ValidateEmail($(this).val()))
-    {
-        $(this).val('');
-        $(this).focus();
-        return false;
-    }
-    else
-    {
-    return true;
-    }
-});
-// $("#email").blur(function(){
-//   if($(this).val() != '' && !ValidateEmail($(this).val()))
-//     {
-//         $(this).val('');
-//         $(this).focus();
-//         return false;
-//     }
-//     else
-//     {
-// return true;
-//     }
-// });
-});
+        
  function checkAlreadyExistPhone() {
                 //var phone = $("#phone").val();
                 var phone = $("#phone").intlTelInput("getNumber");
