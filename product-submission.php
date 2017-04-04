@@ -46,6 +46,9 @@
 
 	}
 
+echo $result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
+		echo "tt".$lastID = $result['id'];
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
