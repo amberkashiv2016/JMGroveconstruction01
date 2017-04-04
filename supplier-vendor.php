@@ -318,7 +318,7 @@ width:100%;
                             <div id="formbox" style="display:<?php echo $style;+';'?>margin-left:20px;">
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
-                                    <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
+                                    <form name="myForm" action="product-submission.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
 
                                         <div class="emp-content" style="width:650px;border:1px solid;padding: 15 15 0 15;">
                                           
