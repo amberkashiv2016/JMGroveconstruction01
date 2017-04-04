@@ -24,7 +24,7 @@
 
 		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
-			//echo $sql;exit;
+			echo $sql;exit;
 	$query = mssql_query($sql);
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
@@ -34,11 +34,11 @@
 		//echo "Record Inserted Successfully";
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
-		$email = $_POST['cont_email'];
+		/*$email = $_POST['cont_email'];
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
 		
-		echo $lastID." Inserted Successfully";
+		echo $lastID." Inserted Successfully";*/
 		}
 
 
