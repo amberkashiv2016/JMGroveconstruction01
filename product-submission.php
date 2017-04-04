@@ -17,13 +17,12 @@
 	$now_dt=date("Y-m-d");
 	
 
-	if($_POST['hid_submit']=='hid_submit_val')
+	/*if($_POST['hid_submit']=='hid_submit_val')
 	{
+	print_r($_POST);
+	exit();*/
 	
-	//$address=$_POST['address1'].", ".$_POST['address2'];
-	$VendorId=1;
-		
-	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
+	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","test","test","test")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
@@ -32,7 +31,7 @@
 	}
 	else
 	{
-		//echo "Record Inserted Successfully";
+		echo "Record Inserted Successfully";
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
 		/*$email = $_POST['cont_email'];
@@ -44,7 +43,7 @@
 
 
 
-	}
+	/*}*/
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
