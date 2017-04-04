@@ -343,6 +343,7 @@ width:100%;
 														<td height="30" align="right">Supplier Type<span class="style1">*</span> </td>
 														<td align="right"><select  class="emp-txtbox" name="supp_type" id="supp_type">
 														<option value="">Select</option>
+														<option value="1">1</option>
 														</select>
 														</td>
 														<td>&nbsp;</td>
@@ -351,6 +352,7 @@ width:100%;
 														<td height="30" align="right">Small or Diverse Supplier?<span class="style1">*</span> </td>
 														<td align="right"><select  class="emp-txtbox" name="sm_div_supp" id="sm_div_supp">
 														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
@@ -358,6 +360,7 @@ width:100%;
 														  <td height="30" align="right">Do you have the ability to drop ship?<span class="style1">*</span> </td>
 														  <td align="right"><select  class="emp-txtbox" name="ab_drop_ship" id="ab_drop_ship">
 														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														  <td>&nbsp;</td>
 														</tr>
