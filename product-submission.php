@@ -1,3 +1,50 @@
+<?php
+	header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Methods: PUT, GET, POST");
+	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+	
+	
+	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
+	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
+	mssql_select_db("JGBS_Dev_New",$conn);
+	
+	/*mssql_select_db("JGC",$conn);*/
+	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
+	// error_reporting(E_ALL);
+	// ini_set("display_errors", 1);
+	date_default_timezone_set("Asia/Kolkata");
+	$now=date("YmdHis"); //echo $now;
+	$now_dt=date("Y-m-d");
+	
+	$address=$_POST['address1'].", ".$_POST['address2'];
+
+	if($_POST['hid_submit']=='hid_submit_val')
+	{
+
+		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
+		
+			//echo $sql;exit;
+	$query = mssql_query($sql);
+	if ($query === false){
+		exit("<pre>".print_r(mssql_error(), true));
+	}
+	else
+	{
+		//echo "Record Inserted Successfully";
+		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
+		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
+		$email = $_POST['email'];
+		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
+		$lastID = $result['id'];
+		
+		echo $lastID." Inserted Successfully";
+		}
+
+
+
+	}
+
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>

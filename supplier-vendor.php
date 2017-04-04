@@ -679,22 +679,22 @@ width:100%;
 														
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1">*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
+														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="cont_name" id="cont_name"></td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Position Title<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="cont_pos_title" id="cont_pos_title"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Phone Number<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
+														<td align="right"><input  class="emp-txtbox" type="text" name="con_ph_num" id="con_ph_num"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Email Address<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="cont_email" id="cont_email"></td>
 														<td>&nbsp;</td>
 														</tr>
 														
@@ -769,7 +769,7 @@ width:100%;
 										  
 										  
                                         </div>
-										
+										<input type="hidden" name="hid_submit" value="hid_submit_val">
 										 <div class="pad-5 btn_sec" style="text-align: center;">
                                                 <!--<input onClick="window.location='product-submission.php'" type="submit" name="submit" value="Next"
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >-->
