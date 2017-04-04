@@ -17,16 +17,16 @@
 	$now_dt=date("Y-m-d");
 	
 
-	/*if($_POST['hid_submit']=='hid_submit_val')
+	if($_POST['hid_submit']=='hid_submit_val')
 	{
 	print_r($_POST);
-	exit();*/
+	exit();
 	
-	$sql = 'insert into dbo.tblVendors set `VendorId` = "1",`VendorName`="ts",`Email`="tst5642@gmail.com"';
+	//$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
 		
 			//echo $sql;exit;
-	$query = mssql_query($sql);
-	
+	//$query = mssql_query($sql);
+	$query=1;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 	}
@@ -44,7 +44,7 @@
 
 
 
-	/*}*/
+	}
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
