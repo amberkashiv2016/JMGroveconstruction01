@@ -342,22 +342,22 @@ width:100%;
 														<tr>
 														<td height="30" align="right">Supplier Type<span class="style1">*</span> </td>
 														<td align="right"><select  class="emp-txtbox" name="supp_type" id="supp_type">
-														<option>Select</option>
+														<option value="">Select</option>
 														</select>
 														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Small or Diverse Supplier?<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
-														<option>Select</option>
+														<td align="right"><select  class="emp-txtbox" name="sm_div_supp" id="sm_div_supp">
+														<option value="">Select</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Do you have the ability to drop ship?<span class="style1">*</span> </td>
-														  <td align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
-														<option>Select</option>
+														  <td align="right"><select  class="emp-txtbox" name="ab_drop_ship" id="ab_drop_ship">
+														<option value="">Select</option>
 														</select></td>
 														  <td>&nbsp;</td>
 														</tr>
@@ -628,7 +628,7 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Address 1<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="address1" id="address1"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
@@ -638,17 +638,17 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">City<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="city" id="city"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">State/Province<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5"></td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="state" id="state"></td>
 														  <td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Postal Code<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="postal_code" id="postal_code"></td>
 														<td>&nbsp;</td>
 														</tr>
 												  </table>
@@ -752,7 +752,7 @@ width:100%;
 														  <td align="left">&nbsp;</td>
 														  </tr>
 														<tr>
-														<td width="4%" height="30" align="left"><input type="checkbox" name="checkbox" value="checkbox"></td>
+														<td width="4%" height="30" align="left"><input type="checkbox" name="check_terms" value="checkbox"></td>
 														<td width="96%" align="left">I have read and understoon this agreement and agree to be bound by all of its <a href="#">terms and conditions</a><span class="style1">*</span> <a href="#">View Print Legal Agreement</a></td>
 														</tr>
 												  </table>
@@ -812,18 +812,17 @@ width:100%;
 		      required: true,
 		      email: true
 		    },*/
-		    us_vendor_num: "required",
 			/*git_uname: "required",*/
-		    supp_type: "required"
-		    /*state: "required",
+		    supp_type: "required",
+		    sm_div_supp: "required",
+		    ab_drop_ship: "required",
+		    country: "required",
+		    address1: "required",
 		    city: "required",
-		    address: "required",
-		    phone: "required",
-		    startdate: "required",
-		    salary: "required",
-		    position: "required",
-            NameMiddleInitial: "required",
-            reasonforleaving:"required",
+		    state: "required",
+		    postal_code: "required",
+            check_terms: "required",
+           /* reasonforleaving:"required",
             salaryrequirements:"required",
             messagetorecruiter:"required",
             profilepic: "required",
