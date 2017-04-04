@@ -46,8 +46,10 @@
 
 	}
 
-echo $result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
-		echo "tt".$lastID = $result['id'];
+$result = mssql_fetch_array(mssql_query("select * from dbo.tblVendors where VendorId=1"));
+	
+	echo "<pre>";
+	print_r($result);
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
