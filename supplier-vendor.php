@@ -662,7 +662,7 @@ width:100%;
 												</tr>
 												<tr>
 												<td>
-														<table width="100%" border="0" cellpadding="0">
+														<table width="100%" border="0" cellpadding="0" id="POITable">
 														<tr>
 														<td width="35%" height="30" align="right">Primary Contact Name<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
@@ -685,7 +685,7 @@ width:100%;
 														</tr>
 														
 														<tr>
-														<td height="30" align="left"><input type="button" name="zip4" value="+ Add Alternate Contact"></td>
+														<td height="30" align="left"><input type="button" id="addmorePOIbutton" value="+ Add Alternate Contact" onclick="insRow()" name="zip4"></td>
 														<td align="right">&nbsp;</td>
 														<td>&nbsp;</td>
 														</tr>
@@ -776,7 +776,28 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
-    $("#employees_data_form").validate({
+    function insRow()
+{
+    console.log( 'hi');
+    var x=document.getElementById('POITable');
+    var new_row = x.rows[1].cloneNode(true);
+    var len = x.rows.length;
+    new_row.cells[0].innerHTML = len;
+    
+    var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
+    inp1.id += len;
+    inp1.value = '';
+    var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
+    inp2.id += len;
+    inp2.value = '';
+    x.appendChild( new_row );
+}
+	
+	
+	
+	
+	
+	$("#employees_data_form").validate({
 		  rules: {
 		    fname: "required",
 		    email: {
