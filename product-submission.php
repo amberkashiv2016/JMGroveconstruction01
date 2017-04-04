@@ -5,8 +5,8 @@
 	
 	
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-	$conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
-	mssql_select_db("JGBS",$conn);
+	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
+	mssql_select_db("JGBS_Dev_New",$conn);
 	
 	/*mssql_select_db("JGC",$conn);*/
 	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
@@ -22,7 +22,7 @@
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
 
-		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("'.$VendorId.'","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
+		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
@@ -34,7 +34,7 @@
 		//echo "Record Inserted Successfully";
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
-		$email = $_POST['email'];
+		$email = $_POST['cont_email'];
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
 		
