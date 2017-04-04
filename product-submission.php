@@ -3,12 +3,12 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
-	//$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com,1433"; //serverName\instanceName
-	//$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
-	//mssql_select_db("JGBS_Dev_New",$conn);
+	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
+	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
+	mssql_select_db("JGBS_Dev_New",$conn);
 	
 	/*mssql_select_db("JGC",$conn);*/
-	//if( $conn === false ) {	die( print_r( mssql_error(), true)); }
+	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
 	 //error_reporting(E_ALL);
 	 //ini_set("display_errors", 1);
 	 
@@ -22,9 +22,8 @@
 	
 	//$address=$_POST['address1'].", ".$_POST['address2'];
 	$VendorId=1;
-		echo 'test';
-exit();
-		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
+		
+	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$_POST['address1'].'")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
