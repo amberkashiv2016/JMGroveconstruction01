@@ -26,7 +26,7 @@
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
-	$query=1;
+	
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 	}
