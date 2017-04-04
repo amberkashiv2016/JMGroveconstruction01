@@ -17,11 +17,12 @@
 	$now_dt=date("Y-m-d");
 	
 	$address=$_POST['address1'].", ".$_POST['address2'];
+	$VendorId=7;
 
 	if($_POST['hid_submit']=='hid_submit_val')
 	{
 
-		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
+		$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address)values ("'.$VendorId.'","'.$_POST['company'].'","'.$_POST['cont_email'].'","'.$address.'")';
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
