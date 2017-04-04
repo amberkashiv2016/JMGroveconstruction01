@@ -660,6 +660,7 @@ width:100%;
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Contact Information</div></td>
 												</tr>
+												<legend style="padding:10px">Primary Contact Details</legend>
 												 <?php
                   $l=1;
 				  $im=1;
@@ -673,24 +674,24 @@ width:100%;
 												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
-														<legend>Primary Contact Details</legend>
+														
 														<tr>
-														<td width="35%" height="30" align="right">Primary Contact Name<span class="style1">*</span></td>
+														<td width="35%" height="30" align="right">Contact Name<span class="style1">*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="zip" id="zip"></td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Primary Contact Position Title<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Position Title<span class="style1">*</span> </td>
 														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Primary Contact Phone Number<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Phone Number<span class="style1">*</span> </td>
 														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Primary Contact Email Address<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Email Address<span class="style1">*</span> </td>
 														<td align="right"><input class="emp-txtbox" type="text" name="zip4" id="zip4"></td>
 														<td>&nbsp;</td>
 														</tr>
