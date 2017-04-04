@@ -22,10 +22,11 @@
 	print_r($_POST);
 	exit();*/
 	
-	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","test","test","test")';
+	//$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","test","test","test")';
 		
 			//echo $sql;exit;
-	$query = mssql_query($sql);
+	//$query = mssql_query($sql);
+	$query=1;
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
 	}
