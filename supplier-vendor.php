@@ -856,7 +856,7 @@ width:100%;
 		 
 			var inputs = document.getElementsByClassName( 'webcampics' );
 			var names = [];
-			names.push(inputs[1].value);
+			names.push(inputs[0].value);
 			
 			var webcamval = names;
 			alert(webcamval);
