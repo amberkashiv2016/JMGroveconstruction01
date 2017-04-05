@@ -682,22 +682,30 @@ width:100%;
 														
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1">*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>
+														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>">
+														<label id="company-error-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
+														</td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Position Title<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>"></td>
+														<td align="right"><input class="emp-txtbox webcampics2" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>">
+														<label id="company-error2-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
+														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Phone Number<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"></td>
+														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>">
+														<label id="company-error3-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
+														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Email Address<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="cont_email[]" id="cont_email_<?=$i?>"></td>
+														<td align="right"><input class="emp-txtbox webcampics4" type="text" name="cont_email[]" id="cont_email_<?=$i?>">
+														<label id="company-error4-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
+														</td>
 														<td>&nbsp;</td>
 														</tr>
 														
@@ -857,13 +865,46 @@ width:100%;
 			var inputs = document.getElementsByClassName( 'webcampics' );
 			var names = [];
 			names.push(inputs[0].value);
-			
 			var webcamval = names;
-			alert(webcamval);
+			
+			var inputs2 = document.getElementsByClassName( 'webcampics2' );
+			var names2 = [];
+			names2.push(inputs2[0].value);
+			var webcamval2 = names2;
+			
+			var inputs3 = document.getElementsByClassName( 'webcampics3' );
+			var names3 = [];
+			names3.push(inputs3[0].value);
+			var webcamval3 = names3;
+			
+			var inputs4 = document.getElementsByClassName( 'webcampics4' );
+			var names4 = [];
+			names4.push(inputs4[0].value);
+			var webcamval4 = names4;
+			
+			if(webcamval=='')
+			{
+			jQuery('#company-error-1').css('display','inline');
+			return false;
+			}
+			if(webcamval2=='')
+			{
+			jQuery('#company-error2-1').css('display','inline');
+			return false;
+			}
+			if(webcamval3=='')
+			{
+			jQuery('#company-error3-1').css('display','inline');
+			return false;
+			}
+			if(webcamval4=='')
+			{
+			jQuery('#company-error4-1').css('display','inline');
+			return false;
+			}
 			
 			
-			
-            return false;
+            
 		}
 		
 		
