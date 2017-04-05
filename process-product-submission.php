@@ -55,7 +55,7 @@
 			
 			foreach($cont_name as $contact_info)
 			{
-			if(trim($cont_name[$con_loop]!='')
+			if(trim($cont_name[$con_loop])!='')
 				{
 					if($contact_info!='')
 					{
