@@ -857,7 +857,7 @@ width:100%;
 			var inputs = document.getElementsByClassName( 'webcampics' ),
 			names  = [].map.call(inputs, function( input ) {
 			return input.value;
-			}).join( '|' );
+			});
 			
 			alert(names);
 			
