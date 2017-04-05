@@ -22,7 +22,7 @@
 	//print_r($_POST);
 	//exit();
 	
-	$sql = 'insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values ("1","'.$_POST['company'].'","test","'.$_POST['address1'].'")';
+	$sql = "insert into dbo.tblVendors ( VendorId,VendorName,Email,Address )values (1,'cc','dd','gg')";
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
