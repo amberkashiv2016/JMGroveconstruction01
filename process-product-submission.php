@@ -59,8 +59,12 @@
 				{
 					if($contact_info!='')
 					{
+					$a=$cont_email[$con_loop];
+					$b=$con_ph_num[$con_loop];
+					$c=$cont_pos_title[$con_loop];
+					
 						
-						mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,FName,Contact,Title )values ("'.$lastID.'","'.$cont_email.'","'.$contact_info.'","'.$con_ph_num.'","'.$cont_pos_title.'")');
+					mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,FName,Contact,Title )values ("'.$lastID.'","'.$a.'","'.$contact_info.'","'.$b.'","'.$d.'")');
 						
 						
 					}
