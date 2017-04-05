@@ -687,17 +687,17 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Position Title<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox webcampics" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Phone Number<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox webcampics" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"></td>
+														<td align="right"><input  class="emp-txtbox" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Email Address<span class="style1">*</span> </td>
-														<td align="right"><input class="emp-txtbox webcampics" type="text" name="cont_email[]" id="cont_email_<?=$i?>"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="cont_email[]" id="cont_email_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														
