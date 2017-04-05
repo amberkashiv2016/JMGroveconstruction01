@@ -855,13 +855,9 @@ width:100%;
 		{
 		 
 			var inputs = document.getElementsByClassName( 'webcampics' ),
-			names  = [].map.call(inputs, function( input ) {
-			//return input.value;
-			
+			var names = [];
 			names.push(inputs[0].value);
 			
-			
-			});
 			var webcamval = names;
 			alert(webcamval);
 			
