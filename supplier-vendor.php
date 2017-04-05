@@ -854,7 +854,7 @@ width:100%;
 		function cntactvald()
 		{
 		 
-			var inputs = document.getElementsByClassName( 'webcampics' ),
+			var inputs = document.getElementsByClassName( 'webcampics' );
 			var names = [];
 			names.push(inputs[1].value);
 			
