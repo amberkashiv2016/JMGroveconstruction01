@@ -682,30 +682,22 @@ width:100%;
 														
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>">
-														<label id="company-error-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
-														</td>
+														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Position Title<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
-														<td align="right"><input class="emp-txtbox webcampics2" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>">
-														<label id="company-error2-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
-														</td>
+														<td align="right"><input class="emp-txtbox webcampics2" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Phone Number<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
-														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>">
-														<label id="company-error3-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
-														</td>
+														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Email Address<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
-														<td align="right"><input class="emp-txtbox webcampics4" type="text" name="cont_email[]" id="cont_email_<?=$i?>">
-														<label id="company-error4-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
-														</td>
+														<td align="right"><input class="emp-txtbox webcampics4" type="text" name="cont_email[]" id="cont_email_<?=$i?>"></td>
 														<td>&nbsp;</td>
 														</tr>
 														
