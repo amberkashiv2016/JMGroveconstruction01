@@ -682,7 +682,7 @@ width:100%;
 														
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1">*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>
+														<td width="39%" align="right"><input class="emp-txtbox" type="text" name="cont_name_<?=$i?>" id="cont_name_<?=$i?>"></td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
