@@ -824,8 +824,7 @@ width:100%;
 		    city: "required",
 		    state: "required",
 		    postal_code: "required",
-            check_terms: "required",
-			cont_name[0]: "required"
+            check_terms: "required"
            /* reasonforleaving:"required",
             salaryrequirements:"required",
             messagetorecruiter:"required",
