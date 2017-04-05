@@ -681,28 +681,28 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0" id="data_table">
 														
 														<tr>
-														<td width="35%" height="30" align="right">Contact Name<span class="style1">*</span></td>
+														<td width="35%" height="30" align="right">Contact Name<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>">
 														<label id="company-error-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
 														</td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Contact Position Title<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Position Title<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
 														<td align="right"><input class="emp-txtbox webcampics2" type="text" name="cont_pos_title[]" id="cont_pos_title_<?=$i?>">
 														<label id="company-error2-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
 														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Contact Phone Number<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Phone Number<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
 														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>">
 														<label id="company-error3-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
 														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Contact Email Address<span class="style1">*</span> </td>
+														<td height="30" align="right">Contact Email Address<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
 														<td align="right"><input class="emp-txtbox webcampics4" type="text" name="cont_email[]" id="cont_email_<?=$i?>">
 														<label id="company-error4-<?=$i?>" style="display:none" class="error" for="company">This field is required.</label>
 														</td>
@@ -884,22 +884,22 @@ width:100%;
 			
 			if(webcamval=='')
 			{
-			jQuery('#company-error-1').css('display','inline');
+			//jQuery('#company-error-1').css('display','inline');
 			return false;
 			}
 			if(webcamval2=='')
 			{
-			jQuery('#company-error2-1').css('display','inline');
+			//jQuery('#company-error2-1').css('display','inline');
 			return false;
 			}
 			if(webcamval3=='')
 			{
-			jQuery('#company-error3-1').css('display','inline');
+			//jQuery('#company-error3-1').css('display','inline');
 			return false;
 			}
 			if(webcamval4=='')
 			{
-			jQuery('#company-error4-1').css('display','inline');
+			//jQuery('#company-error4-1').css('display','inline');
 			return false;
 			}
 			
