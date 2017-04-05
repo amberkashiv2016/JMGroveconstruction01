@@ -864,8 +864,8 @@ width:100%;
 			}
 			}
 			var webcamval = names;
-			alert(webcamval.join("  -  "));
-			
+			//alert(webcamval.join("  -  "));
+			alert(elem);
 			
 			
 			
