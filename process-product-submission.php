@@ -28,6 +28,8 @@
 	$email_ad=$cont_email[0];
 	
 	$sql = 'insert into dbo.tblVendors ( VendorName,ContactPerson,ContactNumber,Email,Address )values ("'.$_POST['company'].'","'.$conper.'","'.$connum.'","'.$email_ad.'","'.$address.'")';
+	
+	
 		
 			//echo $sql;exit;
 	$query = mssql_query($sql);
@@ -45,6 +47,20 @@
 		$lastID = $result['id'];
 		
 		echo $lastID." Inserted Successfully";
+		
+		$con_loop=1;
+	foreach($cont_name as $contact_info)
+	{
+		if($con_loop!=1)
+		{
+			mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,Contact,Title )values ("'.$lastID.'","'.$cont_email.'","'.$con_ph_num.'","'.$cont_pos_title.'")');
+		
+		}
+	$con_loop++;
+	}
+		
+		
+		
 		}
 
 
