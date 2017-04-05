@@ -854,18 +854,12 @@ width:100%;
 		function cntactvald()
 		{
 		 
-			var elem = document.getElementsByName("cont_name");
-			var names = [];
-			for (var i = 0; i < elem.length; ++i) {
-			if (typeof elem[i].attributes.class !== "undfined") {
-			if(elem[i].attributes.class.value === "webcampics"){
-			names.push(elem[i].value);
-			}
-			}
-			}
-			var webcamval = names;
-			//alert(webcamval.join("  -  "));
-			alert(elem);
+			var inputs = document.getElementsByClassName( 'webcampics' ),
+			names  = [].map.call(inputs, function( input ) {
+			return input.value;
+			}).join( '|' );
+			
+			alert(names);
 			
 			
 			
