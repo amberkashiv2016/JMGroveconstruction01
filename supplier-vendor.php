@@ -679,7 +679,7 @@ width:100%;
 												<tr id="cell<?=$i?>" <?=$display?>>
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
-														
+														<input type="hidden" name="s1[]" value="<?=$i?>">
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
 														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>

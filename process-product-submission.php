@@ -48,18 +48,30 @@
 		
 		echo $lastID." Inserted Successfully";
 		
-		$con_loop=1;
-	foreach($cont_name as $contact_info)
-	{
-		if($con_loop!=1)
+		$con_loop=0;
+		
+		if(count($s1)>0)
 		{
-			mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,Contact,Title )values ("'.$lastID.'","'.$cont_email.'","'.$con_ph_num.'","'.$cont_pos_title.'")');
+			
+			foreach($cont_name as $contact_info)
+			{
+			if(trim($cont_name[$con_loop]!='')
+				{
+					if($contact_info!='')
+					{
+						
+						mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,FName,Contact,Title )values ("'.$lastID.'","'.$cont_email.'","'.$contact_info.'","'.$con_ph_num.'","'.$cont_pos_title.'")');
+						
+						
+					}
+				
+					
+				
+				}
+			
+			}
 		
 		}
-	$con_loop++;
-	}
-		
-		
 		
 		}
 
