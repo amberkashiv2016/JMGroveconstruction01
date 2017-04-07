@@ -273,7 +273,7 @@ width:100%;
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
                                     <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return productvald()">
-
+										<input type="hidden" name="vendorid" value="<?php echo $_REQUEST['vendor_id']; ?>">
                                         <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
 												<table width="100%" border="0" cellpadding="0" cellspacing="0">
