@@ -22,12 +22,8 @@
 	//print_r($_POST);
 	//exit();
 	extract($_POST);
-	$address=$_POST['address1'].", ".$_POST['address2'];
-	$conper=$cont_name[0];
-	$connum=$con_ph_num[0];
-	$email_ad=$cont_email[0];
-	
-	$sql = 'insert into dbo.tblVendors ( VendorName,ContactPerson,ContactNumber,Email,Address )values ("'.$_POST['company'].'","'.$conper.'","'.$connum.'","'.$email_ad.'","'.$address.'")';
+		
+	$sql = 'insert into dbo.tblVendorProduct ( VendorID,ItemDescription,UnitCost )values ("'.$_REQUEST['vendor_id'].'","'.$_POST['product_desc'].'","'.$_POST['product_cost_unit'].'")';
 	
 	
 		
@@ -46,42 +42,9 @@
 		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
 		$lastID = $result['id'];
 		
-		//echo $lastID." Inserted Successfully";
-		
-		$con_loop=0;
-		
-		if(count($s1)>0)
-		{
-			
-			foreach($cont_name as $contact_info)
-			{
-			if(trim($cont_name[$con_loop])!='')
-				{
-					if($contact_info!='')
-					{
-					$a=$cont_email[$con_loop];
-					$b=$con_ph_num[$con_loop];
-					$c=$cont_pos_title[$con_loop];
-					
-						
-					mssql_query('insert into dbo.tblVendorEmail ( VendorId,Email,FName,Contact,Title )values ("'.$lastID.'","'.$a.'","'.$contact_info.'","'.$b.'","'.$d.'")');
-						
-						
-					}
-				
-					
-				
-				}
-			$con_loop++;
-			}
-		
-		}
-		
-		}
-
 		?>
 		<script type="text/javascript">
-            window.location.href = '<?php echo 'http://jmgroveconstruction.com/demo/product-submission.php?vendor_id='.$lastID; ?>';
+            window.location.href = '<?php echo 'http://jmgroveconstruction.com/demo/product-submission.php'; ?>';
           </script>
 		<?php
 

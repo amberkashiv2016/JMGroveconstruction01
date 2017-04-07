@@ -296,7 +296,8 @@ width:100%;
 														<tr>
 														<td height="30" align="right">Product Pitch<span class="style1">*</span> </td>
 														<td align="right"><select  class="emp-txtbox" name="product_pitch" id="product_pitch">
-														<option>Select</option>
+														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
