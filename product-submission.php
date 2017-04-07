@@ -272,7 +272,7 @@ width:100%;
                             <div id="formbox" style="margin-left:20px;">
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
-                                    <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
+                                    <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return productvald()">
 
                                         <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
@@ -371,17 +371,18 @@ width:100%;
 												
 												<td>
 														<table width="100%" border="0" cellpadding="0" id="data_table">
+														<input type="hidden" name="s1[]" value="<?=$i?>">
 														<tr>
-														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1">*</span></td>
-														<td width="39%" align="right"><select  class="emp-txtbox" name="manf_country" id="manf_country">
+														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
+														<td width="39%" align="right"><select  class="emp-txtbox webcampics" name="manf_country[]" id="manf_country">
 														<option value="">Select</option>
 														<option value="1">1</option>
 														</select></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">Where will this be sold?<span class="style1">*</span> </td>
-														<td align="right"> <select name="country" id="country" class="emp-ddl">
+														<td height="30" align="right">Where will this be sold?<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
+														<td align="right"> <select name="country[]" id="country" class="emp-ddl webcampics2">
                                                     <option value="">Country...</option>
                                                     <option value="AF">Afghanistan</option>
                                                     <option value="AL">Albania</option>
@@ -634,16 +635,16 @@ width:100%;
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
-														<td height="30" align="right">FOB Point<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="fob_point" id="fob_point"></td>
+														<td height="30" align="right">FOB Point<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
+														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="fob_point[]" id="fob_point"></td>
 														<td>&nbsp;</td>
 														</tr>
-														<tr>
+														<!--<tr>
 														  <td height="30" colspan="3" align="center"><input type="button" name="zip42" value="+ Add Another Product"></td>
-														  </tr>
+														  </tr>-->
 												  </table>
 												  
-												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Alternate Contact &nbsp;</a>
+												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
                           <?php
                           if($i> $im)
                           {
@@ -676,8 +677,9 @@ width:100%;
                                         </div>
 										
 										 <div class="pad-5 btn_sec" style="text-align: center;">
-                                                <input onClick="window.location='product-submission.php'" type="submit" name="submit" value="Next"
-                                                style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
+                                                <!--<input onClick="window.location='product-submission.php'" type="submit" name="submit" value="Next"
+                                                style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >-->
+												<input type="submit" name="submit" value="Next"  style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
                                             <div class="clear-float"></div>
@@ -710,33 +712,18 @@ width:100%;
     <script type="text/javascript">
     $("#employees_data_form").validate({
 		  rules: {
-		    fname: "required",
+		    /*fname: "required",
 		    email: {
 		      required: true,
 		      email: true
-		    },
-		    lname: "required",
-			/*git_uname: "required",*/
-		    zip: "required",
-		    state: "required",
-		    city: "required",
-		    address: "required",
-		    phone: "required",
-		    startdate: "required",
-		    salary: "required",
-		    position: "required",
-            NameMiddleInitial: "required",
-            reasonforleaving:"required",
-            salaryrequirements:"required",
-            messagetorecruiter:"required",
-            profilepic: "required",
-            resume:"required",
-            employed:{required: true},
-            crime:{required: true},
-            drugtest:{required: true},
-            workedforjg:{required: true},
-            source: "required",
-            jobtype:"required"
+		    },*/
+			submission_type:{required: true},
+		    product_pitch: "required",
+			product_desc: "required",
+		    product_cost_unit: "required",
+		    suggested_retail: "required",
+		    thd_product_dept: "required",
+		    thd_product_class: "required"
 		  },
 		  submitHandler: function(form) {
 		    form.submit();
@@ -751,6 +738,47 @@ width:100%;
 		    form.submit();
 		  }
 		});
+		
+		function productvald()
+		{
+		 
+			var inputs = document.getElementsByClassName( 'webcampics' );
+			var names = [];
+			names.push(inputs[0].value);
+			var webcamval = names;
+			
+			var inputs2 = document.getElementsByClassName( 'webcampics2' );
+			var names2 = [];
+			names2.push(inputs2[0].value);
+			var webcamval2 = names2;
+			
+			var inputs3 = document.getElementsByClassName( 'webcampics3' );
+			var names3 = [];
+			names3.push(inputs3[0].value);
+			var webcamval3 = names3;
+			
+			if(webcamval=='')
+			{
+			//jQuery('#company-error-1').css('display','inline');
+			return false;
+			}
+			if(webcamval2=='')
+			{
+			//jQuery('#company-error2-1').css('display','inline');
+			return false;
+			}
+			if(webcamval3=='')
+			{
+			//jQuery('#company-error3-1').css('display','inline');
+			return false;
+			}
+			
+            
+		}
+		
+		
+		
+		
     </script>
     <script src="../js/intlTelInput.js"></script>
     <script type="text/javascript">
@@ -839,124 +867,7 @@ width:100%;
                     });
                 }
         }
-        $(document).ready(function () {
-            $('#country, #zip').on('change', function () {
-                var str = $('#zip').val() + ',' + $("#country option:selected").text();
-                var geocoder;
-                var map;
-                geocoder = new google.maps.Geocoder();
-                var address = str;
-                var city;
-                geocoder.geocode({ 'address': address }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        for (var component in results[0]['address_components']) {
-                            for (var i in results[0]['address_components'][component]['types']) {
-                                if (results[0]['address_components'][component]['types'][i] == "administrative_area_level_1") {
-                                    state = results[0]['address_components'][component]['long_name'];
-                                    city = results[0]['address_components'][1]['long_name'];
-                                    $("#city").val(city);
-                                    $("#state").val(state);
-                                    $('#reasonforleaving').focus();
-                                }
-                            }
-                        }
-                    } else {
-                        alert('Invalid Zipcode');
-                    }
-                });
-            });
-            $("#startdate").datepicker(
-                     {
-                         minDate: 0,
-                         dateFormat: 'yy-mm-dd',
-                         changeMonth: true,
-                         changeYear: true,
-                         yearRange: '1950:2050'
-                     }
-                 );
-            var position = $("#position option:selected").text();
-            $("#position_text").val(position);
-            $("#otherposition").hide();
-            $("#email").on("blur", function () {
-                var email = $("#email").val();
-                if (email != '') {
-                    //alert(email);
-                    $.ajax({
-                        url: "emailValidation.php",
-                        type: "POST",
-                        data: { email: email },
-                        success: function (returnedData) {
-                            //  alert('done');
-                            //var returnedData = data.json;
-                            if (returnedData == "Exist") {
-                                var r = confirm("This email is already exists, do you want to go our staff login page?");
-                                if (r == true) {
-                                    window.location.href = "http://web.jmgrovebuildingsupply.com/stafflogin.aspx";
-                                }
-                                else
-                                {
-                                	
-                                    $("#email").val('');
-                                    $("#email").focus();
-                                    $("#email").trigger('change');
-                                    return false;
-                                }
-                            }
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            //alert('not done');
-                            $('#info').html(textStatus + ", " + errorThrown);
-                        }
-                    });
-                }
-            });
-            $("#position").change(function () {
-                //    var position = $("#position").val();
-                var position = $("#position option:selected").text();
-                $("#position_text").val(position);
-                //  alert(position);
-                switch (position) {
-                    case 'Installer - Helper':
-                    case 'Installer - Journeyman':
-                    case 'Installer - Mechanic':
-                    case 'Installer - Lead mechanic':
-                    case 'Installer - Foreman':
-                    case 'Commercial Only':
-                    case 'SubContractor':
-                        position = 'installer';
-                        break;
-                    default: position = 'SalesUser';
-                        break;
-                }
-               // alert(position);
-                $("#user_type").val(position);
-            });
-ApplyIntlPhoneValidation();
-$("#txtloginid").blur(function(){
-    if( $(this).val() != '' &&!ValidateEmail($(this).val()))
-    {
-        $(this).val('');
-        $(this).focus();
-        return false;
-    }
-    else
-    {
-    return true;
-    }
-});
-// $("#email").blur(function(){
-//   if($(this).val() != '' && !ValidateEmail($(this).val()))
-//     {
-//         $(this).val('');
-//         $(this).focus();
-//         return false;
-//     }
-//     else
-//     {
-// return true;
-//     }
-// });
-});
+        
  function checkAlreadyExistPhone() {
                 //var phone = $("#phone").val();
                 var phone = $("#phone").intlTelInput("getNumber");
