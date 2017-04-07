@@ -12,43 +12,7 @@
 	 //error_reporting(E_ALL);
 	 //ini_set("display_errors", 1);
 	 
-	date_default_timezone_set("Asia/Kolkata");
-	$now=date("YmdHis"); //echo $now;
-	$now_dt=date("Y-m-d");
 	
-
-	if($_POST['hid_submit']=='hid_submit_val')
-	{
-	//print_r($_POST);
-	//exit();
-	$address=$_POST['address1'].", ".$_POST['address2'];
-	$sql = 'insert into dbo.tblVendors ( VendorName,Email,Address )values ("'.$_POST['company'].'","test@gmail.com","'.$address.'")';
-		
-			//echo $sql;exit;
-	$query = mssql_query($sql);
-	
-	if ($query === false){
-		exit("<pre>".print_r(mssql_error(), true));
-	}
-	else
-	{
-		//echo "Record Inserted Successfully";
-		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
-		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
-		/*$email = $_POST['cont_email'];*/
-		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
-		$lastID = $result['id'];
-		
-		echo $lastID." Inserted Successfully";
-		}
-
-
-
-	}
-
-$result = mssql_fetch_array(mssql_query("select * from dbo.tblVendors where Email='test'"));
-	
-	print_r($result);
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -321,39 +285,39 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">Submission Type<span class="style1">*</span></td>
-														<td width="46%" align="left" style="padding-left:12px"><input type="radio" name="zip" id="zip"> By Product <input type="radio" name="zip" id="zip"> By Catalog</td>
+														<td width="46%" align="left" style="padding-left:12px"><input type="radio" name="submission_type" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type" id="submission_type" value="By Catalog"> By Catalog</td>
 														<td width="19%">&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Name </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="zip2" id="zip2"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="product_name" id="product_name"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Pitch<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
+														<td align="right"><select  class="emp-txtbox" name="product_pitch" id="product_pitch">
 														<option>Select</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Description<span class="style1">*</span> </td>
-														<td align="right"><textarea class="emp-txtbox"  style="width:94%; height:80px;" name="zip4" id="zip4"></textarea></td>
+														<td align="right"><textarea class="emp-txtbox"  style="width:94%; height:80px;" name="product_desc" id="product_desc"></textarea></td>
 														<td>750 Char Max</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Product cost per unit $<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5" value="0.00"></td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="product_cost_unit" id="product_cost_unit" value="0.00"></td>
 														  <td>USD</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Suggested Retail $<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="zip5" id="zip5" value="0.00"></td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="suggested_retail" id="suggested_retail" value="0.00"></td>
 														  <td>USD</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">&nbsp;</td>
-														  <td colspan="2" align="left"><input type="button" name="submit" value="Upload an image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
+														  <td colspan="2" align="left"><input type="button" name="product_image" value="Upload an image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
 
@@ -368,15 +332,17 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">THD Product Department<span class="style1">*</span></td>
-														<td width="39%" align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
-														<option>Select</option>
+														<td width="39%" align="right"><select  class="emp-txtbox" name="thd_product_dept" id="thd_product_dept">
+														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">THD Product Class<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
-														<option>Select</option>
+														<td align="right"><select  class="emp-txtbox" name="thd_product_class" id="thd_product_class">
+														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
@@ -390,13 +356,26 @@ width:100%;
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Logistics</div></td>
 												</tr>
-												<tr>
+												
+												
+												 <?php
+                  $l=1;
+				  $im=1;
+                  for ($i = $im; $i<10+$im; $i++) {
+                    if ($nbr_ligne == 0) $nbr_ligne = $im+1;
+                    if ($i >= $nbr_ligne) $display = 'style="display:none"';
+                    ?>
+												
+												
+												<tr id="cell<?=$i?>" <?=$display?>>
+												
 												<td>
-														<table width="100%" border="0" cellpadding="0">
+														<table width="100%" border="0" cellpadding="0" id="data_table">
 														<tr>
 														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1">*</span></td>
-														<td width="39%" align="right"><select  class="emp-txtbox" name="zip3" id="zip3">
-														<option>Select</option>
+														<td width="39%" align="right"><select  class="emp-txtbox" name="manf_country" id="manf_country">
+														<option value="">Select</option>
+														<option value="1">1</option>
 														</select></td>
 														<td width="26%">&nbsp;</td>
 														</tr>
@@ -656,17 +635,33 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">FOB Point<span class="style1">*</span> </td>
-														<td align="right"><input  class="emp-txtbox" type="text" name="zip3" id="zip3"></td>
+														<td align="right"><input  class="emp-txtbox" type="text" name="fob_point" id="fob_point"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														  <td height="30" colspan="3" align="center"><input type="button" name="zip42" value="+ Add Another Product"></td>
 														  </tr>
 												  </table>
+												  
+												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Alternate Contact &nbsp;</a>
+                          <?php
+                          if($i> $im)
+                          {
+                            ?>
+                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('cellq<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
+                            if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Delete </a>
+                            <?php
+                          }
+                          ?></span>  
+												  
+												  
 
 												</td>
 												</tr>
 												
+												<?php
+                    }
+                    ?>
 												
 												
 												
