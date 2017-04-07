@@ -17,7 +17,7 @@
 	$now_dt=date("Y-m-d");
 	
 
-	if($_POST['hid_submit']=='hid_submit_val')
+	if($_POST['hid_pr_submit']=='hid_pr_submit_val')
 	{
 	//print_r($_POST);
 	//exit();

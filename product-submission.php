@@ -676,7 +676,7 @@ width:100%;
 										  
 										  
                                         </div>
-										
+										<input type="hidden" name="hid_pr_submit" value="hid_pr_submit_val">
 										 <div class="pad-5 btn_sec" style="text-align: center;">
                                                 <!--<input onClick="window.location='product-submission.php'" type="submit" name="submit" value="Next"
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >-->
