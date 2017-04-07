@@ -23,7 +23,7 @@
 	//exit();
 	extract($_POST);
 		
-	$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("","","'.$_POST['product_desc'].'","'.$_POST['product_cost_unit'].'")';
+	$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("","","'.$_POST['product_desc'].'","$_POST[product_cost_unit]")';
 	
 	
 		
