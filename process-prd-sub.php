@@ -23,17 +23,14 @@
 	//exit();
 	extract($_POST);
 	
-	//$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
-	//$last_pid =	$last_pid_qr['pid']+1;
+	$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
+	$last_pid =	$last_pid_qr['pid']+1;
 		
-		print_r($_POST);
-		exit();
-	//$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","","'.$_POST['product_desc'].'","'.$_POST[product_cost_unit].'")';
+	$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","","'.$_POST['product_desc'].'","'.$_POST['product_cost_unit'].'")';
 	
 	
 		
 			//echo $sql;exit;
-			$query=1;
 	$query = mssql_query($sql);
 	
 	if ($query === false){
@@ -54,5 +51,6 @@
           </script>
 		<?php
 
+	}
 	}
 	?>
