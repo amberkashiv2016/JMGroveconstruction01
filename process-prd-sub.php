@@ -24,9 +24,11 @@
 	extract($_POST);
 	
 	$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
-	$last_pid =	$last_pid_qr['pid'];
+	$last_pid =	$last_pid_qr['pid']+1;
 		
-	$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","","'.$_POST['product_desc'].'","'.$_POST[product_cost_unit].'")';
+		echo $last_pid;
+		exit();
+	//$sql = 'insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","","'.$_POST['product_desc'].'","'.$_POST[product_cost_unit].'")';
 	
 	
 		
