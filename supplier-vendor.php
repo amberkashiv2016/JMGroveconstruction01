@@ -245,8 +245,8 @@ width:100%;
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Welcome to JMG Vendor Portal</h1>
                     <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
-                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding employees! </p>
-                        <p style="padding: 10px 15px 10px 15px;"> JMG provides suppliers and business partners with access to information and real time apps used for conducting business with JMG company(ies).  This site provides users with business related documentation, contact information, alerts, billing, logisitcs & user actions . </p>
+                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding vendors! </p>
+                        <p style="padding: 10px 15px 10px 15px;"> JMG provides suppliers and business partners with access to information and real time apps used for conducting business with JMG company(ies).  This site provides users with business related documentation, contact information, alerts, billing, logisitcs & user actions. </p>
                         <section class="content_panel" style="min-height:inherit;">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 
@@ -301,7 +301,7 @@ width:100%;
                         </section>
 						<div style="padding: 0px 15px 10px 15px;clear:both;">
 						<h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Become a JMG Supplier! </h1>
-						<p style="padding: 10px 15px 10px 15px;"> we strive to be the best corporate partner possible in our communities. If you are a prospective US, International Merchandising &/or Non- Merchandising supplier, fill the form below</p>
+						<p style="padding: 10px 15px 10px 15px;"> We strive to be the best corporate partner possible in our communities. If you are a prospective US, International Merchandising &/or Non- Merchandising supplier, fill up the form below:</p>
 						</div>
                         <?php if(isset($_GET['view'])=='formbox')
                         {
@@ -352,7 +352,8 @@ width:100%;
 														<td height="30" align="right">Small or Diverse Supplier?<span class="style1">*</span> </td>
 														<td align="right"><select  class="emp-txtbox" name="sm_div_supp" id="sm_div_supp">
 														<option value="">Select</option>
-														<option value="1">1</option>
+														<option value="small">Small</option>
+														<option value="diverse">Diverse</option>
 														</select></td>
 														<td>&nbsp;</td>
 														</tr>
@@ -360,7 +361,8 @@ width:100%;
 														  <td height="30" align="right">Do you have the ability to drop ship?<span class="style1">*</span> </td>
 														  <td align="right"><select  class="emp-txtbox" name="ab_drop_ship" id="ab_drop_ship">
 														<option value="">Select</option>
-														<option value="1">1</option>
+														<option value="yes">Yes</option>
+														<option value="no">No</option>
 														</select></td>
 														  <td>&nbsp;</td>
 														</tr>
@@ -668,7 +670,7 @@ width:100%;
 												 <?php
                   $l=1;
 				  $im=1;
-                  for ($i = $im; $i<10+$im; $i++) {
+                  for ($i = $im; $i<6+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
@@ -682,7 +684,7 @@ width:100%;
 														<input type="hidden" name="s1[]" value="<?=$i?>">
 														<tr>
 														<td width="35%" height="30" align="right">Contact Name<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
-														<td width="39%" align="right"><input class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>
+														<td width="39%" align="right"><input maxlength="24" class="emp-txtbox webcampics" type="text" name="cont_name[]" id="cont_name_<?=$i?>"></td>
 														<td width="26%">&nbsp;24 Char Max</td>
 														</tr>
 														<tr>
@@ -692,7 +694,11 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Contact Phone Number<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
-														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"></td>
+														<td align="right"><?php /*?><input  class="emp-txtbox webcampics3" type="text" name="con_ph_num[]" id="con_ph_num_<?=$i?>"><?php */?>
+														<input class="emp-txtbox webcampics3" placeholder="Phone * - Ex. (111)-111-1111" style="color:#999;width:94% !important;height:25px;border:1px solid;border-radius:5px;" name="con_ph_num[]" id="con_ph_num_<?=$i?>" data-mask="(000)-000-0000">
+                                                </input>
+														
+														</td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
@@ -743,7 +749,8 @@ width:100%;
 														      <br>
 														      <strong>(2) No Commitment.</strong>&nbsp;JMG has no obligation to enter into any discussion or agreement regarding the Submission or pay or buy the Submission. Moreover, nothing herein will prevent JMG from pursuing any conversations or agreements for similar Submissions with other third parties. Further, JMG shall not be limited or prohibited from creating, developing or acquiring any ideas, products, technologies, concepts or systems that are similar to or compete with the Submission.&nbsp;<br>
 														      <br>
-														      <strong>(3) Additional Representations.</strong>&nbsp;I represent that I am 18 years or older. I represent that to the best of my knowledge I am the owner of the Submission or authorized representative of the owner.</p>
+														      <strong>(3) Additional Representations.</strong>&nbsp;I represent that I am 18 years or older. I represent that to the best of my knowledge I am the owner of the Submission or authorized representative of the owner.<br>
+														      <br>
 														    <p><strong>(4) Governing Law.</strong>The website from which this document was downloaded ("<strong>Website</strong>"), these terms and conditions, and any Submission made pursuant to the Website is governed by the substantive law of and is subject to the exclusive jurisdiction of the State of Pennsylvania, USA, without regard to any principle of conflict or choice of laws<br>
 													        </p>
 														  
