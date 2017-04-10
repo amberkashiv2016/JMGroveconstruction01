@@ -7,7 +7,9 @@
 		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="employment.php?view=formbox" style="text-decoration:none;">Employment</a></div>
 		<div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
 		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="industry.php" style="text-decoration:none;">Industry Links</a></div>
-        
+        <div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
+		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="quote-service-contact-us.php?page=contact" style="text-decoration:none;">Supplier & Vendor</a></div>
+		
         <div style="text-align:center; display:inline-block; float:left; margin-top:12px; margin-left:15px;">
                     <a style="margin:0px 2px;" href="http://www.linkedin.com/company/j.m.-grove" target="_blank" rel="nofollow"><img src="img/social-icon/linkedin-icon.png" width="24px" alt="Linkedin" title="Linkedin"/></a>
                     <a style="margin:0px 2px;" href="https://www.facebook.com/pages/JM-Grove-Construction/420262327994942" target="_blank" rel="nofollow"><img src="img/social-icon/facebook-icon.png" width="24px" alt="Facebook" title="Facebook" /></a>
