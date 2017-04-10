@@ -670,7 +670,7 @@ width:100%;
 												 <?php
                   $l=1;
 				  $im=1;
-                  for ($i = $im; $i<5+$im; $i++) {
+                  for ($i = $im; $i<10+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>

@@ -285,7 +285,7 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">Submission Type<span class="style1">*</span></td>
-														<td width="46%" align="left" style="padding-left:12px"><input type="radio" name="submission_type" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type" id="submission_type" value="By Catalog"> By Catalog</td>
+														<td width="46%" align="left" style="padding-left:12px"><input checked="checked" type="radio" name="submission_type" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type" id="submission_type" value="By Catalog"> By Catalog</td>
 														<td width="19%">&nbsp;</td>
 														</tr>
 														<tr>
@@ -303,7 +303,7 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Description<span class="style1">*</span> </td>
-														<td align="right"><textarea class="emp-txtbox"  style="width:94%; height:80px;" name="product_desc" id="product_desc"></textarea></td>
+														<td align="right"><textarea maxlength="750" class="emp-txtbox"  style="width:94%; height:80px;" name="product_desc" id="product_desc"></textarea></td>
 														<td>750 Char Max</td>
 														</tr>
 														<tr>
@@ -318,7 +318,7 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">&nbsp;</td>
-														  <td colspan="2" align="left"><input type="button" name="product_image" value="Upload an image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
+														  <td colspan="2" align="left"><input type="file" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
 
@@ -362,7 +362,7 @@ width:100%;
 												 <?php
                   $l=1;
 				  $im=1;
-                  for ($i = $im; $i<10+$im; $i++) {
+                  for ($i = $im; $i<5+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
