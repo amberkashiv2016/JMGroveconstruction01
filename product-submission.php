@@ -51,10 +51,11 @@
 /* Example stylistic flourishes */
 
 .fileContainer {
-    background: red;
+    background: rgba(193,82,85,1);
     border-radius: .5em;
     float: left;
     padding: .5em;
+	color: #fff;
 }
 
 .fileContainer [type=file] {
@@ -352,12 +353,7 @@ width:100%;
 														<tr>
 														  <td height="30" align="right">&nbsp;</td>
 														  <td colspan="2" align="left">
-														  <label class="fileContainer">
-    Click here to trigger the file uploader!
-    <input type="file" name="product_image"/>
-</label>Format JPEG - 5MB/Product
-														  
-														  <!--<input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > --></td>
+														  <label class="fileContainer">Upload image<input type="file" name="product_image"/></label>&nbsp;&nbsp;Format JPEG - 5MB/Product <!--<input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > --></td>
 														  </tr>
 												  </table>
 
