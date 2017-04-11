@@ -28,6 +28,38 @@
 }
 .style1 {color: #FF0000}
 -->
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+/* Example stylistic flourishes */
+
+.fileContainer {
+    background: red;
+    border-radius: .5em;
+    float: left;
+    padding: .5em;
+}
+
+.fileContainer [type=file] {
+    cursor: pointer;
+}
     </style>
 <noscript>
     This page needs JavaScript activated to work. 
@@ -319,7 +351,13 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">&nbsp;</td>
-														  <td colspan="2" align="left"><input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
+														  <td colspan="2" align="left">
+														  <label class="fileContainer">
+    Click here to trigger the file uploader!
+    <input type="file" name="product_image"/>
+</label>Format JPEG - 5MB/Product
+														  
+														  <!--<input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > --></td>
 														  </tr>
 												  </table>
 
