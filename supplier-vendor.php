@@ -245,7 +245,7 @@ width:100%;
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Welcome to JMG Vendor Portal</h1>
                     <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
-                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding vendors! </p>
+                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding Vendors & Partners! </p>
                         <p style="padding: 10px 15px 10px 15px;"> JMG provides suppliers and business partners with access to information and real time apps used for conducting business with JMG company(ies).  This site provides users with business related documentation, contact information, alerts, billing, logisitcs & user actions. </p>
                         <section class="content_panel" style="min-height:inherit;">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
