@@ -319,7 +319,7 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">&nbsp;</td>
-														  <td colspan="2" align="left"><input type="file" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
+														  <td colspan="2" align="left"><input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
 
