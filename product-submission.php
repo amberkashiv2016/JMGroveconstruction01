@@ -270,7 +270,8 @@ width:100%;
 
                         <div style="padding: 0px 15px 10px 15px;clear:both;">
                             <div id="formbox" style="margin-left:20px;">
-                                <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
+                                <div class="innerbox" style="margin-left: 10px;padding-top: 20px;">
+								<p style="padding:5px;">You may submit a total of 5 products with each submission.</p>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
                                     <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return productvald()">
 										<input type="hidden" name="vendorid" value="<?php echo $_REQUEST['vendor_id']; ?>">
