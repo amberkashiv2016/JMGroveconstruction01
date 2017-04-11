@@ -296,7 +296,7 @@ width:100%;
                                     
                                 </div>
                             </div>
-                            <div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your given "email" or "phone number" as login Id & your given password. Complete the vendor form below or if already an active vendor,  login to view access of JMG vendor portal.</strong> </div>
+                            <div style="padding: 42px 21px 10px 27px;float: left;width: 132px;text-align: justify;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your given "email" or "phone number" as login Id & your given password. Complete the vendor form below or if already an active vendor,  login to view access of JMG vendor portal.</strong> </div>
                           </form>
                         </section>
 						<div style="padding: 0px 15px 10px 15px;clear:both;">
