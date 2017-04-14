@@ -688,6 +688,19 @@ width:100%;
 												
 												</table>
 												
+												
+												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
+                          <?php
+                          if($i> $im)
+                          {
+                            ?>
+                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('cellq<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
+                            if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Deletes </a>
+                            <?php
+                          }
+                          ?></span>  	
+												
+												
 												 </td>
 												</tr> 
 
@@ -695,16 +708,7 @@ width:100%;
                     }
                     ?>
 										
-									<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
-                          <?php
-                          if($i> $im)
-                          {
-                            ?>
-                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('cellq<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
-                            if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Delete </a>
-                            <?php
-                          }
-                          ?></span>  	
+									
 										
 										
 										
