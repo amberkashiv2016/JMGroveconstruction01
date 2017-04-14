@@ -316,14 +316,14 @@ width:100%;
                   $l=1;
 				  $im=1;
 				  $display = '';
-                  for ($i = $im; $i<2+$im; $i++) {
+                  for ($i = $im; $i<5+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
 										  <tr id="cell<?=$i?>" <?=$display?>>
 												
 												<td>
-										  <input type="hidden" name="s12[]" value="<?=$i?>">
+										  <input type="hidden" name="s1[]" value="<?=$i?>">
 										  
 										  
 												<table width="100%" border="0" cellpadding="0" cellspacing="0" id="data_table">
@@ -368,8 +368,8 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">Upload image</td>
-														  <td colspan="2" align="left">
-														  <!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >&nbsp;&nbsp;Format JPEG - 5MB/Product</td>
+														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >&nbsp;&nbsp;Format JPEG - 5MB/Product</td>
+														 <td>&nbsp;</td>
 														  </tr>
 												  </table>
 
