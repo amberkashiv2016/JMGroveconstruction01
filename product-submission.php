@@ -368,7 +368,7 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">Upload image</td>
-														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" ></td>
+														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="text" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" ></td>
 														 <td>Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
