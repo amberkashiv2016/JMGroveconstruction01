@@ -310,6 +310,21 @@ width:100%;
 										<input type="hidden" name="vendorid" value="<?php echo $_REQUEST['vendor_id']; ?>">
                                         <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
+										 <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+										  
+										  <?php
+                  $l=1;
+				  $im=1;
+                  for ($i = $im; $i<5+$im; $i++) {
+                    if ($nbr_ligne == 0) $nbr_ligne = $im+1;
+                    if ($i >= $nbr_ligne) $display = 'style="display:none"';
+                    ?>
+										  <tr id="cell<?=$i?>" <?=$display?>>
+												
+												<td>
+										  
+										  
+										  
 												<table width="100%" border="0" cellpadding="0" cellspacing="0">
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Info</div></td>
@@ -393,20 +408,7 @@ width:100%;
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Logistics</div></td>
 												</tr>
 												
-												
-												 <?php
-                  $l=1;
-				  $im=1;
-                  for ($i = $im; $i<5+$im; $i++) {
-                    if ($nbr_ligne == 0) $nbr_ligne = $im+1;
-                    if ($i >= $nbr_ligne) $display = 'style="display:none"';
-                    ?>
-												
-												
-												<tr id="cell<?=$i?>" <?=$display?>>
-												
-												<td>
-														<table width="100%" border="0" cellpadding="0" id="data_table">
+												<table width="100%" border="0" cellpadding="0" id="data_table">
 														<input type="hidden" name="s1[]" value="<?=$i?>">
 														<tr>
 														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
@@ -680,7 +682,20 @@ width:100%;
 														  </tr>-->
 												  </table>
 												  
-												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
+												<tr>
+												<td>&nbsp;</td>
+												</tr>
+												
+												</table>
+												
+												 </td>
+												</tr> 
+
+										  <?php
+                    }
+                    ?>
+										
+									<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
                           <?php
                           if($i> $im)
                           {
@@ -689,27 +704,12 @@ width:100%;
                             if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Delete </a>
                             <?php
                           }
-                          ?></span>  
-												  
-												  
-
-												</td>
-												</tr>
+                          ?></span>  	
+										
+										
+										
 												
-												<?php
-                    }
-                    ?>
-												
-												
-												
-												<tr>
-												<td>&nbsp;</td>
-												</tr>
-												
-												</table>
-
-										  
-										  
+										</table>
                                         </div>
 										<input type="hidden" name="hid_pr_submit" value="hid_pr_submit_val">
 										 <div class="pad-5 btn_sec" style="text-align: center;">
