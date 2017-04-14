@@ -35,10 +35,10 @@
 					$pdesc=$product_desc[$con_loop];
 					$pcunit=$product_cost_unit[$con_loop];*/
 					
-					$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
-					$last_pid =	$last_pid_qr['pid']+1;
+					/*$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
+					$last_pid =	$last_pid_qr['pid']+1;*/
 											
-					mssql_query('insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("6","1618","test","2")');
+					mssql_query('insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values (6,1618,"test",2)');
 						
 					}
 				
