@@ -891,7 +891,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		{
 			
 			
-			if(postn_val==8 || postn_val==9 || postn_val==10 || postn_val==11 || postn_val==12 || postn_val==13 || postn_val==21)
+			if(postn_val==10 || postn_val==9 || postn_val==11 || postn_val==12 || postn_val==8)
 			{
 			//alert(postn_val);
 			
