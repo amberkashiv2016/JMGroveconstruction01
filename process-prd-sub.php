@@ -23,32 +23,7 @@
 	//exit();
 	extract($_POST);
 	
-	if(basename( $_FILES['product_image']['name'])!="")
-		{
-			$target_path="ProfilePicture/$now";
-			$target_path = $target_path . basename( $_FILES['product_image']['name']);
-			//gif|jpg|png|jpeg
-			$allowedExts = array("jpg","jpeg","JPG","JPEG");
-			$extension = end(explode(".", $_FILES["product_image"]["name"]));
-			if (($_FILES["product_image"]["size"] < 5097152)	&& in_array($extension, $allowedExts)){
-			if(move_uploaded_file($_FILES['product_image']['tmp_name'], $target_path))
-			{
-			//echo "The file ".  basename( $_FILES['profilepic']['name'])." has been uploaded successfully";
-				//echo 'file moved';
-				//exit();
-			} else
-			{
-				//echo 'locha';
-				//exit();
-				//echo "There was an error uploading the file, please try again!";
-			}
-			}
-			else
-			{
-				echo "Error : please enter valid product picture";
-				exit;
-			}
-		}
+	
 	
 	
 	
@@ -95,7 +70,7 @@
 	
 		
 			//echo $sql;exit;
-	$query = mssql_query($sql);
+	//$query = mssql_query($sql);
 	
 	if ($query === false){
 		exit("<pre>".print_r(mssql_error(), true));
