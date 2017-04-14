@@ -1333,7 +1333,7 @@ var d = document.loginform;
 				200: function() {
 				  //alert('Valid Username');	
 				  jQuery("#er_chk_gitunm").css('display','none');	
-				  //jQuery("#frm_sub").removeAttr('disabled');	  
+				  jQuery("#frm_sub").removeAttr('disabled');	  
 				}
 			  }
 			});		
