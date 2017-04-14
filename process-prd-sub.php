@@ -15,13 +15,14 @@
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
 	$now_dt=date("Y-m-d");
-	extract($_POST);
-
+	//extract($_POST);
+	
+	print_r($_POST);
+	exit();
 	if($_POST['hid_pr_submit']=='hid_pr_submit_val')
 	{
 			
-	print_r($_POST);
-	exit();
+	
 	
 	
 	
