@@ -49,14 +49,13 @@
 				{
 					if($contact_info!='')
 					{
-					$venid==$vendorid[$con_loop];
 					$pdesc=$product_desc[$con_loop];
 					$pcunit=$product_cost_unit[$con_loop];
 					
 					$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
 					$last_pid =	$last_pid_qr['pid']+1;
 											
-					$query = mssql_query('insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","'.$venid.'","'.$pdesc.'","'.$pcunit.'")');
+					$query = mssql_query('insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values ("'.$last_pid.'","'.$_POST['vendorid'].'","'.$pdesc.'","'.$pcunit.'")');
 						
 					}
 				
