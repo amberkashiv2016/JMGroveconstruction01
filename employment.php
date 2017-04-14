@@ -901,7 +901,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				jQuery("#er_chk_gitunm").css('display','none');
 				jQuery("#git_uname_error").css('display','inline');
 				//document.myForm.git_uname.focus();
-				alert(postn_val);
+				//alert(postn_val);
 				jQuery("#frm_sub").attr('disabled','disabled');
 				return false;
 				}
@@ -927,7 +927,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			
 			}
 			else {
-			alert(postn_val);
+			//alert(postn_val);
 			jQuery("#git_uname_error").css('display','none');
 			jQuery("#frm_sub").removeAttr('disabled');
 			}
@@ -1327,13 +1327,13 @@ var d = document.loginform;
 				  } else {
 				  jQuery("#er_chk_gitunm").css('display','inline');
 				  }
-				  jQuery("#frm_sub").attr('disabled','disabled');
+				  //jQuery("#frm_sub").attr('disabled','disabled');
 				  //document.myForm.git_uname.focus();
 				},
 				200: function() {
 				  //alert('Valid Username');	
 				  jQuery("#er_chk_gitunm").css('display','none');	
-				  jQuery("#frm_sub").removeAttr('disabled');	  
+				  //jQuery("#frm_sub").removeAttr('disabled');	  
 				}
 			  }
 			});		
