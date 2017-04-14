@@ -306,7 +306,7 @@ width:100%;
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 20px;">
 								<p style="padding:5px;">You may submit a total of 5 products with each submission.</p>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
-                                    <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data"  >
+                                    <form name="myForm2" action="process-prd-sub.php" method="POST" enctype="multipart/form-data"  >
 										<input type="hidden" name="vendorid" value="<?php echo $_REQUEST['vendor_id']; ?>">
                                         <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
@@ -335,7 +335,7 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">Submission Type<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
-														<td width="46%" align="left" style="padding-left:12px"><input checked="checked" type="radio" name="submission_type[]" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type[]" id="submission_type" value="By Catalog"> By Catalog</td>
+														<td width="46%" align="left" style="padding-left:12px"><input checked="checked" type="radio" name="submission_type" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type" id="submission_type" value="By Catalog"> By Catalog</td>
 														<td width="19%">&nbsp;</td>
 														</tr>
 														<tr>
