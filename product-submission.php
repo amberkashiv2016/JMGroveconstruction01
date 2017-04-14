@@ -322,7 +322,7 @@ width:100%;
 										  <tr id="cell<?=$i?>" <?=$display?>>
 												
 												<td>
-										  
+										  <input type="hidden" name="s1[]" value="<?=$i?>">
 										  
 										  
 												<table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -334,17 +334,17 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">Submission Type<span class="style1">*</span></td>
-														<td width="46%" align="left" style="padding-left:12px"><input checked="checked" type="radio" name="submission_type" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type" id="submission_type" value="By Catalog"> By Catalog</td>
+														<td width="46%" align="left" style="padding-left:12px"><input checked="checked" type="radio" name="submission_type[]" id="submission_type" value="By Product"> By Product <input type="radio" name="submission_type[]" id="submission_type" value="By Catalog"> By Catalog</td>
 														<td width="19%">&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Name </td>
-														<td align="right"><input class="emp-txtbox" type="text" name="product_name" id="product_name"></td>
+														<td align="right"><input class="emp-txtbox" type="text" name="product_name[]" id="product_name"></td>
 														<td>&nbsp;</td>
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Pitch<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="product_pitch" id="product_pitch">
+														<td align="right"><select  class="emp-txtbox" name="product_pitch[]" id="product_pitch">
 														<option value="">Select</option>
 														<option value="1">1</option>
 														</select></td>
@@ -352,23 +352,23 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">Product Description<span class="style1">*</span> </td>
-														<td align="right"><textarea maxlength="750" class="emp-txtbox"  style="width:94%; height:80px;" name="product_desc" id="product_desc"></textarea></td>
+														<td align="right"><textarea maxlength="750" class="emp-txtbox"  style="width:94%; height:80px;" name="product_desc[]" id="product_desc"></textarea></td>
 														<td>750 Char Max</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Product cost per unit $<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="product_cost_unit" id="product_cost_unit" value="0.00"></td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="product_cost_unit[]" id="product_cost_unit" value="0.00"></td>
 														  <td>USD</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Suggested Retail $<span class="style1">*</span> </td>
-														  <td align="right"><input class="emp-txtbox" type="text" name="suggested_retail" id="suggested_retail" value="0.00"></td>
+														  <td align="right"><input class="emp-txtbox" type="text" name="suggested_retail[]" id="suggested_retail" value="0.00"></td>
 														  <td>USD</td>
 														</tr>
 														<tr>
 														  <td height="30" align="right">Upload image</td>
 														  <td colspan="2" align="left">
-														  <!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >&nbsp;&nbsp;Format JPEG - 5MB/Product</td>
+														  <!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >&nbsp;&nbsp;Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
 
@@ -383,7 +383,7 @@ width:100%;
 														<table width="100%" border="0" cellpadding="0">
 														<tr>
 														<td width="35%" height="30" align="right">THD Product Department<span class="style1">*</span></td>
-														<td width="39%" align="right"><select  class="emp-txtbox" name="thd_product_dept" id="thd_product_dept">
+														<td width="39%" align="right"><select  class="emp-txtbox" name="thd_product_dept[]" id="thd_product_dept">
 														<option value="">Select</option>
 														<option value="1">1</option>
 														</select></td>
@@ -391,7 +391,7 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">THD Product Class<span class="style1">*</span> </td>
-														<td align="right"><select  class="emp-txtbox" name="thd_product_class" id="thd_product_class">
+														<td align="right"><select  class="emp-txtbox" name="thd_product_class[]" id="thd_product_class">
 														<option value="">Select</option>
 														<option value="1">1</option>
 														</select></td>
@@ -409,7 +409,7 @@ width:100%;
 												</tr>
 												
 												<table width="100%" border="0" cellpadding="0" id="data_table">
-														<input type="hidden" name="s1[]" value="<?=$i?>">
+														
 														<tr>
 														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
 														<td width="39%" align="right"><select  class="emp-txtbox webcampics" name="manf_country[]" id="manf_country">
