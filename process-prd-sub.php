@@ -41,7 +41,8 @@
 		
 		if(count($s2)>0)
 		{
-	
+	echo count($s2);
+	exit;
 	
 			foreach($product_name as $contact_info)
 			{
