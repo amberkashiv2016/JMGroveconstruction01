@@ -19,10 +19,7 @@
 
 	if($_POST['hid_pr_submit']=='hid_pr_submit_val')
 	{
-	//print_r($_POST);
-	//exit();
-	extract($_POST);
-	
+			
 	print_r($_POST);
 	exit();
 	
