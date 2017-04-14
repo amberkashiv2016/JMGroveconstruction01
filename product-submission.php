@@ -316,14 +316,14 @@ width:100%;
                   $l=1;
 				  $im=1;
 				  $display = '';
-                  for ($i = $im; $i<5+$im; $i++) {
+                  for ($i = $im; $i<2+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
                     ?>
 										  <tr id="cell<?=$i?>" <?=$display?>>
 												
 												<td>
-										  <input type="hidden" name="s1[]" value="<?=$i?>">
+										  <input type="hidden" name="s12[]" value="<?=$i?>">
 										  
 										  
 												<table width="100%" border="0" cellpadding="0" cellspacing="0" id="data_table">
