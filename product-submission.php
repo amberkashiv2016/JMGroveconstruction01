@@ -351,9 +351,9 @@ width:100%;
 														  <td>USD</td>
 														</tr>
 														<tr>
-														  <td height="30" align="right">&nbsp;</td>
+														  <td height="30" align="right">Upload image</td>
 														  <td colspan="2" align="left">
-														  <label class="fileContainer">Upload image<input type="file" name="product_image"/></label>&nbsp;&nbsp;Format JPEG - 5MB/Product <!--<input type="button" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" > --></td>
+														  <!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" name="product_image" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >&nbsp;&nbsp;Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
 
@@ -672,8 +672,8 @@ width:100%;
 														</tr>
 														<tr>
 														<td height="30" align="right">FOB Point<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span> </td>
-														<td align="right"><input  class="emp-txtbox webcampics3" type="text" name="fob_point[]" id="fob_point"></td>
-														<td>&nbsp;</td>
+														<td align="right"><input maxlength="25"  class="emp-txtbox webcampics3" type="text" name="fob_point[]" id="fob_point"></td>
+														<td>25 Char Max</td>
 														</tr>
 														<!--<tr>
 														  <td height="30" colspan="3" align="center"><input type="button" name="zip42" value="+ Add Another Product"></td>
