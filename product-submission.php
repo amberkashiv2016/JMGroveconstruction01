@@ -315,6 +315,7 @@ width:100%;
 										  <?php
                   $l=1;
 				  $im=1;
+				  $display = '';
                   for ($i = $im; $i<5+$im; $i++) {
                     if ($nbr_ligne == 0) $nbr_ligne = $im+1;
                     if ($i >= $nbr_ligne) $display = 'style="display:none"';
@@ -689,12 +690,12 @@ width:100%;
 												</table>
 												
 												
-												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; document.getElementById('cellq<?php echo $i+1;?>').style.display='inline'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
+												<span style="float:right;margin-bottom: 12px;"><a href="javascript:void(0);"  id="add<?=$i?>" onClick="javascript:document.getElementById('cell<?php echo $i+1;?>').style.display='table-row'; this.style.display='none';document.getElementById('del<?=$i?>').style.display='none';"/>+ Add Another Product &nbsp;</a>
                           <?php
                           if($i> $im)
                           {
                             ?>
-                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('cellq<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
+                            <a href="javascript:void(0);" id="del<?=$i?>"  onClick="javascript:document.getElementById('cell<?php echo $i;?>').style.display='none';document.getElementById('add<?php echo $i-1;?>').style.display='';<?php
                             if($i>'1'){?>document.getElementById('del<?php echo $i-1;?>').style.display='';<?php }else{?>document.getElementById('del<?php echo $i-1;?>').style.display='none';<?php }?>"/>Deletes </a>
                             <?php
                           }
