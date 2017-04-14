@@ -1317,8 +1317,7 @@ var d = document.loginform;
 	{
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
-	if(pos_val==10 || pos_val==9 || pos_val==11 || pos_val==12 || pos_val==8)
-		{
+	
 	
 	var url="https://api.github.com/users/"+uname_val;
 	jQuery("#git_uname_error").css('display','none');
@@ -1331,7 +1330,10 @@ var d = document.loginform;
 				  } else {
 				  jQuery("#er_chk_gitunm").css('display','inline');
 				  }
+				  if(pos_val==10 || pos_val==9 || pos_val==11 || pos_val==12 || pos_val==8)
+					{
 				  jQuery("#frm_sub").attr('disabled','disabled');
+				  }
 				  //document.myForm.git_uname.focus();
 				},
 				200: function() {
@@ -1342,7 +1344,7 @@ var d = document.loginform;
 			  }
 			});		
 			
-		}
+		
 	}
         </script>
 
