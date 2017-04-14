@@ -325,7 +325,7 @@ width:100%;
 										  <input type="hidden" name="s1[]" value="<?=$i?>">
 										  
 										  
-												<table width="100%" border="0" cellpadding="0" cellspacing="0">
+												<table width="100%" border="0" cellpadding="0" cellspacing="0" id="data_table">
 												<tr>
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Info</div></td>
 												</tr>
@@ -408,7 +408,7 @@ width:100%;
 												<td><div style="height:25px; background-color:#999999; color:#FFFFFF; font-size:14px; font-weight:800; padding-left:10px; padding-top:10px">Product Logistics</div></td>
 												</tr>
 												
-												<table width="100%" border="0" cellpadding="0" id="data_table">
+												<table width="100%" border="0" cellpadding="0">
 														
 														<tr>
 														<td width="35%" height="30" align="right">Manufacturing country of origin<span class="style1" id="cellq<?=$i?>" <?=$display?>>*</span></td>
