@@ -15,7 +15,7 @@
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
 	$now_dt=date("Y-m-d");
-	//extract($_POST);
+	extract($_POST);
 	
 	/*print_r($_POST);
 	exit();*/
@@ -25,7 +25,7 @@
 		if(count($s2)>0)
 		{
 		
-			foreach($product_name as $contact_info)
+			foreach($_POST['product_name'] as $contact_info)
 			{
 			if(trim($product_name[$con_loop])!='')
 				{
@@ -38,7 +38,7 @@
 					/*$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
 					$last_pid =	$last_pid_qr['pid']+1;*/
 											
-					mssql_query('insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values (6,1618,"test",2)');
+					mssql_query("insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values (7,1618,'test',3)");
 						
 					}
 				
@@ -49,12 +49,12 @@
 	
 		}
 	
-	if($_POST['hid_pr_submit']=='hid_pr_submit_val')
+	/*if($_POST['hid_pr_submit']=='hid_pr_submit_val')
 	{
 			
 	
 	
 	
 	
-	}
+	}*/
 	?>
