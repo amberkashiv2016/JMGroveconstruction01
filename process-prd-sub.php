@@ -39,7 +39,7 @@
 					$last_pid =	$last_pid_qr['pid']+1;*/
 											
 					mssql_query("insert into dbo.tblVendorProduct ( ID,VendorID,ItemDescription,UnitCost )values (7,1618,'test',3)");
-						
+						break;
 					}
 				
 				}
