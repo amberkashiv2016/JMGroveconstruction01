@@ -369,7 +369,7 @@ width:100%;
 														<tr>
 														  <td height="30" align="right">Upload image</td>
 														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" class="prdimgcls" id="product_image" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
-														  <p id="fp"></p>
+														  <!--<p id="fp"></p>-->
 														  </td>
 														 <td>Format JPEG - 5MB/Product</td>
 														  </tr>
@@ -974,7 +974,7 @@ width:100%;
 										 <div class="pad-5 btn_sec" style="text-align: center;">
                                                 <!--<input onClick="window.location='product-submission.php'" type="submit" name="submit" value="Next"
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >-->
-												<input type="submit" name="submit" value="Next"  style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
+												<input id="frm_sub" type="submit" name="submit" value="Next"  style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
                                             <div class="clear-float"></div>
@@ -1095,6 +1095,15 @@ $(document).ready(function () {
                     $('#fp').html($('#fp').html() + '<br />' +
                         '<b>' + Math.round((value.size / 1024)) + '</b> KB');
 						alert(Math.round((value.size / 1024)));
+						if(Math.round((value.size / 1024)) > 5000)
+						{
+						alert('File size exceeded');
+						jQuery("#frm_sub").attr('disabled','disabled');
+						}
+						else {
+						jQuery("#frm_sub").removeAttr('disabled');
+						}
+						
                 })
             }
         });
