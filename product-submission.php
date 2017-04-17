@@ -1062,6 +1062,18 @@ width:100%;
                     }
                 }
 				
+				$('#product_image').change(function () {
+            if (this.files.length > 0) {
+
+                $.each(this.files, function (index, value) {
+                    /*$('#fp').html($('#fp').html() + '<br />' +
+                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');*/
+						alert(Math.round((value.size / 1024)));
+                })
+            }
+        });
+				
+				
                 if (!blnValid) {
                     alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
                     return false;
@@ -1088,15 +1100,7 @@ width:100%;
 			
 			
 $(document).ready(function () {
-        $('#product_image').change(function () {
-            if (this.files.length > 0) {
-
-                $.each(this.files, function (index, value) {
-                    $('#fp').html($('#fp').html() + '<br />' +
-                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');
-                })
-            }
-        });
+        
     });		
 		
 		
