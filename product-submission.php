@@ -1060,8 +1060,11 @@ width:100%;
                     }
                 }
 				
-				alert(sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase().size);
+				//alert(sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase().size);
                 
+				alert(sFileName.files[i].size);
+				
+				
                 if (!blnValid) {
                     alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
                     return false;
