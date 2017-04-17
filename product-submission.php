@@ -1062,7 +1062,7 @@ width:100%;
 				
 				//alert(sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase().size);
                 
-				alert(sFileName.files[i].size);
+				alert(arrInputs.files[i].size);
 				
 				
                 if (!blnValid) {
