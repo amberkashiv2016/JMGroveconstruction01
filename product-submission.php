@@ -1065,6 +1065,16 @@ width:100%;
                     return false;
                 }
             }
+			
+			file = sFileName; console.log(sFileName);
+			
+			if(file.size > 5293)
+			{
+				alert("Sorry, " + sFileName + " size exceeded");
+                return false;
+			
+			}
+			
         }
     }
   
