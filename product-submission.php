@@ -368,7 +368,9 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">Upload image</td>
-														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" class="prdimgcls" id="product_image" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" ></td>
+														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" class="prdimgcls" id="product_image" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
+														  tst<p id="fp"></p>
+														  </td>
 														 <td>Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
@@ -1090,9 +1092,8 @@ $(document).ready(function () {
             if (this.files.length > 0) {
 
                 $.each(this.files, function (index, value) {
-                   /* $('#fp').html($('#fp').html() + '<br />' +
-                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');*/
-						alert(Math.round((value.size / 1024)));
+                    $('#fp').html($('#fp').html() + '<br />' +
+                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');
                 })
             }
         });
