@@ -1091,7 +1091,7 @@ width:100%;
                     txt += "name: " + file.name + "<br>";
                 }
                 if ('size' in file) {
-                alert(x.files[0].size);
+                alert(arrInputs.files[0].size);
                     txt += "size: " + file.size + " bytes <br>";
                 }
             }
