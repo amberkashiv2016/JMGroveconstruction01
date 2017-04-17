@@ -306,7 +306,7 @@ width:100%;
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 20px;">
 								<p style="padding:5px;">You may submit a total of 5 products with each submission.</p>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
-                                    <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return productimg()">
+                                    <form name="myForm" action="process-prd-sub.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return productimg(this)">
 										<input type="hidden" name="vendorid" value="<?php echo $_REQUEST['vendor_id']; ?>">
                                         <div class="emp-content" style="width:614px;border:1px solid;padding: 15 15 0 15;">
                                           
@@ -1032,19 +1032,48 @@ width:100%;
 		  }
 		});
 		
-		function productimg()
-		{
 		
-			var inputs = document.getElementsByClassName( 'prdimgcls' );
+		
+			/*var inputs = document.getElementsByClassName( 'prdimgcls' );
 			var names = [];
 			names.push(inputs[0].value);
-			var webcamval = names;
+			var webcamval = names;*/
 			
 			//alert(webcamval);
 			
 			//return false;
+			
+			var _validFileExtensions = [".jpg", ".jpeg"];    
+			function productimg(oForm) {
+    var arrInputs = oForm.getElementsByClassName( 'prdimgcls' );
+    for (var i = 0; i < arrInputs.length; i++) {
+        var oInput = arrInputs[i];
+        if (oInput.type == "file") {
+            var sFileName = oInput.value;
+            if (sFileName.length > 0) {
+                var blnValid = false;
+                for (var j = 0; j < _validFileExtensions.length; j++) {
+                    var sCurExtension = _validFileExtensions[j];
+                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                        blnValid = true;
+                        break;
+                    }
+                }
+                
+                if (!blnValid) {
+                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                    return false;
+                }
+            }
+        }
+    }
+  
+    return false;
+			}
+			
+			
 		
-		}
+		
 		
 		
 		
