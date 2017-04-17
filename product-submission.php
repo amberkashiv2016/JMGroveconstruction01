@@ -368,7 +368,7 @@ width:100%;
 														</tr>
 														<tr>
 														  <td height="30" align="right">Upload image</td>
-														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" class="prdimgcls" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" ></td>
+														  <td align="right"><!--<label class="fileContainer">Upload image<input type="file" name="product_image"/></label>--> <input type="file" class="prdimgcls" id="product_image" name="product_image[]" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" ></td>
 														 <td>Format JPEG - 5MB/Product</td>
 														  </tr>
 												  </table>
@@ -1078,55 +1078,25 @@ width:100%;
         }
     }
 	
-	//var x = document.getElementsByClassName( 'prdimgcls' );
-    var txt = "";
-    if ('files' in arrInputs) {
-        if (arrInputs.files.length == 0) {
-            txt = "Select one or more files.";
-        } else {
-            for (var i = 0; i < arrInputs.files.length; i++) {
-                txt += "<br><strong>" + (i+1) + ". file</strong><br>";
-                var file = arrInputs.files[i];
-                if ('name' in file) {
-                    txt += "name: " + file.name + "<br>";
-                }
-                if ('size' in file) {
-                alert(arrInputs.files[0].size);
-                    txt += "size: " + file.size + " bytes <br>";
-                }
-            }
-        }
-    } 
+	
+   
   
     return false;
 			}
 			
 			
-		function myFunction(){
-    var x = document.getElementsByClassName( 'prdimgcls' );
-    var txt = "";
-    if ('files' in x) {
-        if (x.files.length == 0) {
-            txt = "Select one or more files.";
-        } else {
-            for (var i = 0; i < x.files.length; i++) {
-                txt += "<br><strong>" + (i+1) + ". file</strong><br>";
-                var file = x.files[i];
-                if ('name' in file) {
-                    txt += "name: " + file.name + "<br>";
-                }
-                if ('size' in file) {
-                alert(x.files[0].size);
-                    txt += "size: " + file.size + " bytes <br>";
-                }
+$(document).ready(function () {
+        $('#product_image').change(function () {
+            if (this.files.length > 0) {
+
+                $.each(this.files, function (index, value) {
+                   /* $('#fp').html($('#fp').html() + '<br />' +
+                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');*/
+						alert(Math.round((value.size / 1024)));
+                })
             }
-        }
-    } 
-    
-    
-	return false;
-}
-		
+        });
+    });		
 		
 		
 		
