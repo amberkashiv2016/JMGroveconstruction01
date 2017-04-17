@@ -1059,6 +1059,8 @@ width:100%;
                         break;
                     }
                 }
+				
+				alert(sFileName.size);
                 
                 if (!blnValid) {
                     alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
@@ -1066,14 +1068,14 @@ width:100%;
                 }
             }
 			
-			file = sFileName; console.log(sFileName);
+			/*file = sFileName; console.log(sFileName);
 			
 			if(file.size > 5293)
 			{
 				alert("Sorry, " + sFileName + " size exceeded");
                 return false;
 			
-			}
+			}*/
 			
         }
     }
