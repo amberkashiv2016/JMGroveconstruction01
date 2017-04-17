@@ -1094,7 +1094,7 @@ $(document).ready(function () {
                 $.each(this.files, function (index, value) {
                     $('#fp').html($('#fp').html() + '<br />' +
                         '<b>' + Math.round((value.size / 1024)) + '</b> KB');
-						alert(Math.round((value.size / 1024)));
+						//alert(Math.round((value.size / 1024)));
 						if(Math.round((value.size / 1024)) > 5000)
 						{
 						alert('File size exceeded');
