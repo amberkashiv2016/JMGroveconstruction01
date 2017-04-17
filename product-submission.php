@@ -1060,7 +1060,7 @@ width:100%;
                     }
                 }
 				
-				alert(oInput.size);
+				alert(oInput.name);
                 
                 if (!blnValid) {
                     alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
