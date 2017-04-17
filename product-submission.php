@@ -1040,9 +1040,9 @@ width:100%;
 			names.push(inputs[0].value);
 			var webcamval = names;
 			
-			alert(webcamval);
+			//alert(webcamval);
 			
-			return false;
+			//return false;
 		
 		}
 		
