@@ -1037,7 +1037,7 @@ width:100%;
 		
 			var inputs = document.getElementsByClassName( 'prdimgcls' );
 			var names = [];
-			names.push(inputs.value);
+			names.push(inputs[0].value);
 			var webcamval = names;
 			
 			alert(webcamval);
