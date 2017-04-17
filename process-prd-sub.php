@@ -76,7 +76,7 @@
 						}
 						else
 						{
-							echo "Error : please enter valid profile picture";
+							echo "Error : please enter valid product picture";
 							exit;
 						}
 					}
