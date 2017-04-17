@@ -1066,9 +1066,9 @@ width:100%;
             if (this.files.length > 0) {
 
                 $.each(this.files, function (index, value) {
-                    /*$('#fp').html($('#fp').html() + '<br />' +
-                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');*/
-						alert(Math.round((value.size / 1024)));
+                    $('#fp').html($('#fp').html() + '<br />' +
+                        '<b>' + Math.round((value.size / 1024)) + '</b> KB');
+						/*alert(Math.round((value.size / 1024)));*/
                 })
             }
         });
