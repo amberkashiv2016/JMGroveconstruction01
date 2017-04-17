@@ -52,6 +52,40 @@
 					$pdesc=$product_desc[$con_loop];
 					$pcunit=$product_cost_unit[$con_loop];
 					
+					
+					
+					if(basename( $_FILES['product_image']['name'][$con_loop])!="")
+					{
+						$target_path="ProfilePicture/$now";
+						$target_path = $target_path . basename( $_FILES['product_image']['name'][$con_loop]);
+						//gif|jpg|png|jpeg
+						$allowedExts = array("jpg","jpeg","JPG","JPEG");
+						$extension = end(explode(".", $_FILES["product_image"]["name"][$con_loop]));
+						if (($_FILES["product_image"]["size"][$con_loop] < 5097152)	&& in_array($extension, $allowedExts)){
+						if(move_uploaded_file($_FILES['product_image']['tmp_name'][$con_loop], $target_path))
+						{
+						//echo "The file ".  basename( $_FILES['profilepic']['name'])." has been uploaded successfully";
+							//echo 'file moved';
+							//exit();
+						} else
+						{
+							//echo 'locha';
+							//exit();
+							//echo "There was an error uploading the file, please try again!";
+						}
+						}
+						else
+						{
+							echo "Error : please enter valid profile picture";
+							exit;
+						}
+					}
+					
+					
+					
+					
+					
+					
 					$last_pid_qr = mssql_fetch_array(mssql_query("SELECT MAX(ID) as pid FROM tblVendorProduct"));
 					$last_pid =	$last_pid_qr['pid']+1;
 											
