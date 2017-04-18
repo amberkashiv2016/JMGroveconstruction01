@@ -1030,6 +1030,7 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
+	alert('testw');
 	<?php
 	if($_REQUEST['succ_sub']==1)
 	{
