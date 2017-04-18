@@ -994,7 +994,7 @@ width:100%;
                                     </form>
 									
 									
-									<div id="dialog-message" title="Download complete">
+									<!--<div id="dialog-message" title="Download complete">
   <p>
     <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
     Your files have downloaded successfully into the My Downloads folder.
@@ -1004,7 +1004,7 @@ width:100%;
   </p>
 </div>
 									
-							<p onClick="mdlpopup();">click on</p>		
+							<p onClick="mdlpopup();">click on</p>	-->	
 									
 									
                                 </div>
