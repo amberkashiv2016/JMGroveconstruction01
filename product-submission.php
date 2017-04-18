@@ -982,6 +982,21 @@ width:100%;
                                         <div class="clearboth"></div>
 
                                     </form>
+									
+									
+									<div id="dialog-message" title="Download complete">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Your files have downloaded successfully into the My Downloads folder.
+  </p>
+  <p>
+    Currently using <b>36% of your storage space</b>.
+  </p>
+</div>
+									
+							<p onClick="mdlpopup();">click on</p>		
+									
+									
                                 </div>
                             </div>
                         </div>
@@ -1005,6 +1020,20 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
+	
+	function mdlpopup() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  }
+	
+	
+	
     $("#employees_data_form").validate({
 		  rules: {
 		    /*fname: "required",
