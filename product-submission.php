@@ -1030,8 +1030,14 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
+	<?php
+	if($_REQUEST['succ_sub']==1)
+	{
+	?>
+	alert('test');
+	<?php } ?>
 	
-	function mdlpopup() {
+	$(document).ready(function () {
     $( "#dialog-message" ).dialog({
       modal: true,
       buttons: {
@@ -1040,7 +1046,7 @@ width:100%;
         }
       }
     });
-  }
+  });
 	
 	
 	
