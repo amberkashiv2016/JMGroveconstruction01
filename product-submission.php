@@ -281,6 +281,16 @@ width:100%;
     display: inline-block;
     margin-left: 5%;
 }
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable
+{
+	position: absolute;
+    height: auto;
+    width: 300px;
+    top: 50px !important;
+    left: 517px;
+    display: block;
+    z-index: 101;
+}
     </style>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
