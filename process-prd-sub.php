@@ -119,7 +119,7 @@
 		
 		?>
 		<script type="text/javascript">
-            window.location.href = '<?php echo 'http://jmgroveconstruction.com/demo/product-submission.php'; ?>';
+            window.location.href = '<?php echo 'http://jmgroveconstruction.com/demo/product-submission.php?succ_sub=1'; ?>';
           </script>
 		<?php
 

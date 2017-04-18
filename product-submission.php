@@ -992,19 +992,16 @@ width:100%;
                                         <div class="clearboth"></div>
 
                                     </form>
+									<?php if($_REQUEST['succ_sub']==1) { ?>
 									
+									<div id="dialog-message" title="Success">
+									<p>
+									<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+									Your have successfully add product.
+									</p>
+									</div>
 									
-									<!--<div id="dialog-message" title="Download complete">
-  <p>
-    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-    Your files have downloaded successfully into the My Downloads folder.
-  </p>
-  <p>
-    Currently using <b>36% of your storage space</b>.
-  </p>
-</div>
-									
-							<p onClick="mdlpopup();">click on</p>	-->	
+								<?php } ?>
 									
 									
                                 </div>
@@ -1030,14 +1027,11 @@ width:100%;
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
     <script type="text/javascript" src="jquery.mask.js"></script>
     <script type="text/javascript">
-	alert('testw');
+	//alert('testw');
 	<?php
 	if($_REQUEST['succ_sub']==1)
 	{
 	?>
-	alert('test');
-	<?php } ?>
-	
 	$(document).ready(function () {
     $( "#dialog-message" ).dialog({
       modal: true,
@@ -1048,6 +1042,9 @@ width:100%;
       }
     });
   });
+	<?php } ?>
+	
+	
 	
 	
 	
