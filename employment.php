@@ -22,7 +22,7 @@ else
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Employmenta - J.M. Grove  - The Home Improvement Specialists</title>
+    <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
     <link rel="stylesheet" href="../inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="../inc/intlTelInput.css" type="text/css">
     <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
@@ -394,8 +394,8 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </input>
                                                 </div>
                                                 <div>
-                                                <label id="fname-error" class="error" for="fname"></label>
-                                                <label id="NameMiddleInitial-error" class="error" for="NameMiddleInitial"></label>
+                                                <!--<label id="fname-error" class="error" for="fname"></label>
+                                                <label id="NameMiddleInitial-error" class="error" for="NameMiddleInitial"></label>-->
                                                 </div>
                                             </div>
                                             <div class="col-250 right">
