@@ -387,16 +387,18 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             </div>
                                             <div class="clear-float"></div>
                                             <div class="col-250 left">
-                                              <div>
-                                                <input placeholder="First Name*" class="emp-txtbox" style="width:84%;" type="text" name="fname" id="fname">
+                                              <div style="float:left; width:81%">
+                                                <input placeholder="First Name*" class="emp-txtbox" type="text" name="fname" id="fname">
                                                 </input>
-                                                <input placeholder="I*" class="emp-txtbox" type="text"  style="width:10%;" name="NameMiddleInitial" id="NameMiddleInitial">
+												</div>
+												<div style="float:left; width:14%">
+                                                <input placeholder="I*" class="emp-txtbox" type="text"  name="NameMiddleInitial" id="NameMiddleInitial">
                                                 </input>
                                                 </div>
-                                                <div>
-                                                <!--<label id="fname-error" class="error" for="fname"></label>
-                                                <label id="NameMiddleInitial-error" class="error" for="NameMiddleInitial"></label>-->
-                                                </div>
+                                               <!-- <div>
+                                                <label id="fname-error" class="error" for="fname"></label>
+                                                <label id="NameMiddleInitial-error" class="error" for="NameMiddleInitial"></label>
+                                                </div>-->
                                             </div>
                                             <div class="col-250 right">
                                                 <input placeholder="Last Name*" class="emp-txtbox" type="text" name="lname" id="lname">
