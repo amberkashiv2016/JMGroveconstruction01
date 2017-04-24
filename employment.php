@@ -725,7 +725,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
-                                                <input onClick="clkdate();" placeholder="Available Start Date *" class="emp-txtbox" type="text" name="startdate" id="startdate">
+                                                <input onBlur="clkdate();" placeholder="Available Start Date *" class="emp-txtbox" type="text" name="startdate" id="startdate">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
@@ -982,7 +982,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		
 		function clkdate()
 		{
-			alert('dt');
+			//alert('dt');
 			$('#startdate').focus();
 		}
 
