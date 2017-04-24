@@ -983,8 +983,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		function clkdate()
 		{
 			//alert('dt');
+			if($('#startdate').val()!='')
+			{
 			$('#startdate').css('border-color','#999999');
 			$('#startdate-error').css('display','none');
+			}
 		}
 
         $(document).ready(function () {
