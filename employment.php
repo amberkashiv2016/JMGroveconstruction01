@@ -983,7 +983,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 		function clkdate()
 		{
 			//alert('dt');
-			$('#startdate').focus();
+			//$('#startdate').focus();
 		}
 
         $(document).ready(function () {
