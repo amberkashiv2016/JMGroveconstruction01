@@ -725,7 +725,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                  <label class="f-label">&nbsp;</label>
                                                 <div class="clear-float"></div>
                                                 <div class="clear-float"></div>
-                                                <input placeholder="Available Start Date *" class="emp-txtbox" type="text" name="startdate" id="startdate">
+                                                <input onClick="clkdate();" placeholder="Available Start Date *" class="emp-txtbox" type="text" name="startdate" id="startdate">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
@@ -979,6 +979,11 @@ actively hired, to login to view your daily schedule.</strong> </div>
                     });
                 }
         }
+		
+		function clkdate()
+		{
+			$('#startdate').focus();
+		}
 
         $(document).ready(function () {
 
@@ -1022,7 +1027,6 @@ actively hired, to login to view your daily schedule.</strong> </div>
                          changeYear: true,
                          yearRange: '1950:2050'
                      }
-					 alert('test');
                  );
 
             var position = $("#position option:selected").text();
