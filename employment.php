@@ -1022,6 +1022,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                          changeYear: true,
                          yearRange: '1950:2050'
                      }
+					 alert('test');
                  );
 
             var position = $("#position option:selected").text();
