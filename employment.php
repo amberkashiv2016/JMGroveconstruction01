@@ -1319,6 +1319,7 @@ var d = document.loginform;
 	{
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
+	var chk_er='';
 	
 	
 	var url="https://api.github.com/users/"+uname_val;
