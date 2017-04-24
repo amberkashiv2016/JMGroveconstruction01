@@ -142,11 +142,24 @@
 		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
 		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
 		//header("location:$redirect_url");
+		
+		$prev_addr=strpos($_POST['cur_addr'], 'demo');
+		
+		if($prev_addr !== false)
+		{
+		
 		?>
 		<script type="text/javascript">
             window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  <?php
+		  } else { ?>
+		  
+		  <script type="text/javascript">
+            window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
+          </script>
+		  
+		  <?php }
 
 	}
 		
