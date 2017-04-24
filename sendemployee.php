@@ -144,7 +144,7 @@
 		//header("location:$redirect_url");
 		?>
 		<script type="text/javascript">
-            window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
+            window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  <?php
 

@@ -1019,7 +1019,8 @@ actively hired, to login to view your daily schedule.</strong> </div>
                          dateFormat: 'yy-mm-dd',
                          changeMonth: true,
                          changeYear: true,
-                         yearRange: '1950:2050'
+                         yearRange: '1950:2050',
+						 $('#startdate').focus();
                      }
                  );
 
@@ -1337,6 +1338,7 @@ var d = document.loginform;
 				  jQuery("#frm_sub").attr('disabled','disabled');
 				  }
 				  //document.myForm.git_uname.focus();
+				  var chk_er=tr;
 				},
 				200: function() {
 				  //alert('Valid Username');	
@@ -1346,6 +1348,11 @@ var d = document.loginform;
 			  }
 			});		
 			
+			if(chk_er=='tr')
+			{
+			alert('Please enter github');
+			return false;
+			}
 		
 	}
         </script>
