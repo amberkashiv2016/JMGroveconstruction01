@@ -1020,7 +1020,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                          changeMonth: true,
                          changeYear: true,
                          yearRange: '1950:2050',
-						 $('#startdate').focus();
+						 $('#reasonforleaving').focus()
                      }
                  );
 
