@@ -1315,10 +1315,12 @@ var d = document.loginform;
             return true;
         }
 		
-		function chk_gituname(uname_val)
+		function chk_gituname()
 	{
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
+	
+	var uname_val=document.myForm.git_uname.value;
 	var chk_er='';
 	
 	
@@ -1338,7 +1340,7 @@ var d = document.loginform;
 				  jQuery("#frm_sub").attr('disabled','disabled');
 				  }
 				  //document.myForm.git_uname.focus();
-				  var chk_er=tr;
+				  var chk_er='tr';
 				},
 				200: function() {
 				  //alert('Valid Username');	
