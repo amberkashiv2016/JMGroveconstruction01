@@ -1340,7 +1340,7 @@ var d = document.loginform;
 				  jQuery("#frm_sub").attr('disabled','disabled');
 				  }
 				  //document.myForm.git_uname.focus();
-				  var chk_er='tr';
+				  alert('Please enter github');
 				},
 				200: function() {
 				  //alert('Valid Username');	
@@ -1350,11 +1350,11 @@ var d = document.loginform;
 			  }
 			});		
 			
-			if(chk_er=='tr')
+			/*if(chk_er=='tr')
 			{
 			alert('Please enter github');
 			return false;
-			}
+			}*/
 		
 	}
         </script>
