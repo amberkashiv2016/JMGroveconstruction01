@@ -352,7 +352,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
                                     <h2 class="boxheading" align="center">Employment Application</h2> <span><label class="error">*</label>All fields are mandatory</span>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
-                                    <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form" onSubmit="return chk_gituname()">
+                                    <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
 
                                         <div class="emp-content" style="width:650px;border:1px solid;padding: 15 0 0 15;">
                                             <div class="col-250 left">
@@ -1315,13 +1315,10 @@ var d = document.loginform;
             return true;
         }
 		
-		function chk_gituname()
+		function chk_gituname(uname_val)
 	{
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
-	
-	var uname_val=document.myForm.git_uname.value;
-	var chk_er='';
 	
 	
 	var url="https://api.github.com/users/"+uname_val;
@@ -1340,7 +1337,6 @@ var d = document.loginform;
 				  jQuery("#frm_sub").attr('disabled','disabled');
 				  }
 				  //document.myForm.git_uname.focus();
-				  alert('Please enter github');
 				},
 				200: function() {
 				  //alert('Valid Username');	
@@ -1350,11 +1346,6 @@ var d = document.loginform;
 			  }
 			});		
 			
-			/*if(chk_er=='tr')
-			{
-			alert('Please enter github');
-			return false;
-			}*/
 		
 	}
         </script>
