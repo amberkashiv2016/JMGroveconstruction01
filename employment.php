@@ -1334,7 +1334,7 @@ var d = document.loginform;
 		
 		function chk_gituname(uname_val)
 	{
-	//alert(uname_val);
+	alert('b');
 	var pos_val = document.myForm.position.value;
 	//alert (pos_val);
 	
