@@ -892,7 +892,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 	
 		function chk_gitunm_val(postn_val)
 		{
-			alert("a");
+			//alert("a");
 			
 			if(postn_val==10 || postn_val==9 || postn_val==11 || postn_val==12 || postn_val==8)
 			{
