@@ -402,7 +402,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </div>-->
                                             </div>
                                             <div class="col-250 right">
-                                                <input placeholder="Last Name*" class="emp-txtbox" type="text" name="lname" id="lname">
+                                                <input placeholder="Last Name22*" class="emp-txtbox" type="text" name="lname" id="lname">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
