@@ -1336,7 +1336,7 @@ var d = document.loginform;
 	{
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
-	
+	alert (pos_val);
 	
 	var url="https://api.github.com/users/"+uname_val;
 	jQuery("#git_uname_error").css('display','none');
