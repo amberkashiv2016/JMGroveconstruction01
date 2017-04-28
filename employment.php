@@ -350,7 +350,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                         <div style="padding: 0px 15px 10px 15px;clear:both;">
                             <div id="formbox" style="display:<?php echo $style;+';'?>margin-left:20px;">
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
-                                    <h2 class="boxheading" align="center">Employment Application Sudip</h2> <span><label class="error">*</label>All fields are mandatory</span>
+                                    <h2 class="boxheading" align="center">Employment Application</h2> <span><label class="error">*</label>All fields are mandatory</span>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
                                     <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
 									
@@ -407,7 +407,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             </div>
                                             <div class="clear-float"></div>
 											 <div class="col-250 left">
-                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error"></span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
+                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
                                             </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
@@ -892,27 +892,13 @@ actively hired, to login to view your daily schedule.</strong> </div>
 	
 		function chk_gitunm_val(postn_val)
 		{
-			
+			alert("a");
 			
 			if(postn_val==10 || postn_val==9 || postn_val==11 || postn_val==12 || postn_val==8)
 			{
 			//alert(postn_val);
 			
-			
-			if (document.getElementById("git_uname").value === "" ) 
-              {
-
-               document.getElementById("git_uname_error").innerHTML = "This field is required."; 
-               //document.getElementById("er1").style.color = "red"; 
-               //document.getElementById("er1").style.display = "block"; 
-			   return false;
-              }
-			
-			
-			
-			
-			
-				/*if(document.myForm.git_uname.value=="")
+				if(document.myForm.git_uname.value=="")
 				{
 				//alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
@@ -921,7 +907,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				//alert(postn_val);
 				jQuery("#frm_sub").attr('disabled','disabled');
 				return false;
-				}*/
+				}
 				if(document.myForm.git_uname.value!="")
 				{
 				var url="https://api.github.com/users/"+document.myForm.git_uname.value;
