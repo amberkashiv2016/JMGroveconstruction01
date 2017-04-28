@@ -912,7 +912,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			
 			
 			
-				if(document.myForm.git_uname.value=="")
+				/*if(document.myForm.git_uname.value=="")
 				{
 				//alert("Please Enter GitHub Username");
 				jQuery("#er_chk_gitunm").css('display','none');
@@ -921,7 +921,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				//alert(postn_val);
 				jQuery("#frm_sub").attr('disabled','disabled');
 				return false;
-				}
+				}*/
 				if(document.myForm.git_uname.value!="")
 				{
 				var url="https://api.github.com/users/"+document.myForm.git_uname.value;
