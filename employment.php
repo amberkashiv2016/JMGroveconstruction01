@@ -402,12 +402,12 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 </div>-->
                                             </div>
                                             <div class="col-250 right">
-                                                <input placeholder="Last Name*" class="emp-txtbox" type="text" name="lname" id="lname">
+                                                <input placeholder="Last Name22*" class="emp-txtbox" type="text" name="lname" id="lname">
                                                 </input>
                                             </div>
                                             <div class="clear-float"></div>
 											 <div class="col-250 left">
-                                                <input onKeyUp="chk_gituname(this.value)"  placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
+                                                <input onBlur="chk_gituname(this.value)"  placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
                                             </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
