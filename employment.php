@@ -22,7 +22,7 @@ else
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Employmentd - J.M. Grove  - The Home Improvement Specialists</title>
+    <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
     <link rel="stylesheet" href="../inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="../inc/intlTelInput.css" type="text/css">
     <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
@@ -1349,7 +1349,10 @@ var d = document.loginform;
 				  } else {
 				  jQuery("#er_chk_gitunm").css('display','inline');
 				  }
-				  
+				  if(pos_val==10 || pos_val==9 || pos_val==11 || pos_val==12 || pos_val==8)
+					{
+				  jQuery("#frm_sub").attr('disabled',true);
+				  }
 				  //document.myForm.git_uname.focus();
 				},
 				200: function() {
