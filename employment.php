@@ -407,7 +407,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             </div>
                                             <div class="clear-float"></div>
 											 <div class="col-250 left">
-                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
+                                                <input onBlur="chk_gituname(this.value)" placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error"></span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
                                             </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
@@ -897,6 +897,20 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			if(postn_val==10 || postn_val==9 || postn_val==11 || postn_val==12 || postn_val==8)
 			{
 			//alert(postn_val);
+			
+			
+			if (document.getElementById("git_uname").value === "" ) 
+              {
+
+               document.getElementById("git_uname_error").innerHTML = "This field is required."; 
+               //document.getElementById("er1").style.color = "red"; 
+               //document.getElementById("er1").style.display = "block"; 
+			   return false;
+              }
+			
+			
+			
+			
 			
 				if(document.myForm.git_uname.value=="")
 				{
