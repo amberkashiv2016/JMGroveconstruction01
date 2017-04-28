@@ -906,7 +906,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				//document.myForm.git_uname.focus();
 				//alert(postn_val);
 				jQuery("#frm_sub").attr('disabled','disabled');
-				return false;
+				return true;
 				}
 				if(document.myForm.git_uname.value!="")
 				{
