@@ -896,7 +896,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			
 			if(postn_val==10 || postn_val==9 || postn_val==11 || postn_val==12 || postn_val==8)
 			{
-			//alert(postn_val);
+			alert(postn_val);
 			
 				if(document.myForm.git_uname.value=="")
 				{
@@ -1336,7 +1336,7 @@ var d = document.loginform;
 	{
 	alert(uname_val);
 	var pos_val = document.myForm.position.value;
-	alert (pos_val);
+	//alert (pos_val);
 	
 	var url="https://api.github.com/users/"+uname_val;
 	jQuery("#git_uname_error").css('display','none');
