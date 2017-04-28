@@ -1332,8 +1332,19 @@ var d = document.loginform;
             return true;
         }
 		
-		function chk_gituname(uname_val)
+	
+	function chk_gituname(uname_val)
 	{
+	if(document.myForm.git_uname.value=="")
+				{
+				//alert("Please Enter GitHub Username");
+				jQuery("#er_chk_gitunm").css('display','none');
+				jQuery("#git_uname_error").css('display','inline');
+				//document.myForm.git_uname.focus();
+				//alert(postn_val);
+				jQuery("#frm_sub").attr('disabled','disabled');
+				return false;
+				}
 	//alert(uname_val);
 	var pos_val = document.myForm.position.value;
 	//alert (pos_val);
