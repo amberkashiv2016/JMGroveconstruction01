@@ -350,7 +350,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                         <div style="padding: 0px 15px 10px 15px;clear:both;">
                             <div id="formbox" style="display:<?php echo $style;+';'?>margin-left:20px;">
                                 <div class="innerbox" style="margin-left: 10px;padding-top: 30px;">
-                                    <h2 class="boxheading" align="center">Employment Application</h2> <span><label class="error">*</label>All fields are mandatory</span>
+                                    <h2 class="boxheading" align="center">Employment Application Sudip</h2> <span><label class="error">*</label>All fields are mandatory</span>
                                     <!-- <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" onSubmit="return formValidation()"> -->
                                     <form name="myForm" action="sendemployee.php" method="POST" enctype="multipart/form-data" id="employees_data_form">
 									
