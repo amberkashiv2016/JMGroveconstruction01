@@ -6,13 +6,14 @@ $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //server
 $connectionInfo = array( "Database"=>"JGBS_Dev_New", "UID"=>"devloperuser", "PWD"=>"JG%987");
 $conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
 mssql_select_db("JGBS_Dev_New",$conn);
+//$conn = sqlsrv_connect( $serverName, $connectionInfo);
 /*mssql_select_db("JGC",$conn);*/
 if( $conn === false ) {
-    die( print_r( sqlsrv_errors(), true));
+    die( print_r( sqlsrv_errors(), true ));
 }
 else
 {
-
+//echo "<h1>server connected</h1>";
 }
 
 ?>
@@ -23,8 +24,8 @@ else
     <style>div { display:none; }</style>
     </noscript>
     <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
-    <link rel="stylesheet" href="../inc/grovestyle.css" type="text/css">
-    <link rel="stylesheet" href="../inc/intlTelInput.css" type="text/css">
+    <link rel="stylesheet" href="./inc/grovestyle.css" type="text/css">
+    <link rel="stylesheet" href="./inc/intlTelInput.css" type="text/css">
     <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
     <meta name="keywords" content=" J.M Grove, J.M. Grove employment, J.M. Grove jobs, Installer jobs construction, windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks " />
     
@@ -363,12 +364,17 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <select name="position" id="position" class="emp-ddl" onChange="chk_gitunm_val(this.value);">
                                                    <option value=''>select</option>
                                                     <?php
-                                                    if(($result = mssql_query("SELECT ID, DesignationName FROM dbo.tbl_Designation WHERE IsActive = 1 ORDER BY DesignationName")) !== false){
+													//$params = array(1, "some data");
+													$result = mssql_query($conn,"SELECT ID, DesignationName FROM dbo.tbl_Designation WHERE IsActive = 1 ORDER BY DesignationName");
+                                                    
+													if($result  !== false){
                                                     while( $obj = mssql_fetch_object( $result )) {
                                                     echo "
                                                     <option value='$obj->ID'>$obj->DesignationName</option>";
                                                     }
-                                                    }
+                                                    }else{
+														echo "<h1>in else condition</h1>";
+													}
                                                     ?>
                                                 </select>
                                             </div>
@@ -377,7 +383,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <select name="source" class="emp-ddl" id="source">
                                                 <option value=''>select</option>
                                                     <?php
-                                                    if(($result = mssql_query("SELECT Id,Source FROM tblSource ORDER BY Source")) !== false){
+                                                    if(($result = mssql_query($conn,"SELECT Id,Source FROM tblSource ORDER BY Source")) !== false){
                                                     while( $obj = mssql_fetch_object( $result )) {
                                                     echo "
                                                     <option value='$obj->Id'> $obj->Source</option>";
@@ -407,7 +413,10 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                             </div>
                                             <div class="clear-float"></div>
 											 <div class="col-250 left">
-                                                <input onKeyUp="chk_gituname(this.value)"  placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span></div>
+                                                <input onKeyUp="chk_gituname(this.value)"  placeholder="GitHub Username *" class="emp-txtbox" type="text" name="git_uname" id="git_uname"></input><div><span style="display:none;color: #c72121; position: relative;font-size: 9px;" id="git_uname_error">This field is required.</span><span id="er_chk_gitunm" style="color:#FF0000; display:none">Not a valid github username</span>
+												
+												<span id="no-github-account"><p>Don't have a Github account? <a href="http://github.com/join" target="_blank">Create Github Accout!</a></p></span>
+												</div>
                                             </div>
                                             <div class="col-250 right">
                                                 <select name="country" id="country" class="emp-ddl">
@@ -815,6 +824,12 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                         <div class="clearboth"></div>
 
                                     </form>
+									
+									<div id="application-tc">
+									
+									<p style='font-weight:bold'>" *If application is successfully submited, you will be redirected to login page and prompted with instructions to continue the application process! NO application is reviewed if not submitted properly"
+									</p>
+									</div>
                                 </div>
                             </div>
                         </div>
@@ -887,7 +902,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 
 		});
     </script>
-    <script src="../js/intlTelInput.js"></script>
+    <script src="./js/intlTelInput.js"></script>
     <script type="text/javascript">
 	
 		function chk_gitunm_val(postn_val)
@@ -901,8 +916,9 @@ actively hired, to login to view your daily schedule.</strong> </div>
 				if(document.myForm.git_uname.value=="")
 				{
 				//alert("Please Enter GitHub Username");
+				
 				jQuery("#er_chk_gitunm").css('display','none');
-				jQuery("#git_uname_error").css('display','inline');
+				jQuery("#git_uname_error , #git_uname , #no-github-account").css('display','inline');
 				//document.myForm.git_uname.focus();
 				//alert(postn_val);
 				jQuery("#frm_sub").attr('disabled','disabled');
@@ -925,6 +941,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 					  jQuery("#er_chk_gitunm").css('display','none');	
 					  jQuery("#frm_sub").removeAttr('disabled');  
 					}
+
 				  }
 				});	
 				}
@@ -932,7 +949,7 @@ actively hired, to login to view your daily schedule.</strong> </div>
 			}
 			else {
 			//alert(postn_val);
-			jQuery("#git_uname_error").css('display','none');
+			jQuery("#git_uname_error, #git_uname , #no-github-account").css('display','none');
 			jQuery("#frm_sub").removeAttr('disabled');
 			}
 		
@@ -979,7 +996,26 @@ actively hired, to login to view your daily schedule.</strong> </div>
                         }
                     });
                 }
+				
+				phone_flag_check();
         }
+		
+		function phone_flag_check(){
+			
+			var country_code = $( "#country option:selected" ).val().toLowerCase();
+			
+			//alert($(".selected-flag > div:first-child").attr('class').split(' ')[1]);
+			
+			var flag_id = $(".selected-flag > div:first-child").attr('class').split(' ')[1];
+			
+			if( country_code !== flag_id){
+				
+				alert("International Dialing code and Country Selected in Country Dropdown are different");
+				return false;
+			}
+			
+			//alert(country_code);
+		}
 		
 		function clkdate()
 		{
@@ -1001,6 +1037,8 @@ actively hired, to login to view your daily schedule.</strong> </div>
 
 
             $('#country, #zip').on('change', function () {
+				
+				//alert(1);
                 var str = $('#zip').val() + ',' + $("#country option:selected").text();
                 var geocoder;
                 var map;
@@ -1020,6 +1058,8 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                     $("#city").val(city);
                                     $("#state").val(state);
                                     $('#reasonforleaving').focus();
+									
+									
                                 }
                             }
                         }
@@ -1154,6 +1194,8 @@ $("#txtloginid").blur(function(){
                         data: { phone: phone },
                         success: function (data) {
                             //var returnedData = data.json;
+							
+							alert(phone);
 
                             if (data.trim() == "Exist") {
                                 var r = confirm("This phone is already exists, do you want to go our staff login page?");
@@ -1184,7 +1226,7 @@ var telInput = $("#phone");
 
 // initialise plugin
 telInput.intlTelInput({
-  utilsScript: "../js/intl-tel-utils.js",
+  utilsScript: "./js/intl-tel-utils.js",
   separateDialCode: true,
   initialCountry: "auto",
   geoIpLookup: function(callback) {
