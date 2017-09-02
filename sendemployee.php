@@ -24,11 +24,11 @@ $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$data
 }
 */
 
-$dsn = "Test";
+//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
 
-
+$dsn = "Test";
 $connection = odbc_connect($dsn, $user, $password);
 
 if (!$connection)
@@ -149,11 +149,15 @@ if (!$connection)
 		// alterchange double quote to single quote
 		
 		$ccode =  '+'.countryCode($_POST['country']).'-';
-		 $sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$ccode.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","'.$now_dt.'","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'")';
 		
-	$rs=odbc_exec($connection,$sql);
-	if (!$rs)
-  {exit("Error in SQL");}
+		 
+	$stmt = odbc_prepare($connection, 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$ccode.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","'.$now_dt.'","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'");' ); 
+ 
+if (!odbc_execute($stmt)) { 
+    /* error  */ 
+    echo "Error in SQL"; 
+} 
+	 
 	else
 	{
 		//echo "Record Inserted Successfully";
@@ -178,9 +182,15 @@ if (!$connection)
 		
 	
 		
-		$sqly="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID";
-		$rsx_y=odbc_exec($connection,$sqly);
+	
 		
+		
+		$stmt = odbc_prepare($connection, 'UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID' ); 
+ 
+if (!odbc_execute($stmt)) { 
+    /* error  */ 
+    echo "Whoops"; 
+} 
 		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
 		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
 		//header("location:$redirect_url");
