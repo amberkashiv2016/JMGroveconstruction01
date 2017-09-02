@@ -5,13 +5,40 @@
 	
 	
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-	$conn = mssql_connect($serverName, 'devloperuser', 'JG%987');
-	mssql_select_db("JGBS_Dev_New",$conn);
+$database="JGBS_Dev_New";
+$user="devloperuser";
+$password="JG%987";
+/*
+if($proocutonmode === 2)//
+{
+$dsn = "Live";
+}
+else if($proocutonmode === 1)
+{
+$dsn = "Test";
+}
+else{
+
+$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+
+}
+*/
+
+$dsn = "Test";
+
+//$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
+
+
+$connection = odbc_connect($dsn, $user, $password);
+
+if (!$connection)
+  {exit("Connection Failed: " . $connection);}
+  else
+  {
+	 
+  }
+
 	
-	/*mssql_select_db("JGC",$conn);*/
-	if( $conn === false ) {	die( print_r( mssql_error(), true)); }
-	// error_reporting(E_ALL);
-	// ini_set("display_errors", 1);
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
 	$now_dt=date("Y-m-d");
@@ -122,24 +149,37 @@
 		// alterchange double quote to single quote
 		
 		$ccode =  '+'.countryCode($_POST['country']).'-';
-
 		 $sql = 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$ccode.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","'.$now_dt.'","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'")';
 		
-	$query = mssql_query($sql);
-	if ($query === false){
-		exit("<pre>".print_r(mssql_error(), true));
-	}
+	$rs=odbc_exec($connection,$sql);
+	if (!$rs)
+  {exit("Error in SQL");}
 	else
 	{
 		//echo "Record Inserted Successfully";
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
 		$email = $_POST['email'];
-		$result = mssql_fetch_assoc(mssql_query("select @@IDENTITY as id"));
-		$lastID = $result['id'];
 		
-		$sql="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID";
-		$query = mssql_query($sql);
+		
+		$sqlx="select @@IDENTITY as id";
+		$rsx=odbc_exec($connection,$sqlx);
+		while (odbc_fetch_row($rsx))
+		{
+		  $lastID=odbc_result($rsx,"id");
+		 
+		}
+		odbc_close($connection);
+		
+		
+		
+		
+		
+		
+	
+		
+		$sqly="UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID";
+		$rsx_y=odbc_exec($connection,$sqly);
 		
 		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
 		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
@@ -162,12 +202,10 @@
           </script>
 		  
 		  <?php }
-
 	}
 		
 		
 }
-
 	
 function countryCode ($cc)
 {
@@ -403,16 +441,13 @@ function countryCode ($cc)
 	'ZM'=>array('name'=>'ZAMBIA','code'=>'260'),
 	'ZW'=>array('name'=>'ZIMBABWE','code'=>'263')
 );
-
 foreach ($countryArray as $key => $value)
 {
 	if($key==$cc)
 	{
 	return  $value['code'];
 	}
-
 }
 }
-
 	
 ?>
