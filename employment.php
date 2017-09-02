@@ -1,11 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <?php $currentpage = "employment";
-
 $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
-
 /*
 if($proocutonmode === 2)//
 {
@@ -16,27 +14,20 @@ else if($proocutonmode === 1)
 $dsn = "Test";
 }
 else{
-
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
-
 }
 */
+//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 
 $dsn = "Test";
-
-
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
-
-
 $connection = odbc_connect($dsn, $user, $password);
-
 if (!$connection)
   {exit("Connection Failed: " . $connection);}
   else
   {
 	
   }
-
 ?>
 <html>
 <head>
@@ -356,27 +347,43 @@ actively hired, to login to view your daily schedule.</strong> </div>
                                                 <select name="position" id="position" class="emp-ddl" onChange="chk_gitunm_val(this.value);">
                                                    <option value=''>select</option>
                                                    <?php
-                                                    if(($result = mssql_query("SELECT ID, DesignationName FROM dbo.tbl_Designation WHERE IsActive = 1 ORDER BY DesignationName")) !== false){
-                                                    while( $obj = mssql_fetch_object( $result )) {
-                                                    echo "
-                                                    <option value='$obj->ID'>$obj->DesignationName</option>";
-                                                    }
-                                                    }
-                                                    ?>
+                                                            
+                                                        $sql="SELECT ID, DesignationName FROM dbo.tbl_Designation WHERE IsActive = 1 ORDER BY DesignationName";
+        $rs=odbc_exec($connection,$sql);
+        if (!$rs)
+          {exit("Error in SQL");}
+        while (odbc_fetch_row($rs))
+        {
+          $designationName=odbc_result($rs,"DesignationName");
+          $iD=odbc_result($rs,"ID");
+             echo "<option value='$iD'>$designationName</option>";
+         
+        }
+        odbc_close($conn);
+        
+        ?>
                                                 </select>
                                             </div>
                                             <div class="col-250 right">
                                                 <label class="f-label">Source:</label>
                                                 <select name="source" class="emp-ddl" id="source">
                                                 <option value=''>select</option>
-                                                     <?php
-                                                    if(($result = mssql_query("SELECT Id,Source FROM tblSource ORDER BY Source")) !== false){
-                                                    while( $obj = mssql_fetch_object( $result )) {
-                                                    echo "
-                                                    <option value='$obj->Id'> $obj->Source</option>";
-                                                    }
-                                                    }
-                                                    ?>
+                                                    <?php
+													
+												$sql="SELECT Id,Source FROM tblSource ORDER BY Source";
+$rs=odbc_exec($connection,$sql);
+if (!$rs)
+  {exit("Error in SQL");}
+while (odbc_fetch_row($rs))
+{
+  $Ids=odbc_result($rs,"Id");
+  $source=odbc_result($rs,"Source");
+     echo "<option value='$Ids'>$source</option>";
+ 
+}
+odbc_close($conn);
+
+?>
                                                 </select>
                                             </div>
                                             <div class="clear-float"></div>
@@ -1039,7 +1046,6 @@ actively hired, to login to view your daily schedule.</strong> </div>
                     }
                 });
             });
-
             $("#startdate").datepicker(
                      {
                          minDate: 0,
@@ -1144,8 +1150,7 @@ $("#txtloginid").blur(function(){
                         success: function (data) {
                             //var returnedData = data.json;
 							
-
-							alert(phone);
+							
                             if (data.trim() == "Exist") {
                                 var r = confirm("This phone is already exists, do you want to go our staff login page?");
                                 if (r == true) {
