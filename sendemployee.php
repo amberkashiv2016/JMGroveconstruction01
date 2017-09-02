@@ -45,11 +45,11 @@ if (!$connection)
 	
 	if(isset($_POST['submit']))
 	{
-		/*if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response'] == ""){
+		if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response'] == ""){
 			echo "Error : please verify captcha first";
 			exit;
 		}
-		*/
+		
 		foreach($_POST as $key => $value) {
 			$_POST[$key] = htmlspecialchars ($value);
 		}
@@ -149,9 +149,9 @@ if (!$connection)
 		// alterchange double quote to single quote
 		
 		$ccode =  '+'.countryCode($_POST['country']).'-';
-		
+	
 		 
-	$stmt = odbc_prepare($connection, 'insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ("'.$_POST['source'].'","'.$_POST['country'].'","jmgrove","'.$_POST['fname'].'","'.$_POST['lname'].'","'.$_POST['email'].'","'.$ccode.$_POST['phone'].'","'.$_POST['address'].'","'.$_POST['zip'].'","'.$_POST['state'].'","'.$_POST['city'].'","'.$worked.'","'.$license.'","'.$CrimeStatus.'","'.$_POST['user_type'].'","http://jmgroveconstruction.com/Resumes/'.$now.basename( $_FILES['resume']['name']).'","'.$_POST['startdate'].'","'.$_POST['position_text'].'","'.$_POST['position'].'","2","'.$SourceText.'","'.$_POST['salaryrequirements'].'","'.$_POST['reasonforleaving'].'","'.$now_dt.'","'.$CruntEmployement.'","'.$FELONY.'","'.$SourceUser.'","'.$EmpType.'","'.$Notes.'","'.$NameMiddleInitial.'","'.$_POST['position_text'].'","'.$email_contact.'","'.$call_contact.'","'.$text_contact.'","'.$mail_contact.'","http://jmgroveconstruction.com/ProfilePicture/'.$now.basename( $_FILES['profilepic']['name']).'");' ); 
+	$stmt = odbc_prepare($connection, "insert into JGBS_Dev_New.dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture)values ('".$_POST['source']."','".$_POST['country']."','jmgrove','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$ccode.$_POST['phone']."','".$_POST['address']."','".$_POST['zip']."','".$_POST['state']."','".$_POST['city']."','".$worked."','".$license."','".$CrimeStatus."','".$_POST['user_type']."','http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name'])."','".$_POST['startdate']."','".$_POST['position_text']."','".$_POST['position']."','2','".$SourceText."','".$_POST['salaryrequirements']."','".$_POST['reasonforleaving']."','".$now_dt."','".$CruntEmployement."','".$FELONY."','".$SourceUser."','".$EmpType."','".$Notes."','".$NameMiddleInitial."','".$_POST['position_text']."','".$email_contact."','".$call_contact."','".$text_contact."','".$mail_contact."','http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name'])."');" ); 
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 
@@ -185,7 +185,7 @@ if (!odbc_execute($stmt)) {
 	
 		
 		
-		$stmt = odbc_prepare($connection, 'UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID' ); 
+		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID' ); 
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 
