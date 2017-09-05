@@ -18,26 +18,19 @@ else if($proocutonmode === 1)
 $dsn = "Test";
 }
 else{
-
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
-
 }
 */
-
 //$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
-
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
-
 $dsn = "Test";
 $connection = odbc_connect($dsn, $user, $password);
-
 if (!$connection)
   {exit("Connection Failed: " . $connection);}
   else
   {
 	 
   }
-
 	
 	date_default_timezone_set("Asia/Kolkata");
 	$now=date("YmdHis"); //echo $now;
@@ -185,7 +178,14 @@ if (!odbc_execute($stmt)) {
 	
 		
 		
-		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE Id=$lastID' ); 
+		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id=$lastID' ); 
+		
+		
+		
+			
+			
+
+
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 
