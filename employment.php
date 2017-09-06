@@ -18,7 +18,6 @@ $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$data
 }
 */
 //$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
-
 $dsn = "Test";
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
 $connection = odbc_connect($dsn, $user, $password);
@@ -382,7 +381,6 @@ while (odbc_fetch_row($rs))
  
 }
 odbc_close($conn);
-
 ?>
                                                 </select>
                                             </div>
@@ -809,7 +807,7 @@ odbc_close($conn);
                                             <div class="g-recaptcha" data-sitekey="6LeGzBMUAAAAAN2ph9MEqiwcQAFdiKs-_bWhmgdM"></div>
                                             <div class="clear-float"></div>
                                              <div class="pad-5 btn_sec" style="text-align: center;">
-                                                <input id="frm_sub" onClick="return emailBlur();" type="submit" name="submit" value="Submit"
+                                                <input id="frm_sub"  type="submit" name="submit" value="Submit"
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
@@ -950,6 +948,8 @@ odbc_close($conn);
             return (false);
         }
         function emailBlur(){
+			
+			
             var email = $("#email").val();
                 if (email != '') {
                     //alert(email);
@@ -982,7 +982,7 @@ odbc_close($conn);
                     });
                 }
 				
-				phone_flag_check();
+			
         }
 		
 		function phone_flag_check(){
@@ -996,7 +996,12 @@ odbc_close($conn);
 			if( country_code !== flag_id){
 				
 				alert("International Dialing code and Country Selected in Country Dropdown are different");
+				
 				return false;
+			}
+			else
+			{
+				emailBlur();
 			}
 			
 			//alert(country_code);
@@ -1348,6 +1353,11 @@ var d = document.loginform;
 			
 		
 	}
+	
+	jQuery("#frm_sub").on("click", function(){
+      return phone_flag_check();	
+
+});
         </script>
 
 </body>
