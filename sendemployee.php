@@ -3,7 +3,7 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
-	
+	error_reporting(0);
 	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 $database="JGBS_Dev_New";
 $user="devloperuser";
@@ -38,10 +38,11 @@ if (!$connection)
 	
 	if(isset($_POST['submit']))
 	{
-		if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response'] == ""){
+	/*	if(isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response'] == ""){
 			echo "Error : please verify captcha first";
 			exit;
 		}
+		*/
 		
 		foreach($_POST as $key => $value) {
 			$_POST[$key] = htmlspecialchars ($value);
@@ -149,6 +150,9 @@ if (!$connection)
 if (!odbc_execute($stmt)) { 
     /* error  */ 
     echo "Error in SQL"; 
+	
+	
+	exit;
 } 
 	 
 	else
@@ -163,7 +167,7 @@ if (!odbc_execute($stmt)) {
 		$rsx=odbc_exec($connection,$sqlx);
 		while (odbc_fetch_row($rsx))
 		{
-		  $lastID=odbc_result($rsx,"id");
+		   $lastID=odbc_result($rsx,"id");
 		 
 		}
 		odbc_close($connection);
@@ -178,18 +182,18 @@ if (!odbc_execute($stmt)) {
 	
 		
 		
-		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id=$lastID' ); 
+		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id='.$lastID.'' ); 
 		
 		
 		
 			
 			
-
-
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 
     echo "Whoops"; 
+	
+		exit;
 } 
 		//$redirect_url='http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID;
 		//$redirect_url='http://www.jmgroveconstruction.com/demo/quote-service-contact-us.php?message=sent';
