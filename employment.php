@@ -17,8 +17,8 @@ else{
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 }
 */
-//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
-$dsn = "Test";
+$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+//$dsn = "Test";
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
 $connection = odbc_connect($dsn, $user, $password);
 if (!$connection)
