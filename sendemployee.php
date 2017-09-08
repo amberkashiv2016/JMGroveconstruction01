@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <?php
 	header("Access-Control-Allow-Origin: *");
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
@@ -161,11 +162,14 @@ if (!odbc_execute($stmt)) {
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
 		$email = $_POST['email'];
+		
+
 		$userProfile = "http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
 
 		$userResume = "http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name']);
 		
 		
+
 		$sqlx="select @@IDENTITY as id";
 		$rsx=odbc_exec($connection,$sqlx);
 		while (odbc_fetch_row($rsx))
@@ -176,9 +180,36 @@ if (!odbc_execute($stmt)) {
 		//odbc_close($connection);
 		
 		
+		$phone = $ccode.$_POST['phone'];
+
+		$luser_phone = "insert into JGBS_Dev_New.dbo.tblUserPhone (Phone, IsPrimary, UserID,PhoneTypeID) values ( '".$phone."', 1, '".$lastID."' , 1)";
+
+
+		echo "sql query : " . $luser_phone;
+
+		$odbc_userphone = odbc_prepare($connection, $luser_phone);
+
+		if (!odbc_execute($odbc_userphone)) { 
+		     
+		    echo "insert error in tblUserPhone"; 
+			
+				exit;
+		}
+
+
+		$luser_email = "insert into JGBS_Dev_New.dbo.tblUserEmail (emailID, IsPrimary, UserID) values ( '".$email."', 1, '".$lastID."')";
 		
-		
-	
+		echo "sql query : " . $luser_email;
+
+		$odbc_useremail = odbc_prepare($connection, $luser_email);
+
+		if (!odbc_execute($odbc_useremail)) { 
+		     
+		    echo "insert error in tblUserPhone"; 
+			
+				exit;
+		}
+
 		
 		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id='.$lastID.'' ); 
 		
@@ -208,7 +239,7 @@ if (!odbc_execute($stmt)) {
 		?>
 		<script type="text/javascript">
 
-			jQuery(document).ready(function($){
+			
 				jQuery.post(
 					'http://test.jmgrovebuildingsupply.com/updateuserdetails.aspx',
 					{
@@ -222,7 +253,7 @@ if (!odbc_execute($stmt)) {
 								}
 					);
 
-				});
+				
 
             window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
@@ -231,7 +262,7 @@ if (!odbc_execute($stmt)) {
 		  
 		  <script type="text/javascript">
 
-			jQuery(document).ready(function($){
+			
 				jQuery.post(
 					'http://web.jmgrovebuildingsupply.com/updateuserdetails.aspx',
 					{
@@ -245,7 +276,7 @@ if (!odbc_execute($stmt)) {
 								}
 					);
 
-			});
+			
 
 
             window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
@@ -501,3 +532,4 @@ foreach ($countryArray as $key => $value)
 }
 	
 ?>
+
