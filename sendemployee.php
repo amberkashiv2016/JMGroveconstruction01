@@ -21,9 +21,9 @@ else{
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 }
 */
-//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
-$dsn = "Test";
+//$dsn = "Test";
 $connection = odbc_connect($dsn, $user, $password);
 if (!$connection)
   {exit("Connection Failed: " . $connection);}
@@ -161,6 +161,9 @@ if (!odbc_execute($stmt)) {
 		// $URL="http://jmgroveconstruction.com/employment.php?view=formbox&rstatus=1";
 		///$URL="http://www.jmgroveconstruction.com/quote-service-contact-us.php?message=sent";
 		$email = $_POST['email'];
+		$userProfile = "http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
+
+		$userResume = "http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name']);
 		
 		
 		$sqlx="select @@IDENTITY as id";
@@ -170,17 +173,12 @@ if (!odbc_execute($stmt)) {
 		   $lastID=odbc_result($rsx,"id");
 		 
 		}
-		odbc_close($connection);
-		
-		
+		//odbc_close($connection);
 		
 		
 		
 		
 	
-		
-	
-		
 		
 		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id='.$lastID.'' ); 
 		
@@ -201,17 +199,55 @@ if (!odbc_execute($stmt)) {
 		
 		$prev_addr=strpos($_POST['cur_addr'], 'demo');
 		
+	?>	
+
+<?php
 		if($prev_addr !== false)
 		{
 		
 		?>
 		<script type="text/javascript">
+
+			jQuery(document).ready(function($){
+				jQuery.post(
+					'http://test.jmgrovebuildingsupply.com/updateuserdetails.aspx',
+					{
+							USERID 			: '<?php echo $lastID ?>',
+							RESUMEFILE	: '<?php echo $userResume ?>',
+							'PROFILE PICTURE'	: '<?php echo $userProfile ?>'
+										
+					},
+					function(response) {
+							console.log(response);
+								}
+					);
+
+				});
+
             window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  <?php
 		  } else { ?>
 		  
 		  <script type="text/javascript">
+
+			jQuery(document).ready(function($){
+				jQuery.post(
+					'http://web.jmgrovebuildingsupply.com/updateuserdetails.aspx',
+					{
+							USERID 			: '<?php echo $lastID ?>',
+							RESUMEFILE	: '<?php echo $userResume ?>',
+							'PROFILE PICTURE'	: '<?php echo $userProfile ?>'
+										
+					},
+					function(response) {
+							console.log(response);
+								}
+					);
+
+			});
+
+
             window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  
