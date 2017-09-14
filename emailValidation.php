@@ -27,7 +27,7 @@ $odbccon = odbc_connect($dsn, $user, $password);
     }
     else
     {
-	$email_query = "SELECT Email FROM JGBS_Dev_New.dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'";
+	$email_query = "SELECT Count(*) AS counter  FROM JGBS_Dev_New.dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'";
         
         if(($result = odbc_exec($odbccon,$email_query)) !== false){   //print_r($result);
            //$row_count = mssql_num_rows( $result );
@@ -35,7 +35,7 @@ $odbccon = odbc_connect($dsn, $user, $password);
            //if ($row_count === false)
 	    $arr = odbc_fetch_array($result);   
 		   
-           if (count($arr) > 0)
+           if ($arr['counter'] > 0)
                //echo "Exist";
                $return="Exist";
             else
