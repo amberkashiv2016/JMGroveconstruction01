@@ -1,10 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <?php $currentpage = "employment";
-$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-$database="JGBS_Dev_New";
-$user="devloperuser";
-$password="JG%987";
-/*
+
+include("config.php");
+
 if($proocutonmode === 2)//
 {
 $dsn = "Live";
@@ -16,8 +14,8 @@ $dsn = "Test";
 else{
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 }
-*/
-$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+
+//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 //$dsn = "Test";
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
 $connection = odbc_connect($dsn, $user, $password);

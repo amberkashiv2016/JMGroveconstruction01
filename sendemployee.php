@@ -4,12 +4,11 @@
 	header("Access-Control-Allow-Methods: PUT, GET, POST");
 	header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 	
+	include("config.php");
+
 	error_reporting(0);
-	$serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-$database="JGBS_Dev_New";
-$user="devloperuser";
-$password="JG%987";
-/*
+	
+
 if($proocutonmode === 2)//
 {
 $dsn = "Live";
@@ -21,8 +20,8 @@ $dsn = "Test";
 else{
 $dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 }
-*/
-$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+
+//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
 //$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
 //$dsn = "Test";
 $connection = odbc_connect($dsn, $user, $password);
@@ -530,6 +529,3 @@ foreach ($countryArray as $key => $value)
 	}
 }
 }
-	
-?>
-
