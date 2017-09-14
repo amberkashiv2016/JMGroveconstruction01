@@ -34,6 +34,8 @@ $odbccon = odbc_connect($dsn, $user, $password);
            //$row_count = mssql_num_rows( $result );
              //           echo $_POST['email'];
            //if ($row_count === false)
+		echo "result: ".odbc_num_rows($result);  
+		
            if (odbc_num_rows($result) > 0)
                //echo "Exist";
                $return="Exist";
