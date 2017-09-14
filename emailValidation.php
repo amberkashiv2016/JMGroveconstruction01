@@ -27,9 +27,9 @@ $odbccon = odbc_connect($dsn, $user, $password);
     }
     else
     {
-			
-        if(($result = odbc_exec($odbccon,"SELECT Email FROM JGBS_Dev_New.dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'")) !== false){
-            //print_r($result);
+	$email_query = "SELECT Email FROM JGBS_Dev_New.dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'";
+        echo 	$email_query;	
+        if(($result = odbc_exec($odbccon,$email_query)) !== false){   //print_r($result);
            //$row_count = mssql_num_rows( $result );
              //           echo $_POST['email'];
            //if ($row_count === false)
