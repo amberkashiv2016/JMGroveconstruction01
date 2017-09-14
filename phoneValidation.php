@@ -26,12 +26,14 @@ $odbccon = odbc_connect($dsn, $user, $password);
     }
     else
     {
-        if(($result = odbc_exec($odbccon,"SELECT Phone FROM dbo.tblInstallUsers WHERE Phone LIKE '%".$_POST['phone']."%'")) !== false){
+        if(($result = odbc_exec($odbccon,"SELECT Count(*) AS counter FROM dbo.tblInstallUsers WHERE Phone LIKE '%".$_POST['phone']."%'")) !== false){
             //print_r($result);
            //$row_count = mssql_num_rows( $result );
              //           echo $_POST['email'];
            //if ($row_count === false)
-           if (odbc_num_rows($result) > 0)
+           $arr = odbc_fetch_array($result);   
+		   
+		   if($arr['counter'] > 0)
                //echo "Exist";
                $return="Exist";
             else
