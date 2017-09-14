@@ -1142,8 +1142,8 @@ $("#txtloginid").blur(function(){
 // });
 });
  function checkAlreadyExistPhone() {
-                //var phone = $("#phone").val();
-                var phone = $("#phone").intlTelInput("getNumber");
+                var phone = $("#phone").val();
+                //var phone = $("#phone").intlTelInput("getNumber");
                 //alert(phone);
                 if (phone != '') {
                     $.ajax({
