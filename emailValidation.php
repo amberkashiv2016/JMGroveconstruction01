@@ -28,8 +28,7 @@ $odbccon = odbc_connect($dsn, $user, $password);
     else
     {
 			
-        if(($result = odbc_exec($odbccon,"SELECT Email FROM dbo.tblInstallUsers WHERE
-          Email = '".$_POST['email']."'")) !== false){
+        if(($result = odbc_exec($odbccon,"SELECT Email FROM JGBS_Dev_New.dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'")) !== false){
             //print_r($result);
            //$row_count = mssql_num_rows( $result );
              //           echo $_POST['email'];
