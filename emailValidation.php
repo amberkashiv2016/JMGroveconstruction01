@@ -1,28 +1,33 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+include("config.php");
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: PUT, GET, POST");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept"); 
+if($proocutonmode === 2)//
+{
+$dsn = "Live";
+}
+else if($proocutonmode === 1)
+{
+$dsn = "Test";
+}
+else{
+$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+}
 
-
-// $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
-
-// $connectionInfo = array( "Database"=>"JGBS", "UID"=>"liveuser", "PWD"=>"JGLive@538%");
-// //try{
-//     $conn = mssql_connect($serverName, 'liveuser', 'JGLive@538%');
-//     mssql_select_db("JGBS",$conn);
-$odbccon = odbc_connect ( "test" ,"liveuser", "JGLive@538%");
+//$dsn = "Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;";
+//$dsn = "Test";
+//$connection = odbc_connect("Driver={ODBC Driver 11 for SQL Server};Server=$serverName;Database=$database;", $user, $password);
+$odbccon = odbc_connect($dsn, $user, $password);
 
     $return = $_POST;
 
-    if( $odbccon === false ) {
-         echo "error";
-         exit;
+    if (!$odbccon)
+    {
+		exit("Connection Failed: " . $odbccon);
+
     }
     else
     {
+			
         if(($result = odbc_exec($odbccon,"SELECT Email FROM dbo.tblInstallUsers WHERE
           Email = '".$_POST['email']."'")) !== false){
             //print_r($result);
