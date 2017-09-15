@@ -4,8 +4,10 @@ $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
 
-if ( strpos($actual_link, 'jmgroveconstruction.com') !== false  && strpos($actual_link, 'jmgroveconstruction.com/demo') === false) {
-    
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+if ( strpos($actual_link, 'jmgroveconstruction.com') !== false  && strpos($actual_link, 'jmgroveconstruction.com/demo') === false) 
+{
 	$proocutonmode = 2;
 }else if(strpos($actual_link, 'jmgroveconstruction.com/demo') !== false)
 {
