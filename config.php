@@ -4,7 +4,7 @@ $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
 
-//$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//$actual_link = "http://$_SERVER[HTTP_HOST]";
 //echo "link : " . $actual_link;
 //echo "config file";
 $proocutonmode = 1;
