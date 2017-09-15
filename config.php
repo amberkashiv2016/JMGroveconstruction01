@@ -3,7 +3,7 @@ $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //server
 $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
-echo $_SERVER['PHP_SELF'];
+echo $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $proocutonmode = 1;
 /*
 if($proocutonmode === 2)//
