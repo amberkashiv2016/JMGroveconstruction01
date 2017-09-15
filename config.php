@@ -4,10 +4,17 @@ $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
 
-//$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//echo "link : " . $actual_link;
-//echo "config file";
-$proocutonmode = 1;
+if ( strpos($actual_link, 'jmgroveconstruction.com') !== false  && strpos($actual_link, 'jmgroveconstruction.com/demo') === false) {
+    
+	$proocutonmode = 2;
+}else if(strpos($actual_link, 'jmgroveconstruction.com/demo') !== false)
+{
+	$proocutonmode = 1;
+}else{
+	$proocutonmode = 3;
+}
+
+//$proocutonmode = 1;
 /*
 if($proocutonmode === 2)//
 {
