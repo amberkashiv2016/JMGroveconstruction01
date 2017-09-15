@@ -1,9 +1,10 @@
-<?php $currentpage = "employment";
+<?php 
 $serverName = "jgdbserver001.cdgdaha6zllk.us-west-2.rds.amazonaws.com"; //serverName\instanceName
 $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
-echo $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo "link : " . $actual_link;
 $proocutonmode = 1;
 /*
 if($proocutonmode === 2)//
