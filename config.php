@@ -4,9 +4,9 @@ $database="JGBS_Dev_New";
 $user="devloperuser";
 $password="JG%987";
 
-//$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-//echo "link : " . $actual_link;
-echo "config file";
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo "link : " . $actual_link;
+//echo "config file";
 $proocutonmode = 1;
 /*
 if($proocutonmode === 2)//
