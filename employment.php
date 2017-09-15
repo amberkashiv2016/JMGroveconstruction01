@@ -2,7 +2,7 @@
 <?php $currentpage = "employment";
 
 include("config.php");
-echo "dsn code : " . $proocutonmode;
+
 if($proocutonmode === 2)//
 {
 $dsn = "Live";
