@@ -793,10 +793,12 @@ odbc_close($conn);
                                             <div class="col-250 left" style="margin-bottom:10px; margin-top: 15px;">
                                                 <label class="f-label">Attach resume with References</label>
                                                 <input type="file" style="display:block;" name="resume" id="resume" />
+												<span style="font-size:10px;font-weight:bold">(resume size should be less than 2MB , extention allowed: pdf|doc|txt|gif|jpg|png|jpeg) </span>
                                             </div>
                                             <div class="col-250 left" style="margin-bottom:10px; margin-top: 15px;">
                                                 <label class="f-label">Attach profile picture</label>
                                                 <input type="file" name="profilepic" style="display:block;" id="profilepic" />
+												<span style="font-size:10px;font-weight:bold">(profile pic size should be less than 2MB , extention allowed: gif|jpg|png|jpeg) </span>
                                             </div>
                                            <!--  <div class="pad-5 btn_sec" style="text-align: center;">
                                                 <input type="submit" name="submit" value="Submit" onclick="return formValidation();" style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;">
