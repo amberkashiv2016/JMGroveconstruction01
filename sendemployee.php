@@ -55,7 +55,7 @@ if (!$connection)
 			//pdf|doc|txt|gif|jpg|png|jpeg
 			$allowedExts = array("pdf","doc","txt","docx","PDF","DOC","TXT","DOCX","gif","jpg","png","jpeg","GIF","JPG","PNG","JPEG");
 			$extension = end(explode(".", $_FILES["resume"]["name"]));
-			if (($_FILES["resume"]["size"] < 2097152)	&& in_array($extension, $allowedExts)){
+			if (($_FILES["resume"]["size"] < 5242880)	&& in_array($extension, $allowedExts)){
 				if(move_uploaded_file($_FILES['resume']['tmp_name'], $target_path))
 				{
 					//	echo "The file ".  basename( $_FILES['resume']['name'])." has been uploaded successfully";
@@ -69,7 +69,7 @@ if (!$connection)
 				}
 			}
 			else{
-				if(($_FILES["resume"]["size"] > 2097152))
+				if(($_FILES["resume"]["size"] > 5242880))
 				{
 					echo "Error : resume size should be less than 2MB";
 					exit;
@@ -88,7 +88,7 @@ if (!$connection)
 			//gif|jpg|png|jpeg
 			$allowedExts = array("gif","jpg","png","jpeg","GIF","JPG","PNG","JPEG");
 			$extension = end(explode(".", $_FILES["profilepic"]["name"]));
-			if (($_FILES["profilepic"]["size"] < 2097152)	&& in_array($extension, $allowedExts)){
+			if (($_FILES["profilepic"]["size"] < 5242880)	&& in_array($extension, $allowedExts)){
 				if(move_uploaded_file($_FILES['profilepic']['tmp_name'], $target_path))
 				{
 				//echo "The file ".  basename( $_FILES['profilepic']['name'])." has been uploaded successfully";
@@ -103,7 +103,7 @@ if (!$connection)
 			}
 			else
 			{
-				if(($_FILES["profilepic"]["size"] > 2097152))
+				if(($_FILES["profilepic"]["size"] > 5242880))
 				{
 					echo "Error : profile pic size should be less than 2MB";
 					exit;
@@ -164,7 +164,7 @@ if (!$connection)
 		$ccode =  '+'.countryCode($_POST['country']).'-';
 	
 		 
-	$stmt = odbc_prepare($connection, "insert into JGBS_Dev_New.dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture,GitUserName)values ('".$_POST['source']."','".$_POST['country']."','jmgrove','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$ccode.$_POST['phone']."','".$_POST['address']."','".$_POST['zip']."','".$_POST['state']."','".$_POST['city']."','".$worked."','".$license."','".$CrimeStatus."','".$_POST['user_type']."','http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name'])."','".$_POST['startdate']."','".$_POST['position_text']."','".$_POST['position']."','2','".$SourceText."','".$_POST['salaryrequirements']."','".$_POST['reasonforleaving']."','".$now_dt."','".$CruntEmployement."','".$FELONY."','".$SourceUser."','".$EmpType."','".$Notes."','".$NameMiddleInitial."','".$_POST['position_text']."','".$email_contact."','".$call_contact."','".$text_contact."','".$mail_contact."','http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name'])."','".$github_name."');" ); 
+	$stmt = odbc_prepare($connection, "insert into JGBS_Dev_New.dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture,GitUserName)values ('".$_POST['source']."','".$_POST['country']."','jmgrove','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$ccode.$_POST['phone']."','".$_POST['address']."','".$_POST['zip']."','".$_POST['state']."','".$_POST['city']."','".$worked."','".$license."','".$CrimeStatus."','".$_POST['user_type']."','".$now.basename( $_FILES['resume']['name'])."','".$_POST['startdate']."','".$_POST['position_text']."','".$_POST['position']."','2','".$SourceText."','".$_POST['salaryrequirements']."','".$_POST['reasonforleaving']."','".$now_dt."','".$CruntEmployement."','".$FELONY."','".$SourceUser."','".$EmpType."','".$Notes."','".$NameMiddleInitial."','".$_POST['position_text']."','".$email_contact."','".$call_contact."','".$text_contact."','".$mail_contact."','".$now.basename( $_FILES['profilepic']['name'])."','".$github_name."');" ); 
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 

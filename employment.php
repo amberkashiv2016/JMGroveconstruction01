@@ -1358,6 +1358,18 @@ var d = document.loginform;
       return phone_flag_check();	
 
 });
+
+$('#resume,#profilepic').bind('change', function() {
+
+  //this.files[0].size gets the size of your file.
+  if(this.files[0].size > 5242880){
+	
+	$(this).val('');
+	alert("Allowed file size exceeded. (Max. 5 MB)" );
+	
+  }
+
+});
         </script>
 
 </body>
