@@ -98,8 +98,35 @@
 	
 	
 	//PROFILE PICTURE RELATE CODE SSTARTS HERE
+	//check DB column Picture and update database for only file name and no url
 	
-
+	foreach($file_arr[0] as $key => $profile_url){
+		
+		//echo "<br/>file present in database - user id : " . $u_id ." filename:" . $file  ;
+		
+		$uid_arr = explode("_", $key);
+		
+		if(end($uid_arr) ==1)
+		{
+			$profile_arr = explode("/", $profile_url);
+							
+			$profilename = end($profile_arr);
+			echo "FULL Url is present in DB . Just file name needed in DB : $profilename";
+							
+			if( $profilename === '20170918112045submit-form.png')
+			{
+				echo "<br/>file updated : ". $uid_arr[0] . " filename : " . $profilename;
+				$u_sql = "UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.$db_col[0]='$profilename' WHERE  Id='$uid_arr[0]'" ;
+				$stmt = odbc_exec($connection, $u_sql ); 
+		        
+				if (!$stmt)
+				{
+					exit("Error in SQL");
+				}
+			}
+		} 
+						
+	}
 		
 		// Open ProfilePicture directory, and read its contents
 	if (is_dir($dir_profile)){
@@ -108,34 +135,15 @@
 			  
 				if($file !='.' && $file !='..')
 				{
-                    if( $u_id = array_search($file, $file_arr[0]) )
-					{
-						echo "<br/>file present in database - user id : " . $u_id ." filename:" . $file  ;
-					    $profileuser_id = explode("_", $u_id);
-						$uid_arr = explode("_", $u_id);
-						if(end($uid_arr) ==1){
-							
-							echo "FULL Url is present in DB . Just file name needed in DB";
-							
-							if( $file === '20170918112045submit-form.png')
-							{
-								echo "<br/>file updated : ". $profileuser_id[0];
-								$u_sql = "UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.$db_col[0]='$file' WHERE  Id='$profileuser_id[0]'" ;
-								$stmt = odbc_exec($connection, $u_sql ); 
-		                        if (!$stmt)
-								{exit("Error in SQL");}
-							}
-						}
-					
-					}else
+                    if( !($u_id = array_search($file, $file_arr[0])) )
 					{
 						echo "<br/>Profile Pic :: filename Not in DB : Delete this file from FOLDER " . $file ;
 						
-						/* if( $file === '20170203062242JMGSALES1 - WIN_20151101_133714.JPG')
+						if( $file === '20170228103528Jellyfish.jpg')
 						{
 							echo "<br/>$file - file deleted ";
 							unlink($dir_profile."/".$file);	
-						} */
+						}
 
 					}
 				
@@ -143,44 +151,56 @@
 
 			}
 			closedir($dh_profile);
-		  }
 		}
+	}
+	
+	//RESUME RELATED CODE starts	
+	//check DB Col. ResumePath and update database for only file name and no url	
+	
+	foreach($file_arr[1] as $key => $resume_url){
 		
-		// Open Resumes directory, and read its contents
+		//echo "<br/>file present in database - user id : " . $u_id ." filename:" . $file  ;
+		
+		$uid_arr = explode("_", $key);
+		
+		if(end($uid_arr) ==1)
+		{
+			$resume_arr = explode("/", $resume_url);
+							
+			$resumename = end($resume_arr);
+			echo "FULL Url is present in DB . Just file name needed in DB : $resumename";
+							
+			if( $resumename === '20170918112735Questions - Expert  Zone1.pdf')
+			{
+				echo "<br/>file updated : ". $uid_arr[0] . " filename : " . $resumename;
+				$u_sql = "UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.$db_col[0]='$resumename' WHERE  Id='$uid_arr[0]'" ;
+				$stmt = odbc_exec($connection, $u_sql ); 
+		        
+				if (!$stmt)
+				{
+					exit("Error in SQL");
+				}
+			}
+		} 
+						
+	}
+	
+	// Open Resumes directory, and read its contents
 	if (is_dir($dir_resume)){
 	    if ($dh = opendir($dir_resume)){
 			while (($file = readdir($dh)) !== false){
 			  
 				if($file !='.' && $file !='..')
 				{
-                    if( $u_id = array_search($file, $file_arr[1]) )
-					{
-						echo "<br/>file present in database - user id : " . $u_id ." filename:" . $file  ;
-					    $profileuser_id = explode("_", $u_id);
-						$uid_arr = explode("_", $u_id);
-						if(end($uid_arr) ==1){
-							
-							echo "FULL Url is present in DB . Just file name needed in DB";
-							
-							if( $file === '20170918112735Questions - Expert  Zone1.pdf')
-							{
-								echo "<br/>file updated : ". $profileuser_id[0];
-								$u_sql = "UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.$db_col[1]='$file' WHERE  Id='$profileuser_id[0]'" ;
-								$stmt = odbc_exec($connection, $u_sql ); 
-		                        if (!$stmt)
-								{exit("Error in SQL");}
-							}
-						}
-					
-					}else
+                    if( !($u_id = array_search($file, $file_arr[1])) )
 					{
 						echo "<br/>filename Not in DB : Delete this file from FOLDER " . $file ;
 						
-						/* if( $file === '20170203062242JMGSALES1 - WIN_20151101_133714.JPG')
+						if( $file === '20170203062242JMGSALES1 - WIN_20151101_133714.JPG')
 						{
 							echo "<br/>$file - file deleted ";
 							unlink($dir_resume."/".$file);	
-						} */
+						}
 
 					}
 				
