@@ -164,7 +164,7 @@ if (!$connection)
 		$ccode =  '+'.countryCode($_POST['country']).'-';
 	
 		 
-	$stmt = odbc_prepare($connection, "insert into JGBS_Dev_New.dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture,GitUserName)values ('".$_POST['source']."','".$_POST['country']."','jmgrove','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$ccode.$_POST['phone']."','".$_POST['address']."','".$_POST['zip']."','".$_POST['state']."','".$_POST['city']."','".$worked."','".$license."','".$CrimeStatus."','".$_POST['user_type']."','".$now.basename( $_FILES['resume']['name'])."','".$_POST['startdate']."','".$_POST['position_text']."','".$_POST['position']."','2','".$SourceText."','".$_POST['salaryrequirements']."','".$_POST['reasonforleaving']."','".$now_dt."','".$CruntEmployement."','".$FELONY."','".$SourceUser."','".$EmpType."','".$Notes."','".$NameMiddleInitial."','".$_POST['position_text']."','".$email_contact."','".$call_contact."','".$text_contact."','".$mail_contact."','".$now.basename( $_FILES['profilepic']['name'])."','".$github_name."');" ); 
+	$stmt = odbc_prepare($connection, "insert into dbo.tblInstallUsers ( SourceID,CountryCode,Password,FristName,LastName,Email,Phone,Address,Zip,State,City,	PrevApply,LicenseStatus,CrimeStatus,usertype,ResumePath,StartDate,PositionAppliedFor,DesignationID,Status,Source,SalaryReq,LeavingReason,DateSourced,CruntEmployement,FELONY,SourceUser,EmpType,Notes,NameMiddleInitial,Designation,IsEmailContactPreference,IsCallContactPreference,IsTextContactPreference,IsMailContactPreference,Picture,GitUserName)values ('".$_POST['source']."','".$_POST['country']."','jmgrove','".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$ccode.$_POST['phone']."','".$_POST['address']."','".$_POST['zip']."','".$_POST['state']."','".$_POST['city']."','".$worked."','".$license."','".$CrimeStatus."','".$_POST['user_type']."','".$now.basename( $_FILES['resume']['name'])."','".$_POST['startdate']."','".$_POST['position_text']."','".$_POST['position']."','2','".$SourceText."','".$_POST['salaryrequirements']."','".$_POST['reasonforleaving']."','".$now_dt."','".$CruntEmployement."','".$FELONY."','".$SourceUser."','".$EmpType."','".$Notes."','".$NameMiddleInitial."','".$_POST['position_text']."','".$email_contact."','".$call_contact."','".$text_contact."','".$mail_contact."','".$now.basename( $_FILES['profilepic']['name'])."','".$github_name."');" ); 
  
 if (!odbc_execute($stmt)) { 
     /* error  */ 
@@ -200,7 +200,7 @@ if (!odbc_execute($stmt)) {
 		
 		$phone = $ccode.$_POST['phone'];
 
-		$luser_phone = "insert into JGBS_Dev_New.dbo.tblUserPhone (Phone, IsPrimary, UserID,PhoneTypeID) values ( '".$phone."', 1, '".$lastID."' , 1)";
+		$luser_phone = "insert into dbo.tblUserPhone (Phone, IsPrimary, UserID,PhoneTypeID) values ( '".$phone."', 1, '".$lastID."' , 1)";
 
 
 		//echo "sql query : " . $luser_phone;
@@ -215,7 +215,7 @@ if (!odbc_execute($stmt)) {
 		}
 
 
-		$luser_email = "insert into JGBS_Dev_New.dbo.tblUserEmail (emailID, IsPrimary, UserID) values ( '".$email."', 1, '".$lastID."')";
+		$luser_email = "insert into dbo.tblUserEmail (emailID, IsPrimary, UserID) values ( '".$email."', 1, '".$lastID."')";
 		
 		//echo "sql query : " . $luser_email;
 
@@ -229,7 +229,7 @@ if (!odbc_execute($stmt)) {
 		}
 
 		
-		$stmt = odbc_prepare($connection, 'UPDATE JGBS_Dev_New.dbo.tblInstallUsers SET JGBS_Dev_New.dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id='.$lastID.'' ); 
+		$stmt = odbc_prepare($connection, 'UPDATE dbo.tblInstallUsers SET dbo.tblInstallUsers.AddedByUserID=1537 WHERE  Id='.$lastID.'' ); 
 		
 		
 		
