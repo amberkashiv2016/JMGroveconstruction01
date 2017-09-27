@@ -262,7 +262,7 @@ width:100%;
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment </h1>
                     <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
                         <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding employees! </p>
-                        <img src="/img/hr-page.jpg" style="float:left;margin:0 15px"><div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your email or phone
+                        <img src="./img/hr-page.jpg" style="float:left;margin:0 15px"><div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your email or phone
 number as login Id &amp; your given password. Complete the interview process or if already
 actively hired, to login to view your daily schedule.</strong> </div>
 
