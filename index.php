@@ -17,6 +17,7 @@
     <script src="slider/6/mcVideoPlugin.js" type="text/javascript"></script>
     <script src="slider/6/js-image-slider.js" type="text/javascript"></script>
     <script src="slider/6/js-image-slider_after.js" type="text/javascript"></script>
+    <script src="slider/6/js-image-slider_header.js" type="text/javascript"></script>
     <link href="generic.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -68,11 +69,26 @@
 				<div style="float:left;background: url(img/splash-left-bottom.jpg);height:10px;width:100%;overflow:hidden;"></div>
 			</div>
 			<div id="splash-right" style="height:194px;">
-				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="610" height="194">
-					<param name="movie" value="pub/home.swf">
-					<param name="quality" value="high">
-					<embed src="pub/home.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="610" height="194"></embed>
-				</object>
+				<div class="structuresleft_header">
+                          <div class="structureslider_header">
+                                             
+                     <div id="sliderFrame_header">
+        <div id="slider_header">
+            
+            <a class="lazyImage" href="slider-images/image-slider-1.jpg"></a>
+            <a class="lazyImage" href="slider-images/image-slider-2.jpg"></a>
+            <a class="lazyImage" href="slider-images/image-slider-3.jpg"></a>
+            <!--<a class="lazyImage" href="slider-images/image-slider-4.jpg"></a> -->
+            <a class="lazyImage" href="slider-images/image-slider-5.jpg"></a>
+            <!--<a class="lazyImage" href="slider-images/slide-6.jpg"></a>
+            <a class="lazyImage" href="slider-images/slide-7.jpg"></a>
+            <a class="lazyImage" href="slider-images/slide-8.jpg"></a>-->
+            
+            
+         
+        </div>
+    </div>
+                              </div> </div>
 			</div>
 			<div id="splash-footer"></div>
 		</div>
