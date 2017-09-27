@@ -4,7 +4,7 @@
 		<div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
 		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="quote-service-contact-us.php?page=contact" style="text-decoration:none;">Contact Us</a></div>
 		<div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
-		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="employment.php?view=formbox" style="text-decoration:none;">Employment</a></div>
+		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="employment-jobs-careers-hiring-vacancies.php" style="text-decoration:none;">Employment</a></div>
 		<div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
 		<div style="float:left;padding: 15px 18px 0px 18px;font-size:.8em;"><a href="industry.php" style="text-decoration:none;">Industry Link test</a></div>
         <div style="float:left;"><img src="/img/footer-vdiv.jpg"></div>
