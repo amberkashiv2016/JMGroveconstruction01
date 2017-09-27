@@ -417,7 +417,9 @@ width: 130px !important;
 
 #git_uname , #no-github-account{display:none}
 
-
+label.f-label span.red, h5  span.red,span.red{
+	color:red;
+}
 
 
 
