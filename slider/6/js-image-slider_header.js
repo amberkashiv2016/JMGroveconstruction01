@@ -1,3 +1,4 @@
+
 var sliderOptions =
 {
 	sliderId: "slider_header",
