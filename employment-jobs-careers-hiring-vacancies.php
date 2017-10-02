@@ -260,11 +260,26 @@ width:100%;
                 <div id="content-right">
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment </h1>
-                    <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
-                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding employees! </p>
-                        <img src="./img/hr-page.jpg" style="float:left;margin:0 15px"><div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your email or phone
-number as login Id &amp; your given password. Complete the interview process or if already
-actively hired, to login to view your daily schedule.</strong> </div>
+                    <div style="width:100%;float:left;height:300px;overflow:hidden;">
+				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/roofing-customize.gif" border="0" style="padding-bottom:2px;"></div>
+				<div style="width:80%;float:left;overflow:hidden;">
+					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
+						Installing Quality <strong>Roofing</strong> Products the Right Way!
+					</h2>
+					<p style="padding: 0px 20px 0px 20px;font-size:.8em;">
+						
+						We provide an array of <strong>roofing services</strong> to keep your home dry, safe and increase 
+						curb appeal. J.M. Grove has hand selected the highest quality <strong>roofing products</strong> in the industry to ensure 
+						longevity, strength and an overall positive experience for the life of our customer's <strong>roof</strong>. It is important that an experienced
+						<strong>roofing company</strong> with strong <strong>roofers</strong> make your <strong>homes roof repairs</strong> or <strong>roof replacement</strong> to assure the integrity of the roof. An 
+						improper <strong>roof replacement</strong> could affect the warranty on your roof and be troublesome and expensive in the long run.
+					</p>
+					<p style="padding: 0px 20px 10px 20px;font-size:.8em;"><strong>Our Suppliers:</strong></p>
+	<p style="padding: 0px 20px 10px 20px;font-size:.8em;" align="center">
+						<a href="roofing-shingles.php"><img src="img/button-start-customizing.jpg" alt="Roof Replacement" border="0"></a>
+					</p>
+				</div>
+				</div>
 
 <div style="clear:both"></div>
                         <?php if(isset($_GET['view'])=='formbox')
