@@ -261,7 +261,7 @@ width:100%;
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment Rio De Janiero Brazil</h1>
                     <div style="width:100%;float:left;height:200px;overflow:hidden;">
-				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt="Employment, jobs, careers, hiring vacancies now Rio De Janiero Brazil " title="Employment, jobs, careers, hiring vacancies now Rio De Janiero Brazil"></div>
+				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt=" Rio De Janiero Brazil Employment, jobs, careers, hiring vacancies now " title=" Rio De Janiero Brazil Employment, jobs, careers, hiring vacancies now"></div>
 				<div style="width:80%;float:left;overflow:hidden;">
 					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
 						Careers at JMGrove
