@@ -273,7 +273,7 @@ width:100%;
 						</p>
 						
 						<p style="padding: 10px 20px 0px 20px;font-size:.8em;">From <strong>part-time job</strong> opportunities to <strong>full time jobs</strong>, JMGrove has <strong>employment</strong> opportunities that fit your life. 
-						Get to know us better - fill out a <strong>job application</strong> and let’s get started.
+						Get to know us better - fill out a <strong>job application</strong> and lets get started.
 						
 						</p>
 					
