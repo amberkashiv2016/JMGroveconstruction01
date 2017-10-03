@@ -32,10 +32,10 @@ if (!$connection)
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
+    <title>Jobs - Recruitment - Job Search - Employment - Job Vacancies - J.M. Grove Construction</title>
     <link rel="stylesheet" href="./inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="./inc/intlTelInput.css" type="text/css">
-    <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
+    <meta name="description" content="J.M.Grove -  Now Hiring for job vacancies on jmgroveconstruction.com for full time and part time for for different position in IT and admin roles" />
     <meta name="keywords" content="Employment, jobs, careers, hiring vacancies now" />
     
     <style>
@@ -68,7 +68,7 @@ width:100%;
                 margin: 0 auto;
                 min-height: 200px;
                 padding: 0 0 26px;
-                width: 508px;
+                width: 100%;
                 float:left;
             }
             .content_panel h1 {
@@ -260,27 +260,26 @@ width:100%;
                 <div id="content-right">
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment </h1>
-                    <div style="width:100%;float:left;height:300px;overflow:hidden;">
-				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/roofing-customize.gif" border="0" style="padding-bottom:2px;" alt="Employment, jobs, careers, hiring vacancies now"></div>
+                    <div style="width:100%;float:left;height:200px;overflow:hidden;">
+				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt="Employment, jobs, careers, hiring vacancies now" title="Employment, jobs, careers, hiring vacancies now"></div>
 				<div style="width:80%;float:left;overflow:hidden;">
 					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
-						Installing Quality <strong>Roofing</strong> Products the Right Way!
+						Careers at JMGrove
 					</h2>
-					<p style="padding: 0px 20px 0px 20px;font-size:.8em;">
+					<p style="padding: 10px 20px 0px 20px;font-size:.8em;">
+					Looking for a new <strong>Job</strong>? At <strong>JM Grove</strong>, we are <strong>hiring</strong> for the <strong>vacancies now</strong>. You can experience a world of opportunities to explore a wide-range of <strong>careers</strong>, to work as a <strong>software developer , admin / support, sales, marketing</strong>. 
+						</p>
+						<p style="padding: 10px 20px 0px 20px;font-size:.8em;">Your talents and skills are key to our product success, we recognize and value your contributions.
+						</p>
 						
-						We provide an array of <strong>roofing services</strong> to keep your home dry, safe and increase 
-						curb appeal. J.M. Grove has hand selected the highest quality <strong>roofing products</strong> in the industry to ensure 
-						longevity, strength and an overall positive experience for the life of our customer's <strong>roof</strong>. It is important that an experienced
-						<strong>roofing company</strong> with strong <strong>roofers</strong> make your <strong>homes roof repairs</strong> or <strong>roof replacement</strong> to assure the integrity of the roof. An 
-						improper <strong>roof replacement</strong> could affect the warranty on your roof and be troublesome and expensive in the long run.
-					</p>
-					<p style="padding: 0px 20px 10px 20px;font-size:.8em;"><strong>Our Suppliers:</strong></p>
-	<p style="padding: 0px 20px 10px 20px;font-size:.8em;" align="center">
-						<a href="roofing-shingles.php"><img src="img/button-start-customizing.jpg" alt="Roof Replacement" border="0"></a>
-					</p>
+						<p style="padding: 10px 20px 0px 20px;font-size:.8em;">From <strong>part-time job</strong> opportunities to <strong>full time jobs</strong>, JMGrove has <strong>employment</strong> opportunities that fit your life. 
+						Get to know us better - fill out a <strong>job application</strong> and let’s get started.
+						
+						</p>
+					
 				</div>
 				</div>
-
+<div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
 <div style="clear:both"></div>
                         <?php if(isset($_GET['view'])=='formbox')
                         {
@@ -789,7 +788,7 @@ odbc_close($conn);
 									</div>
                                 </div>
 								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
-                        <section class="content_panel" style="min-height:inherit;">
+                        <section class="content_panel" style="min-height:inherit;width:70%;float:left">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 
                             <div class="login_right_panel">
@@ -838,20 +837,29 @@ odbc_close($conn);
                                     
                                 </div>
                             </div>
+							
+							
                             
                             </form>
                         </section>
+						<div style="width:25%;padding:10px;float:right">
+							<p>* if you have already filled in the form below you can sign in using your email or phone number as login Id & your given password. Complete the interview process or if already actively hired, to login to view your daily schedule.
+							
+							</p>
+							</div>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-            </div>
+                    </div>
             <?php include("inc/testimonials.php"); ?>
-        </div>
+
+		
         <?php include("inc/footer.php"); ?>
     </div>
+	</div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
