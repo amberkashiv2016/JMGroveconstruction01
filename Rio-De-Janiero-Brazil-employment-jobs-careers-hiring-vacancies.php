@@ -259,22 +259,17 @@ width:100%;
                 <?php include("inc/employee_leftmenu.php"); ?>
                 <div id="content-right">
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
-                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment Rio De Janiero Brazil</h1>
+                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">JMGrove Employment! Hiring Job Vacancies Now! </h1>
                     <div style="width:100%;float:left;height:200px;overflow:hidden;">
 				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt=" Rio De Janiero Brazil Employment, jobs, careers, hiring vacancies now " title=" Rio De Janiero Brazil Employment, jobs, careers, hiring vacancies now"></div>
 				<div style="width:80%;float:left;overflow:hidden;">
 					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
-						Careers at JMGrove
+						Rio De Janiero Brazil Employment, Jobs, Careers Hiring Now! 
 					</h2>
 					<p style="padding: 10px 20px 0px 20px;font-size:.8em;">
-					Looking for a new <strong>Job</strong>? At <strong>JM Grove</strong>, we are <strong>hiring</strong> for the <strong>vacancies now</strong>. You can experience a world of opportunities to explore a wide-range of <strong>careers</strong>, to work as a <strong>software developer , admin / support, sales, marketing</strong>  for  <strong>Rio De Janiero Brazil</strong>. 
-						</p>
-						<p style="padding: 10px 20px 0px 20px;font-size:.8em;">Your talents and skills are key to our product success, we recognize and value your contributions.
-						</p>
-						
-						<p style="padding: 10px 20px 0px 20px;font-size:.8em;">From <strong>part-time job</strong> opportunities to <strong>full time jobs</strong>, JMGrove has <strong>employment</strong> opportunities that fit your life. 
-						Get to know us better - fill out a <strong>job application</strong> and lets get started.
-						
+					Looking for a new <strong>career</strong>? At <strong>JM Grove</strong>, we are hiring for open <strong>job vacancies now</strong>. You can experience a world of opportunities to explore a wide-range of <strong>careers</strong>, to work as an admin / support, sales, marketing,construction installer, software developer,<strong>jobs</strong> etc.Your talents and skills are key to our product success, we recognize and value your contributions.For part-time/full time, internships <strong>vacancies</strong> or remote or onsite opportunities.</p>
+					
+					<p style="padding: 10px 20px 0px 20px;font-size:.8em;"> <strong>JMGrove</strong> has <strong>employment</strong> opportunities that fit your life. Get to know us better - fill out the job application and lets get started.
 						</p>
 					
 				</div>
@@ -775,19 +770,25 @@ odbc_close($conn);
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
-                                            <div class="clear-float"></div>
-                                        </div>
-                                        <div class="clearboth"></div>
+                                            <div class="clearboth"></div>
+										<div id="application-tc" style="padding:10px">
+									
+									<p > <span style="color:red">*</span> If application is successfully submited, you will be redirected to login page and prompted with instructions to continue the application process! NO application is reviewed if not submitted properly
+									</p>
+									</div>
+									
+										</div>
+                                        
+										<div class="clearboth"></div>
+
+                                    
+									
 
                                     </form>
 									
-									<div id="application-tc">
 									
-									<p style='font-weight:bold'>" *If application is successfully submited, you will be redirected to login page and prompted with instructions to continue the application process! NO application is reviewed if not submitted properly"
-									</p>
-									</div>
                                 </div>
-								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
+								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. near <strong>Rio De Janiero Brazil</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
                         <section class="content_panel" style="min-height:inherit;width:70%;float:left">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 
@@ -843,7 +844,7 @@ odbc_close($conn);
                             </form>
                         </section>
 						<div style="width:25%;padding:10px;float:right">
-							<p>* if you have already filled in the form below you can sign in using your email or phone number as login Id & your given password. Complete the interview process or if already actively hired, to login to view your daily schedule.
+							<p><span style="color:red">* </span> if you have already filled in the form below you can sign in using your email or phone number as login Id & your given password. Complete the interview process or if already actively hired, to login to view your daily schedule.
 							
 							</p>
 							</div>

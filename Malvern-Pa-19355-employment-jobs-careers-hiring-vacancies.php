@@ -32,11 +32,11 @@ if (!$connection)
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Employment - J.M. Grove  - The Home Improvement Specialists</title>
+    <title>Jobs - Recruitment - Job Search - Employment - Job Vacancies - J.M. Grove Construction  Malvern Pa, 19355</title>
     <link rel="stylesheet" href="./inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="./inc/intlTelInput.css" type="text/css">
-    <meta name="description" content="J.M.Grove -  replacement windows, doors, roofing, vinyl siding, gutters, awnings, brick, stone veneer, skylights, additions, decks and much more!" />
-    <meta name="keywords" content="Malvern Pa-19355 Employment, jobs, careers, hiring vacancies now" />
+    <meta name="description" content="J.M.Grove -  Now Hiring in Malvern Pa, 19355 for job vacancies on jmgroveconstruction.com for full time and part time for for different position in IT and admin roles" />
+    <meta name="keywords" content="Now Hiring in Malvern Pa, 19355  Employment, jobs, careers, hiring vacancies now" />
     
     <style>
 label.error {
@@ -68,7 +68,7 @@ width:100%;
                 margin: 0 auto;
                 min-height: 200px;
                 padding: 0 0 26px;
-                width: 508px;
+                width: 100%;
                 float:left;
             }
             .content_panel h1 {
@@ -259,13 +259,22 @@ width:100%;
                 <?php include("inc/employee_leftmenu.php"); ?>
                 <div id="content-right">
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
-                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">Hiring for Job Vacancies Now! JMGrove Employment </h1>
-                    <div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
-                        <p style="padding: 5px 15px 10px 15px;font-weight:800;color:#c72121;" align="center"> What makes J.M. Grove so great? Our outstanding employees! </p>
-                        <img src="img/hr-page.jpg" style="float:left;margin:0 15px" alt="Malvern Pa-19355 Employment, jobs, careers, hiring vacancies now"><div style="padding: 10px 15px 10px 15px;"> <strong><label class="error">*</label> if you have already filled in the form below you can sign in using your email or phone
-number as login Id &amp; your given password. Complete the interview process or if already
-actively hired, to login to view your daily schedule.</strong> </div>
-
+                    <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">JMGrove Employment! Hiring Job Vacancies Now! </h1>
+                    <div style="width:100%;float:left;height:200px;overflow:hidden;">
+				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt=" Malvern Pa, 19355 Employment, jobs, careers, hiring vacancies now " title=" Malvern Pa, 19355 Employment, jobs, careers, hiring vacancies now"></div>
+				<div style="width:80%;float:left;overflow:hidden;">
+					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
+						Malvern Pa, 19355 Employment, Jobs, Careers Hiring Now! 
+					</h2>
+					<p style="padding: 10px 20px 0px 20px;font-size:.8em;">
+					Looking for a new <strong>career</strong>? At <strong>JM Grove</strong>, we are hiring for open <strong>job vacancies now</strong>. You can experience a world of opportunities to explore a wide-range of <strong>careers</strong>, to work as an admin / support, sales, marketing,construction installer, software developer,<strong>jobs</strong> etc.Your talents and skills are key to our product success, we recognize and value your contributions.For part-time/full time, internships <strong>vacancies</strong> or remote or onsite opportunities.</p>
+					
+					<p style="padding: 10px 20px 0px 20px;font-size:.8em;"> <strong>JMGrove</strong> has <strong>employment</strong> opportunities that fit your life. Get to know us better - fill out the job application and lets get started.
+						</p>
+					
+				</div>
+				</div>
+<div style="width:100%;float:left;overflow:hidden;font-size:.8em;">
 <div style="clear:both"></div>
                         <?php if(isset($_GET['view'])=='formbox')
                         {
@@ -761,20 +770,26 @@ odbc_close($conn);
                                                 style="text-transform: uppercase; padding: 3px 52px; line-height: 32px;" >
                                             </div>
 
-                                            <div class="clear-float"></div>
-                                        </div>
-                                        <div class="clearboth"></div>
+                                            <div class="clearboth"></div>
+										<div id="application-tc" style="padding:10px">
+									
+									<p > <span style="color:red">*</span> If application is successfully submited, you will be redirected to login page and prompted with instructions to continue the application process! NO application is reviewed if not submitted properly
+									</p>
+									</div>
+									
+										</div>
+                                        
+										<div class="clearboth"></div>
+
+                                    
+									
 
                                     </form>
 									
-									<div id="application-tc">
 									
-									<p style='font-weight:bold'>" *If application is successfully submited, you will be redirected to login page and prompted with instructions to continue the application process! NO application is reviewed if not submitted properly"
-									</p>
-									</div>
                                 </div>
-								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
-                        <section class="content_panel" style="min-height:inherit;">
+								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. near <strong>Malvern Pa, 19355</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
+                        <section class="content_panel" style="min-height:inherit;width:70%;float:left">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 
                             <div class="login_right_panel">
@@ -823,20 +838,29 @@ odbc_close($conn);
                                     
                                 </div>
                             </div>
+							
+							
                             
                             </form>
                         </section>
+						<div style="width:25%;padding:10px;float:right">
+							<p><span style="color:red">* </span> if you have already filled in the form below you can sign in using your email or phone number as login Id & your given password. Complete the interview process or if already actively hired, to login to view your daily schedule.
+							
+							</p>
+							</div>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-            </div>
+                    </div>
             <?php include("inc/testimonials.php"); ?>
-        </div>
+
+		
         <?php include("inc/footer.php"); ?>
     </div>
+	</div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
