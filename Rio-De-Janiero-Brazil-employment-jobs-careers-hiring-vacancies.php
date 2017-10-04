@@ -788,7 +788,7 @@ odbc_close($conn);
 									
 									
                                 </div>
-								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field. near <strong>Rio De Janiero Brazil</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
+								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field near <strong>Rio De Janiero Brazil</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
                         <section class="content_panel" style="min-height:inherit;width:70%;float:left">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 

@@ -32,11 +32,11 @@ if (!$connection)
     This page needs JavaScript activated to work. 
     <style>div { display:none; }</style>
     </noscript>
-    <title>Jobs - Recruitment - Job Search - Employment - Job Vacancies - J.M. Grove Construction  New York NY NYC</title>
+    <title>Mason Miami Dade county FL Florida Jobs - Recruitment - Job Search - Employment - Job Vacancies - J.M. Grove Construction  </title>
     <link rel="stylesheet" href="./inc/grovestyle.css" type="text/css">
     <link rel="stylesheet" href="./inc/intlTelInput.css" type="text/css">
-    <meta name="description" content="J.M.Grove -  Now Hiring in New York NY NYC for job vacancies on jmgroveconstruction.com for full time and part time for for different position in IT and admin roles" />
-    <meta name="keywords" content="Now Hiring in New York NY NYC  Employment, jobs, careers, hiring vacancies now" />
+    <meta name="description" content="J.M.Grove -  Now Hiring for Mason near Miami Dade county FL Florida for job vacancies on jmgroveconstruction.com for full time and part time for for different position in IT and admin roles" />
+    <meta name="keywords" content="Now Hiring for Mason near Miami Dade county FL Florida  Employment, jobs, careers, hiring vacancies now" />
     
     <style>
 label.error {
@@ -261,10 +261,10 @@ width:100%;
                     <div style="width:100%;height:17px;float:left;overflow:hidden;"></div>
                     <h1 style="padding-left:15px;padding-top:20px;color:#c72121;font-size:1.3em;" align="center">JMGrove Employment! Hiring Job Vacancies Now! </h1>
                     <div style="width:100%;float:left;height:200px;overflow:hidden;">
-				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt=" New York NY NYC Employment, jobs, careers, hiring vacancies now " title=" New York NY NYC Employment, jobs, careers, hiring vacancies now"></div>
+				<div style="width:20%;float:left;text-align:right;padding-top:10px;"><img src="img/hr-page.png" border="0" style="padding-bottom:2px;" alt=" Mason Miami Dade county FL Florida Employment, jobs, careers, hiring vacancies now " title=" Mason Miami Dade county FL Florida Employment, jobs, careers, hiring vacancies now"></div>
 				<div style="width:80%;float:left;overflow:hidden;">
 					<h2 style="padding: 12px 20px 0px 20px;font-size:1.1em;">
-						New York NY NYC Employment, Jobs, Careers Hiring Now! 
+						Mason Miami Dade county FL Florida Employment, Jobs, Careers Hiring Now! 
 					</h2>
 					<p style="padding: 10px 20px 0px 20px;font-size:.8em;">
 					Looking for a new <strong>career</strong>? At <strong>JM Grove</strong>, we are hiring for open <strong>job vacancies now</strong>. You can experience a world of opportunities to explore a wide-range of <strong>careers</strong>, to work as an admin / support, sales, marketing,construction installer, software developer,<strong>jobs</strong> etc.Your talents and skills are key to our product success, we recognize and value your contributions.For part-time/full time, internships <strong>vacancies</strong> or remote or onsite opportunities.</p>
@@ -788,7 +788,7 @@ odbc_close($conn);
 									
 									
                                 </div>
-								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field near <strong>New York NY NYC</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
+								<p style="padding: 10px 15px 10px 15px;"> J.M. Grove is always looking for charismatic, self driven, hard working people who are looking to be successful in the home improvement field as a <strong>Mason near Miami Dade county FL Florida</strong>. J.M. Grove offers great benefits, competitive compensation and opportunities for both personal and professional growth. Grove offers many career opportunities and we encourage you to send us your resume, or give us a call. </p>
                         <section class="content_panel" style="min-height:inherit;width:70%;float:left">
                         <form name="loginform" id="loginform" method="post" action="<?php if(strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'demo') !== false){echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx';} else{echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx';} ?>">
 
