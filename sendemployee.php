@@ -182,9 +182,9 @@ if (!odbc_execute($stmt)) {
 		$email = $_POST['email'];
 		
 
-		$userProfile = "http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
+		$userProfile = $now.basename( $_FILES['profilepic']['name']);
 
-		$userResume = "http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name']);
+		$userResume = $now.basename( $_FILES['resume']['name']);
 		
 		
 
