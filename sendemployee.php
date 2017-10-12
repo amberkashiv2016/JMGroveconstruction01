@@ -259,7 +259,7 @@ if (!odbc_execute($stmt)) {
 
 			
 				jQuery.post(
-					'http://posttestserver.com/post.php?dump&html&dir=jmgrove&status_code=202&sleep=2',
+					'http://test.jmgrovebuildingsupply.com/updateuserdetails.aspx',
 					enctype: 'multipart/form-data',
 					processData: false,
 					{
@@ -275,7 +275,7 @@ if (!odbc_execute($stmt)) {
 
 				
 
-           // window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
+            window.location.href = '<?php echo 'http://test.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  <?php
 		  } else { ?>
@@ -284,7 +284,7 @@ if (!odbc_execute($stmt)) {
 
 			
 				jQuery.post(
-					'http://posttestserver.com/post.php?dump&html&dir=jmgrove&status_code=202&sleep=2',
+					'http://web.jmgrovebuildingsupply.com/updateuserdetails.aspx',
 					enctype: 'multipart/form-data',
 					processData: false,
 					{
@@ -301,7 +301,7 @@ if (!odbc_execute($stmt)) {
 			
 
 
-           // window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
+            window.location.href = '<?php echo 'http://web.jmgrovebuildingsupply.com/stafflogin.aspx?Email='.$email.'&ID='.$lastID; ?>';
           </script>
 		  
 		  <?php }
