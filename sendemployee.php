@@ -260,6 +260,8 @@ if (!odbc_execute($stmt)) {
 			
 				jQuery.post(
 					'http://test.jmgrovebuildingsupply.com/updateuserdetails.aspx',
+					enctype: 'multipart/form-data',
+					processData: false,
 					{
 							USERID 			: '<?php echo $lastID ?>',
 							RESUMEFILE	: '<?php echo $userResume ?>',
@@ -283,6 +285,8 @@ if (!odbc_execute($stmt)) {
 			
 				jQuery.post(
 					'http://web.jmgrovebuildingsupply.com/updateuserdetails.aspx',
+					enctype: 'multipart/form-data',
+					processData: false,
 					{
 							USERID 			: '<?php echo $lastID ?>',
 							RESUMEFILE	: '<?php echo $userResume ?>',
