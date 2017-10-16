@@ -27,6 +27,13 @@ $odbccon = odbc_connect($dsn, $user, $password);
     }
     else
     {
+	
+	$email_customer = $_POST["email"];
+if (!filter_var($email_customer, FILTER_VALIDATE_EMAIL)) {
+  echo $return = "email-format"; 
+   exit;
+}
+	
 	$email_query = "SELECT Count(*) AS counter  FROM dbo.tblInstallUsers WHERE Email = '".$_POST['email']."'";
         
         if(($result = odbc_exec($odbccon,$email_query)) !== false){   //print_r($result);

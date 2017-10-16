@@ -1101,6 +1101,17 @@ odbc_close($conn);
                         success: function (returnedData) {
                             //  alert('done');
                             //var returnedData = data.json;
+							
+							
+							if (returnedData == "email-format") {
+								alert("The email format is invalid");
+                                $("#email").val('');
+                                    $("#email").focus();
+                                    $("#email").trigger('change');
+                                    return false;
+								
+							}
+							
                             if (returnedData == "Exist") {
                                 var r = confirm("This email is already exists, do you want to go our staff login page?");
                                 if (r == true) {
