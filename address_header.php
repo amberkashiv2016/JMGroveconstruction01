@@ -21,6 +21,13 @@
 </div>
 		<p style="padding: 0px 0px 0px 22px;font-size:.8em;"><a href="mailto:service-sales@jmgroveconstruction.com" style="text-decoration:none;">Service-Sales@jmgroveconstruction.com</a></p>
 				<p style="padding: 0px 0px 0px 22px;font-size:.8em;"> </p>
+				<div style="text-align:center; display:inline-block; float:left; margin-top:2px; margin-left:15px;">
+                    <a style="margin:0px 2px;" href="http://www.linkedin.com/company/j.m.-grove" target="_blank" rel="nofollow"><img src="img/social-icon/linkedin-icon.png" width="24px" alt="Linkedin" title="Linkedin"/></a>
+                    <a style="margin:0px 2px;" href="https://www.facebook.com/JGrove68" target="_blank" rel="nofollow"><img src="img/social-icon/facebook-icon.png" width="24px" alt="Facebook" title="Facebook" /></a>
+                    <a style="margin:0px 2px;" href="https://twitter.com/JMGrove1" target="_blank" rel="nofollow"><img src="img/social-icon/twitter-icon.png" width="24px" alt="Twitter" title="Twitter" /></a>
+                    <a style="margin:0px 2px;" href="https://www.pinterest.com/jmgrove0399/pins/" onclick="return false;"><img src="img/social-icon/pintrest-icon.png" width="24px" alt="Pintrest" title="Pintrest" /></a>
+                    <a style="margin:0px 2px;" href="#" onclick="return false;"><img src="img/social-icon/youtube-icon.png" width="24px" alt="Youtube" title="Youtube" /></a>
+                </div>
 				
 		
  

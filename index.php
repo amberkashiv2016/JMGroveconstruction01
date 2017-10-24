@@ -63,27 +63,26 @@
 						<li><a href="photogallery.php?page=windows" style="color:#fff;text-decoration:none;">Get Inspired. Check out our Photo Gallery</a></li>
 
 					</ul>
-                    <p style="margin:15px auto; width:50%"><img src="img/car.png"></p>
+                    <p style="margin:15px 30px"><img src="img/home-image.png" style="margin-right:50px"><img src="img/car.png"></p>
                     
 				</div>
 				<div style="float:left;background: url(img/splash-left-bottom.jpg);height:10px;width:100%;overflow:hidden;"></div>
 			</div>
 			<div id="splash-right" style="height:194px;">
-				<div class="structuresleft_header">
+				<div class="structuresleft_header" style="color: transparent;font-size: 0;">
                           <div class="structureslider_header">
                                              
                      <div id="sliderFrame_header">
         <div id="slider_header">
             
-            <a class="lazyImage" href="slider-images/image-slider-1.jpg"></a>
-            <a class="lazyImage" href="slider-images/image-slider-2.jpg"></a>
-            <a class="lazyImage" href="slider-images/image-slider-3.jpg"></a>
-            <!--<a class="lazyImage" href="slider-images/image-slider-4.jpg"></a> -->
-            <a class="lazyImage" href="slider-images/image-slider-5.jpg"></a>
-            <!--<a class="lazyImage" href="slider-images/slide-6.jpg"></a>
-            <a class="lazyImage" href="slider-images/slide-7.jpg"></a>
-            <a class="lazyImage" href="slider-images/slide-8.jpg"></a>-->
-            
+            <a class="lazyImage" href="slider-images/1.jpg"></a>
+            <a class="lazyImage" href="slider-images/2.jpg"></a>
+            <a class="lazyImage" href="slider-images/3.jpg"></a>
+            <a class="lazyImage" href="slider-images/4.jpg"></a>
+            <a class="lazyImage" href="slider-images/5.jpg"></a>
+            <a class="lazyImage" href="slider-images/6.jpg"></a>
+            <a class="lazyImage" href="slider-images/7.jpg"></a>
+            <a class="lazyImage" href="slider-images/8.jpg"></a>
             
          
         </div>
@@ -147,12 +146,10 @@
             </div>  
                     
                     <div class="structureright-btn">
-                        
+                        <h4 style="padding: 0px 0px 3px 0px;font-size:1.1em;text-align:center;">Affiliated Companies</h4>
                         <span><a href="http://www.jmgrovebuildingsupply.com"><img src="img/building-supply.png"></a></span>
-                        <span><a href="#"><img src="img/commercial-btn.png"></a></span>
-                        <span><a class="repair-btn" href="start-customizing-service-repair.php"><img src="img/service-repair-btn.png"></a></span>
-                        <span><a class="new-construction-btn" href="start-customizing-remodeling-new-construction.php"><img src="img/New-Construction-btn.png"></a></span>
-                    </div>
+                        <span><a href="http://www.jmgrovecommercialconstruction.com"><img src="img/commercial-btn.png"></a></span>
+                      </div>
                         
                         
                         
@@ -201,7 +198,7 @@
 				</div>
 				</div>	</div>  /div>-->
                      
-                        <div class="structuresleft">
+                        <div class="structuresleft"  style="color: transparent;font-size: 0;">
                           <div class="structureslider">
                                              
                      <div id="sliderFrame">
@@ -240,26 +237,7 @@
                         
                 
                         
-                        <div class="structuresleft_after">
-                          <div class="structureslider_after">
-                                             
-                     <div id="sliderFrame_after">
-        <div id="slider_after" style="width:50% !important;">
-            <a href="http://www.menucool.com/video-slider">
-                <img src="slider-images/1-500x638.jpg"  alt="" />
-            </a>
-            <a class="video" href="http://vimeo.com/18560206">
-                <b data-src="slider-images/8-500x638.jpg" ></b>
-            </a>
-            <a class="video" href="http://www.youtube.com/watch?v=P0G_2tiivxE">
-                <b data-src="slider-images/4-500x638.jpg" ></b>
-            </a>
-            
-            
-        
-        </div>
-    </div>
-                              </div> </div>
+                        
                     </div>
                     
                 <div class="rightt">
@@ -351,5 +329,6 @@
 </div>
 <div style=" width:900px; line-height:15px; padding-bottom:10px; margin:0 auto; text-align:center;" ><h1 style="margin:0; font-weight:normal; padding:0; font-size:10px; color:;font-family:Verdana,Arial,Helvetica, sans-serif;"><!--<a href="http://jmgroveconstruction.com/bathroom-remodeling.php" style="font-size:10px; color:#000000"><u>Bathroom Remodeling</u></a> | --><a href="http://jmgroveconstruction.com/bathroom-remodeling-Bala-Cynwyd-Pa-19004.php" style="font-size:10px; color:#000000"><u>Bathroom Renovations Bala Cynmyd Pa 19004</u></a> |  <a href="http://jmgroveconstruction.com/bathroom-remodeling-Berwyn-Pa-19312.php" style="font-size:10px; color:#000000"><u>Bathroom Companies Berwyn Pa 19312</u></a> | <a href="http://jmgroveconstruction.com/bathroom-remodeling-Bryn-Mawr-Pa-19010.php" style="font-size:10px; color:#000000"><u>Bathroom Contractor Bryn Mawr Pa 19010</u></a> | <!--<a href="http://jmgroveconstruction.com/bathroom-remodeling-Chestnut-Hill-Pa-19118.php" style="font-size:10px; color:#000000"><u>Bathroom Remodeling Chestnut Hill Pa 19118</u></a> |--> <a href="http://jmgroveconstruction.com/bathroom-remodeling-Gladwyne-Pa-19035.php" style="font-size:10px; color:#000000"><u>Bathroom Renovations Gladwyne Pa 19035</u></a> | <a href="http://jmgroveconstruction.com/bathroom-remodeling-Haverford-Pa-19041.php" style="font-size:10px; color:#000000"><u>Bathroom Companies Haverford Pa 19041</u></a> | <a href="http://jmgroveconstruction.com/bathroom-remodeling-Lafayette-Hill-Pa-19444.php" style="font-size:10px; color:#000000"><u>Bathroom Contractor Lafayette Hill Pa 19444</u></a></h1></div>
 </body>
+
 <?php include_once("inc/analyticstracking.php") ?>
 </html>
