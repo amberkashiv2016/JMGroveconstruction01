@@ -182,9 +182,26 @@ if (!odbc_execute($stmt)) {
 		$email = $_POST['email'];
 		
 
-		$userProfile = $now.basename( $_FILES['profilepic']['name']);
+		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-		$userResume = $now.basename( $_FILES['resume']['name']);
+		if ( strpos($actual_link, 'jmgroveconstruction.com') !== false  && strpos($actual_link, 'jmgroveconstruction.com/demo') === false) 
+		{
+			$userProfile = "http://jmgroveconstruction.com/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
+
+				$userResume = "http://jmgroveconstruction.com/Resumes/".$now.basename( $_FILES['resume']['name']);
+				
+		}else if(strpos($actual_link, 'jmgroveconstruction.com/demo') !== false)
+		{
+			$userProfile = "http://jmgroveconstruction.com/demo/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
+
+				$userResume = "http://jmgroveconstruction.com/demo/Resumes/".$now.basename( $_FILES['resume']['name']);
+				
+		}else{
+			$userProfile = "http://jmgroveconstruction.com/demo/ProfilePicture/".$now.basename( $_FILES['profilepic']['name']);
+
+			$userResume = "http://jmgroveconstruction.com/demo/Resumes/".$now.basename( $_FILES['resume']['name']);
+				
+		}
 		
 		
 
